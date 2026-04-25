@@ -42,12 +42,12 @@ export default async function ProgramPage({
   const program = getProgramBySlug(slug);
   if (!program) notFound();
 
-  const programTestimonials = testimonials.filter((t) =>
-    t.program.toLowerCase().includes(program.shortName.toLowerCase())
-  );
+  const programTestimonials = testimonials
+    .filter((t) => t.program.toLowerCase().includes(program.shortName.toLowerCase()))
+    .slice(0, 3);
 
   const whatsappMsg = encodeURIComponent(
-    `Hi Gaurav! I am interested in the ${program.name} at Digital Magician. Can you tell me more?`
+    `Hi! I am interested in the ${program.name} at Digital Magician, Sonipat. Can you tell me more?`
   );
 
   const emiAmount = Math.ceil(program.fee / 3).toLocaleString("en-IN");
@@ -144,7 +144,7 @@ export default async function ProgramPage({
                     href="/free-demo"
                     className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
                   >
-                    Watch Free Demo First
+                    Book Free Demo First
                   </Link>
                 </div>
               </div>
@@ -188,10 +188,13 @@ export default async function ProgramPage({
                     href="/free-demo"
                     className="flex items-center justify-center gap-2 bg-white/8 hover:bg-white/12 text-white font-semibold w-full py-3.5 rounded-xl transition-colors text-sm border border-white/10"
                   >
-                    Watch Free Demo
+                    Book Free Demo
                   </Link>
                   <p className="text-slate-500 text-xs text-center mt-4">
-                    ⭐ 4.9 stars · 127+ students trained · 100% placement guarantee
+                    ⭐ 4.9 stars, 500+ students trained, 100% placement guarantee
+                  </p>
+                  <p className="text-slate-600 text-xs text-center mt-1">
+                    Above Dr. Batra&apos;s Clinic, Model Town, Sonipat, Haryana 131001
                   </p>
                 </div>
               </div>
@@ -345,6 +348,22 @@ export default async function ProgramPage({
             >
               See Placement Data <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+        </section>
+
+        {/* ── Location ────────────────────────────────────────────────────── */}
+        <section className="py-10 px-4">
+          <div className="max-w-4xl mx-auto bento p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <div className="text-3xl shrink-0">📍</div>
+            <div>
+              <h3 className="font-bold text-white text-sm mb-1">
+                {program.name} — Taught in Sonipat, Haryana. Available Online Across India.
+              </h3>
+              <p className="text-slate-400 text-sm">
+                Our campus is at: above Dr. Batra&apos;s Clinic, near Mittal Nursing Home, 8 Marla, Model Town, Sonipat, Haryana 131001.
+                Students from Delhi, Rohtak, Panipat, Karnal, Hisar and cities across India attend online with the same live experience.
+              </p>
+            </div>
           </div>
         </section>
 

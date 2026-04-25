@@ -12,16 +12,18 @@ import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Course in Sonipat | #1 in Haryana & Delhi NCR — Digital Magician",
+  title: "Digital Marketing Course in Sonipat | Best AI Marketing Institute in India — Digital Magician",
   description:
-    "North India's most results-driven digital marketing institute. 127 students trained. ₹1.2 Crore+ in salaries generated. Master Google Ads, SEO, Meta Ads & AI Tools with a 100% placement guarantee. Online & offline — Sonipat campus.",
+    "India's most results-driven digital marketing institute, based in Sonipat, Haryana. 500+ students trained. ₹1.2 Crore+ in salaries generated. Master Google Ads, SEO, Meta Ads and AI Tools with a 100% placement guarantee. Online and offline classes available.",
 };
 
 const tools = [
-  "Google Ads", "Meta Ads Manager", "SEMrush", "Ahrefs", "ChatGPT",
-  "Google Analytics 4", "Canva", "WordPress", "GTM", "Meta Pixel",
-  "Mailchimp", "Integrately", "Surfer SEO", "WhatsApp CRM",
+  "ChatGPT", "Claude", "Gemini", "Google Ads", "Meta Ads Manager",
+  "SEMrush", "Ahrefs", "Google Analytics 4", "Canva", "WordPress",
+  "GTM", "Meta Pixel", "Mailchimp", "Surfer SEO", "WhatsApp CRM",
   "YouTube Ads", "Screaming Frog", "HubSpot", "Google Search Console",
+  "AI Image Generation", "AI Video Generation", "Programmatic SEO",
+  "Leonardo AI", "HeyGen", "n8n", "Zapier", "Looker Studio",
 ];
 
 const painPoints = [
@@ -32,17 +34,17 @@ const painPoints = [
 ];
 
 const whyUs = [
-  { icon: <BarChart3 className="w-5 h-5" />, title: "Live Campaigns from Week 1", desc: "You manage real ad budgets on real client accounts through eSahayak, our active digital marketing agency. Not simulations. Not dummy accounts." },
-  { icon: <TrendingUp className="w-5 h-5" />, title: "Gaurav Has Skin in the Game", desc: "Gaurav manages ₹1 Crore+ in ad spend annually. When he teaches campaign optimisation, it's because he ran that exact campaign last week." },
-  { icon: <Users className="w-5 h-5" />, title: "10+ Companies Actively Hiring From Us", desc: "We have a genuine placement pipeline. Our hiring partners come to us for talent. That's how 80% of our graduates are placed within 30 days." },
-  { icon: <Zap className="w-5 h-5" />, title: "AI-Integrated Curriculum, Updated Quarterly", desc: "ChatGPT, Gemini, Midjourney, Perplexity. AI tools are woven into every module. You graduate as a marketer who's 10x more productive than your peers." },
+  { icon: <BarChart3 className="w-5 h-5" />, title: "Live Campaigns from Week 1", desc: "You manage real ad budgets on real client accounts from Day 1. Not simulations. Not dummy accounts. Actual campaigns with actual results in your portfolio." },
+  { icon: <TrendingUp className="w-5 h-5" />, title: "Taught by Active Practitioners", desc: "Our trainers manage over Rs 1 Crore in ad spend every year. When they teach campaign optimisation, it is because they ran that exact campaign last week." },
+  { icon: <Users className="w-5 h-5" />, title: "10+ Companies Actively Hiring From Us", desc: "We have a real placement pipeline. Hiring partners come to us for talent every month. That is how 80% of our graduates are placed within 30 days of graduating." },
+  { icon: <Zap className="w-5 h-5" />, title: "AI-Integrated Curriculum, Updated Every Quarter", desc: "ChatGPT, Claude, Gemini, Midjourney. AI tools are built into every module. You graduate as a marketer who is 10x more productive than your competition." },
 ];
 
 const faqs = [
   { q: "Is the 100% placement guarantee actually real — or is it full of conditions?", a: "It's real, and the conditions are fair. Complete all modules with 75%+ score, submit assignments on time, build your portfolio during training, and apply to 30+ jobs within 4 months. If you do all that and still aren't placed, we refund every rupee. No loopholes." },
   { q: "I have zero marketing experience. Will I be able to keep up?", a: "That's who this is designed for. We start from 'what is digital marketing' and go all the way to managing real client campaigns. 60% of our students had no prior marketing experience. Today they're running campaigns for companies across India." },
   { q: "Can I attend while working a full-time job?", a: "Yes. Classes are Mon/Wed/Fri from 7–9 PM. Every session is recorded and accessible for 12 months. You can attend from Sonipat in person or join the same live class online — identical experience, identical access to Gaurav." },
-  { q: "What's the actual difference between online and offline mode?", a: "The content is identical — same live Gaurav, same curriculum, same real campaign projects. Offline students get the campus energy; online students join the live Zoom with full interaction and screen sharing. Most students prefer hybrid — offline on days they can, online when they can't." },
+  { q: "What's the actual difference between online and offline mode?", a: "The content is identical: same live class, same curriculum, same real campaign projects. Offline students get the campus energy in Sonipat. Online students join the live Zoom with full interaction and screen sharing. Most students prefer hybrid: come to campus when they can, join online when they cannot." },
   { q: "How long before I can start earning after the course?", a: "Most Full Stack graduates land jobs within 30 days. Freelancers often start getting clients within 2–3 months. Our fastest: Sakshi from Panipat was earning ₹60,000/month freelancing 3 months after completing the SEO course." },
   { q: "What certifications will I actually earn?", a: "For the Full Stack program: Google Ads Search Certification, Google Analytics 4 Certification, Meta Blueprint certification, and 7+ more — all issued directly by Google, Meta, and industry platforms. Plus your Digital Magician completion certificate. Total: 10+ credentials on your resume." },
 ];
@@ -81,7 +83,7 @@ export default function HomePage() {
             <div className="hero-item hero-item-1 inline-flex items-center gap-2.5 glass-amber rounded-full px-5 py-2.5 mb-8">
               <span className="w-2 h-2 rounded-full bg-amber-brand animate-pulse" />
               <span className="text-amber-brand text-sm font-heading font-bold tracking-wide">
-                #1 in Haryana &amp; Delhi NCR — Sonipat Campus
+                #1 in Sonipat, Haryana. Serving Students Across India.
               </span>
             </div>
 
@@ -104,20 +106,20 @@ export default function HomePage() {
 
             {/* Sub-headline */}
             <p className="hero-item hero-item-3 text-white/70 text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-body">
-              <strong className="text-white font-semibold">127 students trained.</strong> ₹1.2 Crore+ in combined annual salaries generated.
-              Placed in 30 days — or we refund{" "}
+              <strong className="text-white font-semibold">500+ students trained.</strong> ₹1.2 Crore+ in combined annual salaries generated.
+              Placed in 30 days, or we refund{" "}
               <strong className="text-amber-brand font-semibold">every single rupee.</strong>
             </p>
 
             {/* CTAs */}
             <div className="hero-item hero-item-4 flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
               <Link
-                href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician."
+                href="https://wa.me/917988227240?text=Hi!%20I%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary px-8 py-4 text-base gap-2.5 group w-full sm:w-auto justify-center"
               >
-                Talk to Gaurav — It&apos;s Free
+                Talk to Digital Magician, It&apos;s Free
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -125,15 +127,15 @@ export default function HomePage() {
                 className="btn-ghost px-8 py-4 text-base gap-2.5 w-full sm:w-auto justify-center"
               >
                 <Play className="w-4 h-4 text-amber-brand fill-amber-brand" />
-                Watch Free Demo Class
+                Book Free Demo Class
               </Link>
             </div>
 
             {/* Proof strip */}
             <div className="hero-item hero-item-5 flex flex-wrap items-center justify-center gap-5 sm:gap-8 text-sm text-white/50 font-body">
               {[
-                { icon: "⭐", text: "4.9★ — 105 Google Reviews" },
-                { icon: "🎓", text: "127 Students Trained" },
+                { icon: "⭐", text: "4.9★, 115+ Google Reviews" },
+                { icon: "🎓", text: "500+ Students Trained" },
                 { icon: "🏆", text: "10+ Certifications Included" },
                 { icon: "✅", text: "100% Placement or Refund" },
               ].map((item) => (
@@ -214,9 +216,9 @@ export default function HomePage() {
                 <div className="text-3xl mb-4">👨‍🎓</div>
                 <div>
                   <div className="stat-number text-7xl lg:text-8xl mb-2">
-                    <CountUp end={127} suffix="+" />
+                    <CountUp end={500} suffix="+" />
                   </div>
-                  <div className="text-white/60 font-body text-sm">Students trained in Sonipat, Haryana</div>
+                  <div className="text-white/60 font-body text-sm">Students trained, from Sonipat to across India</div>
                 </div>
               </div>
             </AnimateOnScroll>
@@ -232,7 +234,7 @@ export default function HomePage() {
                 <div className="stat-number text-5xl mb-1">
                   <CountUp end={4.9} suffix="" decimals={1} />
                 </div>
-                <div className="text-white/50 text-xs font-body">Average rating · 105 Google Reviews</div>
+                <div className="text-white/50 text-xs font-body">Average rating, 115+ Google Reviews</div>
               </div>
             </AnimateOnScroll>
 
@@ -346,7 +348,7 @@ export default function HomePage() {
               <span className="text-gradient-amber">₹1 Lakh/Month</span>
             </h2>
             <p className="text-white/60 text-lg mt-4 max-w-2xl mx-auto font-body">
-              Every program is taught by Gaurav. Every program includes live campaign work. Every program comes with placement support.
+              Every program includes live campaign work on real client accounts. Every program comes with placement support. Every program gives you results you can show, not just a certificate.
             </p>
           </AnimateOnScroll>
 
@@ -453,8 +455,8 @@ export default function HomePage() {
               {
                 step: "02",
                 icon: "📊",
-                title: "Learn & Execute — Simultaneously",
-                desc: "Weeks 2–12. Theory in the morning. You apply it on live client campaigns through eSahayak by evening. No waiting to 'get to the real part.'",
+                title: "Learn and Execute at the Same Time",
+                desc: "Weeks 2 to 12. Theory in class. You apply it on live client campaigns the same day. No waiting to get to the real part. You are doing the real part from Week 2.",
               },
               {
                 step: "03",
@@ -710,15 +712,15 @@ export default function HomePage() {
                   </div>
                   <h3 className="heading-lg text-white text-2xl mb-1">Gaurav Malik</h3>
                   <p className="text-amber-brand font-heading font-semibold text-sm mb-6">
-                    Founder & Lead Mentor · Co-Founder, eSahayak Agency
+                    Founder, Digital Magician. 7+ Years in Performance Marketing.
                   </p>
                   <blockquote className="text-white/70 font-body text-base leading-relaxed italic mb-8 border-l-2 border-amber-brand/40 pl-5">
-                    &ldquo;I built Digital Magician because I was tired of watching talented people get stuck with certificates that didn&apos;t translate to jobs. Every lesson I teach is something I applied last week on a live client campaign. That&apos;s the only kind of teaching that actually works.&rdquo;
+                    &ldquo;I built Digital Magician because I was tired of watching talented people get stuck with certificates that meant nothing to employers. Every lesson we teach is something we applied last week on a live client campaign. That is the only kind of teaching that actually works.&rdquo;
                   </blockquote>
                   <div className="grid grid-cols-3 gap-4">
                     {[
                       { v: "7+", l: "Years Active" },
-                      { v: "127+", l: "Students" },
+                      { v: "500+", l: "Students" },
                       { v: "4.9★", l: "Rating" },
                     ].map((s) => (
                       <div key={s.l} className="text-center">
@@ -734,20 +736,20 @@ export default function HomePage() {
             <AnimateOnScroll type="reveal-right">
               <span className="tag mb-6 block w-fit">Who You&apos;re Learning From</span>
               <h2 className="heading-lg text-4xl sm:text-5xl text-white mb-6">
-                Your Trainer Manages{" "}
-                <span className="text-gradient-amber">₹1 Crore+</span>{" "}
-                in Ad Spend. Annually.
+                Taught by People Who{" "}
+                <span className="text-gradient-amber">Actually Run Campaigns</span>{" "}
+                Right Now.
               </h2>
               <p className="text-white/65 text-lg font-body leading-relaxed mb-8">
-                Gaurav isn&apos;t a &quot;digital marketing trainer.&quot; He runs eSahayak, an active digital marketing agency with real clients, real budgets, and real accountability. He trains you using the exact systems he uses every day.
+                Digital Magician was built by practitioners, not academics. Gaurav has managed over Rs 1 Crore in live ad spend across Google and Meta. He co-founded 10x Estates and 10x Admissions, two active performance marketing agencies serving clients across India. What he teaches, he does every day.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Co-Founder of eSahayak — active digital marketing agency",
-                  "Managed ₹1 Crore+ in Google & Meta ad budgets",
-                  "7+ years of performance marketing experience",
-                  "Only trainer at Digital Magician — 100% personal teaching",
-                  "Students working at companies across Delhi NCR & Haryana",
+                  "Co-Founder of 10x Estates and 10x Admissions, active performance marketing agencies",
+                  "Managed Rs 1 Crore+ in Google and Meta ad budgets",
+                  "7+ years of performance marketing experience across India",
+                  "Students placed at companies across Delhi NCR, Haryana and major Indian cities",
+                  "Curriculum updated every quarter based on what is working in live campaigns",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-amber-brand flex-shrink-0 mt-0.5" />
@@ -829,7 +831,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="btn-primary px-8 py-3.5 text-sm gap-2"
             >
-              Ask Gaurav Directly on WhatsApp <ArrowRight className="w-4 h-4" />
+              Ask Us on WhatsApp <ArrowRight className="w-4 h-4" />
             </Link>
           </AnimateOnScroll>
         </div>
@@ -873,21 +875,21 @@ export default function HomePage() {
               Could Change Everything.
             </h2>
             <p className="text-white/70 text-lg font-body mb-4 max-w-2xl mx-auto leading-relaxed">
-              127 people before you took the leap. They now run ad budgets, manage campaigns, and earn salaries they didn&apos;t think were possible. The May 5 batch has{" "}
+              500+ people have already made this decision. They now run ad budgets, manage campaigns, and earn salaries they did not think were possible a year ago. The May 5 batch has{" "}
               <strong className="text-white">4 seats left.</strong>
             </p>
             <p className="text-amber-brand font-heading font-bold mb-10">
-              100% placement guarantee — or every rupee back. No risk.
+              100% placement guarantee, or every rupee back. No risk.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <Link
-                href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20enroll%20in%20the%20May%202026%20batch.%20Please%20guide%20me."
+                href="https://wa.me/917988227240?text=Hi!%20I%20want%20to%20enroll%20in%20the%20May%202026%20batch%20at%20Digital%20Magician.%20Please%20guide%20me."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary px-10 py-5 text-base gap-2.5 group w-full sm:w-auto justify-center"
               >
-                Reserve My Seat — Talk to Gaurav
+                Reserve My Seat, Talk to Digital Magician
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -899,11 +901,11 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white/40 font-body">
-              <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-amber-brand/50" />
-                Model Town, Sonipat, Haryana — 131001
+              <span className="flex items-center gap-2 text-center sm:text-left">
+                <MapPin className="w-4 h-4 text-amber-brand/50 shrink-0" />
+                Above Dr. Batra&apos;s Clinic, near Mittal Nursing Home, 8 Marla, Model Town, Sonipat, Haryana 131001
               </span>
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 shrink-0">
                 <Phone className="w-4 h-4 text-amber-brand/50" />
                 +91-79882-27240
               </span>

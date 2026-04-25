@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const included = [
-  { icon: "👨‍🏫", title: "Live Mentorship from Gaurav", desc: "Learn directly from a practitioner managing ₹1 Crore+ in annual ad spend — not a trainer who memorised slides." },
-  { icon: "📊", title: "Real Campaign Work", desc: "Run live campaigns on actual eSahayak agency client accounts from Week 1. Not simulations, not demo accounts." },
-  { icon: "🎓", title: "Industry Certifications", desc: "Google, Meta, and platform-issued certifications included in your course fee. 10+ credentials on your resume." },
-  { icon: "💼", title: "Placement Support", desc: "Resume review, mock interviews, and direct referrals to 10+ hiring partners. 80% placed within 30 days." },
+  { icon: "👨‍🏫", title: "Live Mentorship from Practitioners", desc: "Learn from people who manage Rs 1 Crore+ in annual ad spend, not trainers who memorised slides from a course they took 5 years ago." },
+  { icon: "📊", title: "Real Campaign Work from Day 1", desc: "Run live campaigns on actual client accounts from Week 1. Not simulations. Not demo accounts. Real budgets, real results, real portfolio." },
+  { icon: "🎓", title: "Industry Certifications", desc: "Google, Meta, and platform-issued certifications included in your course fee. 10+ credentials on your resume by the time you graduate." },
+  { icon: "💼", title: "Placement Support", desc: "Resume review, mock interviews, and direct referrals to 10+ hiring partners. 80% of our graduates are placed within 30 days." },
 ];
 
 export default function ProgramsPage() {
@@ -147,11 +147,11 @@ export default function ProgramsPage() {
             Not sure which program is right for you?
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
-            Talk to Gaurav for a free 15-minute call. He'll help you pick the right program
-            based on your goals, background, and budget.
+            Get a free 15-minute counselling call. We will help you pick the right program
+            based on your goals, background, and budget. No hard selling.
           </p>
           <a
-            href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20need%20help%20choosing%20the%20right%20digital%20marketing%20program."
+            href="https://wa.me/917988227240?text=Hi!%20I%20need%20help%20choosing%20the%20right%20digital%20marketing%20program%20at%20Digital%20Magician."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"
