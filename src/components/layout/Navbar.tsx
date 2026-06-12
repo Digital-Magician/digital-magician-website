@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { getComingMonday } from "@/lib/date";
 
 const navLinks = [
   { label: "Programs", href: "/programs", hasDropdown: true,
@@ -25,11 +26,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [nextBatch, setNextBatch] = useState<{ long: string; short: string } | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setNextBatch(getComingMonday());
   }, []);
 
   return (
@@ -42,8 +48,12 @@ export default function Navbar() {
     >
       {/* Announcement Bar */}
       <div className="bg-amber-brand text-midnight py-2 text-center text-sm font-semibold font-heading">
-        <span className="hidden sm:inline">🎓 Next Batch: May 5, 2026 — Only 4 Seats Left!</span>
-        <span className="sm:hidden">Next Batch: May 5 — 4 Seats Left!</span>
+        <span className="hidden sm:inline">
+          🎓 Next Batch Starting {nextBatch ? nextBatch.long : "Coming Monday"} — Only 4 Seats Left!
+        </span>
+        <span className="sm:hidden">
+          Next Batch: {nextBatch ? nextBatch.short : "Mon"} — 4 Seats Left!
+        </span>
         <Link href="/scholarship-test" className="ml-3 underline underline-offset-2 hover:opacity-80">
           Get 50% Off →
         </Link>

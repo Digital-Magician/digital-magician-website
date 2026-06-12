@@ -8,6 +8,7 @@ import {
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
 import Marquee from "@/components/shared/Marquee";
+import NextBatchDate from "@/components/shared/NextBatchDate";
 import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 
@@ -159,7 +160,7 @@ export default function HomePage() {
               </div>
               <div className="float glass rounded-2xl px-5 py-3 text-left">
                 <div className="text-xs text-white/50 font-body mb-1">Next batch</div>
-                <div className="font-heading font-bold text-white text-sm">May 5, 2026</div>
+                <div className="font-heading font-bold text-white text-sm"><NextBatchDate /></div>
                 <div className="text-xs text-red-400 font-body">Only 4 seats remaining</div>
               </div>
             </div>
@@ -875,7 +876,7 @@ export default function HomePage() {
               Could Change Everything.
             </h2>
             <p className="text-white/70 text-lg font-body mb-4 max-w-2xl mx-auto leading-relaxed">
-              500+ people have already made this decision. They now run ad budgets, manage campaigns, and earn salaries they did not think were possible a year ago. The May 5 batch has{" "}
+              500+ people have already made this decision. They now run ad budgets, manage campaigns, and earn salaries they did not think were possible a year ago. The upcoming batch has{" "}
               <strong className="text-white">4 seats left.</strong>
             </p>
             <p className="text-amber-brand font-heading font-bold mb-10">
