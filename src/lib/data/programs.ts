@@ -8,6 +8,7 @@ export const programs: Program[] = [
     duration: "4 Months",
     level: "All Levels",
     fee: 45000,
+    originalFee: 60000,
     certifications: 2,
     description:
       "India's only 4-month program that combines advanced digital marketing with AI-powered automation. You will build systems that run campaigns on their own, graduate with a Dual Certification, and be ready for roles paying Rs 8 to 25 LPA.",

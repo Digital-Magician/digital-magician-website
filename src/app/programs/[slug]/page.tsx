@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { programs, getProgramBySlug } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
+import FeeTag from "@/components/shared/FeeTag";
 
 // ── Static params ──────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -71,6 +72,23 @@ export default async function ProgramPage({
     courseMode: "Blended",
     timeRequired: program.duration,
     educationalLevel: program.level,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "115",
+      bestRating: "5",
+    },
+  };
+
+  // FAQPage schema — enables FAQ rich results for each program
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: program.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
   };
 
   return (
@@ -78,6 +96,10 @@ export default async function ProgramPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <main className="min-h-screen pt-24 pb-20">
@@ -154,9 +176,11 @@ export default async function ProgramPage({
                 <div className="bento p-6 lg:sticky lg:top-28">
                   {/* Price */}
                   <div className="text-center mb-5 pb-5 border-b border-white/10">
-                    <div className="font-black text-5xl text-amber-400 mb-1">
-                      ₹{program.fee.toLocaleString("en-IN")}
-                    </div>
+                    <FeeTag
+                      fee={program.fee}
+                      originalFee={program.originalFee}
+                      className="block font-black text-5xl text-amber-400 mb-1"
+                    />
                     <div className="text-slate-500 text-sm">or ₹{emiAmount} × 3 easy EMIs</div>
                   </div>
 
@@ -396,9 +420,11 @@ export default async function ProgramPage({
                       <span>{p.certifications} certs</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-amber-400">
-                        ₹{p.fee.toLocaleString("en-IN")}
-                      </span>
+                      <FeeTag
+                        fee={p.fee}
+                        originalFee={p.originalFee}
+                        className="font-bold text-amber-400"
+                      />
                       <ArrowRight className="w-4 h-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </Link>

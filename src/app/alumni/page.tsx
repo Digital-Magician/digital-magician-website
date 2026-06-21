@@ -5,7 +5,7 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import Marquee from "@/components/shared/Marquee";
 
 export const metadata: Metadata = {
-  title: "Alumni Stories | Digital Magician — 127 Students. Real Salaries. Real Results.",
+  title: "Alumni Stories | Digital Magician — 500+ Students. Real Salaries. Real Results.",
   description:
     "Meet Digital Magician alumni — working marketers earning ₹22,000 to ₹1,50,000 per month. Read their stories, learn from their journeys, and see where a real digital marketing education takes you.",
 };
@@ -102,7 +102,7 @@ const alumni = [
 ];
 
 const quickStats = [
-  { value: "127+", label: "Total alumni" },
+  { value: "500+", label: "Total alumni" },
   { value: "₹28K", label: "Average starting salary" },
   { value: "80%", label: "Placed within 30 days" },
   { value: "4.9★", label: "Average rating by alumni" },
@@ -122,7 +122,7 @@ export default function AlumniPage() {
         <div className="relative z-[10] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="hero-item hero-item-1 inline-flex items-center gap-2 glass-amber rounded-full px-5 py-2 mb-6">
             <TrendingUp className="w-3.5 h-3.5 text-amber-brand" />
-            <span className="text-amber-brand text-sm font-heading font-bold tracking-wide">127 Working Marketers</span>
+            <span className="text-amber-brand text-sm font-heading font-bold tracking-wide">500+ Working Marketers</span>
           </div>
           <h1 className="hero-item hero-item-2 heading-xl text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
             These Are Not<br />

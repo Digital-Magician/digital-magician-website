@@ -263,7 +263,7 @@ export default async function BlogPostPage({
               <p className="text-amber-400 text-sm mb-3">{post.authorRole}</p>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Gaurav has 7+ years in digital marketing, manages ₹1 Crore+ in annual
-                ad spend across Google, Meta, and YouTube, and has placed 127+ students
+                ad spend across Google, Meta, and YouTube, and has placed 500+ students
                 in digital marketing roles across Haryana and Delhi NCR.
               </p>
             </div>

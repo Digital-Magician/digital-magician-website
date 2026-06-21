@@ -18,7 +18,8 @@ const batches = [
     timing: "Mon / Wed / Fri — 7:00 PM to 9:00 PM",
     seats: 4,
     totalSeats: 20,
-    fee: "₹35,000",
+    fee: "₹45,000",
+    originalFee: "₹60,000",
     status: "filling-fast",
     highlights: [
       "Google Ads + Meta Ads + SEO + Content",
@@ -174,7 +175,14 @@ export default function BatchSchedulePage() {
                     </div>
                   </div>
                   <div className="text-right flex-shrink-0">
-                    <div className="stat-number text-3xl">{batch.fee}</div>
+                    <div className="stat-number text-3xl">
+                      {"originalFee" in batch && batch.originalFee ? (
+                        <span className="line-through text-white/30 font-normal mr-2 text-[0.6em] align-middle">
+                          {batch.originalFee}
+                        </span>
+                      ) : null}
+                      {batch.fee}
+                    </div>
                     <div className="text-white/35 text-xs font-body">one-time fee</div>
                   </div>
                 </div>

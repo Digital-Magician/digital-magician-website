@@ -67,7 +67,7 @@ export const locations: LocationData[] = [
     travelTime: "You're already here",
     mode: "home",
     metaTitle: "Best Digital Marketing Course in Sonipat | Digital Magician — 100% Placement",
-    metaDesc: "Top digital marketing institute in Sonipat with 100% placement guarantee. Learn Google Ads, SEO, Meta Ads from live agency campaigns. 127+ students placed. Batches starting May 2026.",
+    metaDesc: "Top digital marketing institute in Sonipat with 100% placement guarantee. Learn Google Ads, SEO, Meta Ads from live agency campaigns. 500+ students placed. Batches starting May 2026.",
     heroHeadline: "Sonipat's Only Digital Marketing Institute With a Placement Guarantee",
     heroSubheadline: "You don't need to travel to Delhi to get Delhi-level digital marketing training. It's right here — with real campaigns, real results, and a 100% placement guarantee.",
     eyebrowText: "Located in Sonipat, Haryana",
@@ -85,7 +85,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "Is Digital Magician the only digital marketing institute in Sonipat?", a: "There are a few institutes in Sonipat, but Digital Magician is the only one that gives you access to live client campaign management through our eSahayak agency. You're not learning on dummy accounts — you're working on real budgets from Week 1." },
       { q: "Can I get a job in Delhi NCR after this course?", a: "Yes — the majority of our placements are in Delhi, Gurgaon, Noida, and Faridabad. The skills are identical regardless of location. Several of our alumni also work remotely for Delhi-based agencies from Sonipat itself." },
-      { q: "What is the fee for the course?", a: "The Full Stack Digital Marketing program is ₹35,000 for both online and offline modes. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
+      { q: "What is the fee for the course?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000) for both online and offline modes. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
     ],
     studentStory: {
       name: "Rahul K.",
@@ -422,7 +422,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "Can I really learn digital marketing from Bhiwani without moving?", a: "100% yes. Our live online batch is the same class our Sonipat students attend — broadcast live. You get the same curriculum, the same real campaign access, and the same placement support." },
       { q: "What are the job opportunities like from Bhiwani?", a: "Most Bhiwani graduates target remote positions — which are abundant in digital marketing. Working remotely for a Delhi or Noida agency while living in Bhiwani is a genuine, common outcome." },
-      { q: "What's the fee and can I pay in instalments?", a: "The Full Stack program is ₹35,000. We offer 2 and 3-month EMI plans with no interest. Contact us on WhatsApp to discuss your preferred plan." },
+      { q: "What's the fee and can I pay in instalments?", a: "The Full Stack program is ₹45,000 (a limited-time offer, reduced from ₹60,000). We offer 2 and 3-month EMI plans with no interest. Contact us on WhatsApp to discuss your preferred plan." },
     ],
   },
 
@@ -505,7 +505,7 @@ export const locations: LocationData[] = [
       body: "Kaithal's agricultural roots remain strong, but its young population is increasingly drawn toward digital and service-sector careers. The city's proximity to Kurukshetra and Karnal creates a triangle of aspirational youth who want careers in digital marketing but have no local infrastructure to train properly. Digital Magician's live online batch serves this exact demographic.",
     },
     problemStatement: "Kaithal students face limited quality training options locally, and the cost of attending Delhi-based institutes is prohibitive for most families.",
-    opportunity: "The live online batch brings premium training to Kaithal at ₹35,000 total — a fraction of what Delhi institutes charge, with better real-world outcomes.",
+    opportunity: "The live online batch brings premium training to Kaithal at ₹45,000 total (reduced from ₹60,000) — a fraction of what Delhi institutes charge, with better real-world outcomes.",
     travelInfo: "Kaithal to Sonipat is 120 km — about 1.5–2 hours. Our live online batch is recommended for Kaithal students.",
     pgNote: "Kaithal students who want offline attendance can arrange PG in Sonipat at ₹5,000–8,000/month. We connect you with trusted options.",
     jobMarket: {
@@ -514,7 +514,7 @@ export const locations: LocationData[] = [
     },
     faqs: [
       { q: "Is this course appropriate for Kaithal students from non-marketing backgrounds?", a: "Absolutely. 60% of our students have no prior marketing experience. We start from scratch — explaining what digital marketing is, why it works, and then building skills step by step on real campaigns." },
-      { q: "What is the fee structure?", a: "The Full Stack program is ₹35,000. EMI plans (2–3 months) are available. The fee is identical for online and offline." },
+      { q: "What is the fee structure?", a: "The Full Stack program is ₹45,000 (a limited-time offer, reduced from ₹60,000). EMI plans (2–3 months) are available. The fee is identical for online and offline." },
       { q: "Can I pay through instalments?", a: "Yes — we offer flexible EMI. Contact us on WhatsApp to discuss your preferred plan before the next batch starts on May 5, 2026." },
     ],
   },
@@ -529,7 +529,7 @@ export const locations: LocationData[] = [
     metaTitle: "Digital Marketing Course in Fatehabad | Digital Magician — Live Online Classes",
     metaDesc: "Fatehabad students: learn digital marketing live from North India's best agency-backed institute. 100% placement guarantee. Online batch. Google Ads, SEO, Meta Ads, AI tools.",
     heroHeadline: "Fatehabad Students: Your Digital Career Doesn't Require Moving to Delhi",
-    heroSubheadline: "Live online training from an institute that has placed 127+ students. Same curriculum, same placement guarantee, same Gaurav — from your home in Fatehabad.",
+    heroSubheadline: "Live online training from an institute that has placed 500+ students. Same curriculum, same placement guarantee, same Gaurav — from your home in Fatehabad.",
     eyebrowText: "Serving students from Fatehabad",
     localContext: {
       heading: "Fatehabad's Agricultural Economy Needs Digital Entrepreneurs",
@@ -724,7 +724,7 @@ export const locations: LocationData[] = [
       insight: "Nuh graduates entering digital marketing can target both local Gurugram/Faridabad roles (Gurugram is 35 km from Nuh) and remote opportunities. The proximity to Gurugram's MNC sector is a significant geographic advantage that trained graduates can leverage.",
     },
     faqs: [
-      { q: "Is this course accessible for students from Nuh with limited resources?", a: "Yes. We offer EMI plans that make the ₹35,000 course fee manageable over 2–3 months. The only equipment you need is a laptop and internet connection for the online batch." },
+      { q: "Is this course accessible for students from Nuh with limited resources?", a: "Yes. We offer EMI plans that make the ₹45,000 course fee (reduced from ₹60,000) manageable over 2–3 months. The only equipment you need is a laptop and internet connection for the online batch." },
       { q: "Will I be able to compete with Delhi students in interviews?", a: "Yes — and here's why: digital marketing is purely results-based. What employers care about is your campaign portfolio — real numbers from real accounts. We build that portfolio from Day 1. Your city of origin doesn't appear in a Google Ads report." },
     ],
   },
@@ -771,7 +771,7 @@ export const locations: LocationData[] = [
     travelTime: "50–70 minutes via NH44",
     mode: "medium",
     metaTitle: "Digital Marketing Course in Delhi | Digital Magician Sonipat — Real Campaigns, Real Jobs",
-    metaDesc: "Delhi students looking for genuine digital marketing training: Digital Magician is 55 km away in Sonipat — with live agency campaigns, 127+ placements, and a 100% refund guarantee. Online batch also available.",
+    metaDesc: "Delhi students looking for genuine digital marketing training: Digital Magician is 55 km away in Sonipat — with live agency campaigns, 500+ placements, and a 100% refund guarantee. Online batch also available.",
     heroHeadline: "Delhi Has Hundreds of Digital Marketing Institutes. Only One Has a Placement Guarantee.",
     heroSubheadline: "Just 55 km from Delhi, Digital Magician offers something most Delhi institutes won't: live client campaign access from Day 1, and a legally backed 100% placement guarantee.",
     eyebrowText: "55 km from Delhi • Online & Offline",
@@ -886,7 +886,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "How is Digital Magician different from the many institutes in Laxmi Nagar?", a: "One key difference: we put you inside real eSahayak client accounts from Week 1. Every institute in Laxmi Nagar uses demo accounts. Your Digital Magician portfolio has real ROAS numbers, real CTR data, and real conversion results. That's the difference in interviews." },
       { q: "Should I attend online or offline?", a: "For East Delhi students, the online batch is the most practical choice. The commute to Sonipat is 65–85 minutes each way — manageable but significant. The online experience is equally effective." },
-      { q: "What placement support do I get?", a: "Access to our placement portal, dedicated job application support, mock interview preparation, and our alumni network across 127+ working marketers. We don't just introduce you to a WhatsApp group." },
+      { q: "What placement support do I get?", a: "Access to our placement portal, dedicated job application support, mock interview preparation, and our alumni network across 500+ working marketers. We don't just introduce you to a WhatsApp group." },
     ],
   },
 

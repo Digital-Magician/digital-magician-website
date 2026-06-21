@@ -55,6 +55,13 @@ export default async function LocationPage({
 
   const featuredPrograms = programs.slice(0, 3);
 
+  // FAQs shared across every city page (rendered + used for FAQPage schema)
+  const sharedFaqs = [
+    { q: "What is the fee for the Full Stack Digital Marketing course?", a: "₹45,000 for the 4-month Full Stack program — a limited-time offer reduced from ₹60,000. Specialisation courses start from ₹10,000. The fee is identical for online and offline modes. EMI options (2–3 months) are available — ask on WhatsApp." },
+    { q: "What certifications will I earn?", a: "10+ industry certifications including Google Ads Search, Google Analytics 4, Meta Blueprint, and more — all issued by Google and Meta directly. Plus your Digital Magician completion certificate." },
+    { q: "Is there really a 100% placement guarantee?", a: "Yes — it's a written commitment with a legal refund policy. Complete all modules, submit assignments, build your portfolio, and apply to 30+ jobs within 4 months. If you're still not placed, you get a full refund. We've processed only 2 refunds in 5 years." },
+  ];
+
   // JSON-LD schema
   const schema = {
     "@context": "https://schema.org",
@@ -72,9 +79,26 @@ export default async function LocationPage({
     offers: {
       "@type": "Offer",
       name: "Full Stack Digital Marketing Program",
-      price: "35000",
+      price: "45000",
       priceCurrency: "INR",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "115",
+      bestRating: "5",
+    },
+  };
+
+  // FAQPage schema — city-specific + shared FAQs (enables FAQ rich results)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [...location.faqs, ...sharedFaqs].map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
   };
 
   return (
@@ -82,6 +106,10 @@ export default async function LocationPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
@@ -159,7 +187,7 @@ export default async function LocationPage({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
-              { end: 127, suffix: "+", label: "Students Placed" },
+              { end: 500, suffix: "+", label: "Students Placed" },
               { end: 80, suffix: "%", label: "Placed in 30 Days" },
               { end: 10, suffix: "+", label: "Certifications Earned" },
               { end: 4.9, suffix: "★", label: "Average Rating", decimals: 1 },
@@ -435,11 +463,7 @@ export default async function LocationPage({
               </AnimateOnScroll>
             ))}
             {/* Shared FAQs */}
-            {[
-              { q: "What is the fee for the Full Stack Digital Marketing course?", a: "₹35,000 for the 4-month Full Stack program. Specialisation courses start from ₹10,000. The fee is identical for online and offline modes. EMI options (2–3 months) are available — ask on WhatsApp." },
-              { q: "What certifications will I earn?", a: "10+ industry certifications including Google Ads Search, Google Analytics 4, Meta Blueprint, and more — all issued by Google and Meta directly. Plus your Digital Magician completion certificate." },
-              { q: "Is there really a 100% placement guarantee?", a: "Yes — it's a written commitment with a legal refund policy. Complete all modules, submit assignments, build your portfolio, and apply to 30+ jobs within 4 months. If you're still not placed, you get a full refund. We've processed only 2 refunds in 5 years." },
-            ].map((faq, i) => (
+            {sharedFaqs.map((faq, i) => (
               <AnimateOnScroll key={`shared-${i}`} delay={(location.faqs.length + i) * 60}>
                 <details className="group bento p-0 overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">

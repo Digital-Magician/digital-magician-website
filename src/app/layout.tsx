@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Digital Magician",
   },
   description:
-    "North India's most results-driven digital marketing institute. 127 students placed. 100% placement guarantee. Master Google Ads, SEO, Meta Ads & AI Tools. Online & offline — Sonipat campus serving Haryana & Delhi NCR.",
+    "North India's most results-driven digital marketing institute. 500+ students placed. 100% placement guarantee. Master Google Ads, SEO, Meta Ads & AI Tools. Online & offline — Sonipat campus serving Haryana & Delhi NCR.",
   keywords: [
     "digital marketing course Sonipat",
     "digital marketing institute Haryana",
@@ -76,7 +76,7 @@ const structuredData = {
   name: "Digital Magician",
   url: "https://digitalmagician.in",
   logo: "https://digitalmagician.in/logo.png",
-  description: "North India's most results-driven digital marketing institute. 127+ students placed. 100% placement guarantee. Haryana & Delhi NCR.",
+  description: "North India's most results-driven digital marketing institute. 500+ students placed. 100% placement guarantee. Haryana & Delhi NCR.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Above Dr. Batra's Clinic, Near Mittal Nursing Home, 8 Marla, Model Town",
@@ -94,7 +94,7 @@ const structuredData = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "105",
+    reviewCount: "115",
     bestRating: "5",
   },
 };

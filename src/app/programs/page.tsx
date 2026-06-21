@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Clock, Award, Zap, CheckCircle, Shield, Users } from "lucide-react";
 import { programs } from "@/lib/data/programs";
+import FeeTag from "@/components/shared/FeeTag";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Programs in Sonipat | Digital Magician",
@@ -84,9 +85,11 @@ export default function ProgramsPage() {
               {/* Price + CTA */}
               <div className="flex flex-col items-start lg:items-end gap-3 shrink-0">
                 <div className="text-right">
-                  <div className="font-black text-3xl text-amber-400">
-                    ₹{program.fee.toLocaleString("en-IN")}
-                  </div>
+                  <FeeTag
+                    fee={program.fee}
+                    originalFee={program.originalFee}
+                    className="font-black text-3xl text-amber-400"
+                  />
                   <div className="text-slate-500 text-xs">+ Placement Support</div>
                 </div>
                 <span className="inline-flex items-center gap-2 bg-amber-500 group-hover:bg-amber-400 text-slate-900 font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">

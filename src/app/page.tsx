@@ -9,6 +9,7 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
 import Marquee from "@/components/shared/Marquee";
 import NextBatchDate from "@/components/shared/NextBatchDate";
+import FeeTag from "@/components/shared/FeeTag";
 import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 
@@ -380,7 +381,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="text-left lg:text-right">
-                  <div className="stat-number text-5xl mb-1">₹45,000</div>
+                  <FeeTag fee={45000} originalFee={60000} className="stat-number text-5xl mb-1 block" />
                   <div className="text-white/40 text-sm font-body mb-5">or ₹15,000 × 3 EMIs</div>
                   <div className="inline-flex items-center gap-2 text-amber-brand font-heading font-bold group-hover:gap-3 transition-all">
                     See Full Program Details <ArrowRight className="w-4 h-4" />

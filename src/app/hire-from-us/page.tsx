@@ -101,7 +101,7 @@ export default function HireFromUsPage() {
         {/* ── Stats ─────────────────────────────────────────────────────── */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {[
-            { value: "127+", label: "Trained Graduates", icon: "👨‍🎓" },
+            { value: "500+", label: "Trained Graduates", icon: "👨‍🎓" },
             { value: "80%", label: "Placed Within 30 Days", icon: "⚡" },
             { value: "10+", label: "Active Hiring Partners", icon: "🤝" },
             { value: "4.9★", label: "Employer Satisfaction", icon: "⭐" },

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { value: 80, suffix: "%", label: "Placed within 30 days", icon: <Clock className="w-5 h-5" /> },
-  { value: 127, suffix: "+", label: "Total students placed", icon: <Users className="w-5 h-5" /> },
+  { value: 500, suffix: "+", label: "Total students placed", icon: <Users className="w-5 h-5" /> },
   { value: 10, suffix: "+", label: "Active hiring partners", icon: <Award className="w-5 h-5" /> },
   { value: 30, suffix: "k+", label: "Avg. first salary (₹)", icon: <TrendingUp className="w-5 h-5" /> },
 ];
@@ -293,7 +293,7 @@ export default function PlacementPage() {
               </h2>
               <p className="text-white/60 font-body mb-8 max-w-xl mx-auto">
                 If you put in the work and still don&apos;t get placed, we refund every rupee.
-                We&apos;ve had 127 students trust us with that risk. Start your journey today.
+                We&apos;ve had 500+ students trust us with that risk. Start your journey today.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link

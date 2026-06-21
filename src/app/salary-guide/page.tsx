@@ -5,10 +5,10 @@ import { ArrowRight, TrendingUp, MapPin, Briefcase } from "lucide-react";
 export const metadata: Metadata = {
   title: "Digital Marketing Salary Guide 2026 — Haryana & Delhi NCR | Digital Magician",
   description:
-    "Real salary data for digital marketing roles in Haryana and Delhi NCR. Entry-level to senior, by specialisation and city. Based on 127+ student placement records.",
+    "Real salary data for digital marketing roles in Haryana and Delhi NCR. Entry-level to senior, by specialisation and city. Based on 500+ student placement records.",
   openGraph: {
     title: "Digital Marketing Salary Guide 2026 | Digital Magician",
-    description: "What can you actually earn in digital marketing in North India? Real data from 127+ placement records.",
+    description: "What can you actually earn in digital marketing in North India? Real data from 500+ placement records.",
     url: "https://digitalmagician.in/salary-guide",
   },
 };
@@ -125,7 +125,7 @@ export default function SalaryGuidePage() {
       <section className="px-4 pb-16 text-center">
         <div className="max-w-3xl mx-auto">
           <span className="hero-item hero-item-1 inline-block text-xs font-bold tracking-widest text-amber-400 uppercase mb-4">
-            Based on 127+ Placement Records
+            Based on 500+ Placement Records
           </span>
           <h1 className="hero-item hero-item-2 font-bold text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight">
             What Digital Marketers

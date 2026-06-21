@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Real results from real students. See how Digital Magician graduates from Haryana and Delhi NCR went from freshers to ₹60,000/month careers in digital marketing.",
   openGraph: {
     title: "Student Success Stories | Digital Magician",
-    description: "127+ students placed. ₹1.2 Crore+ in salaries generated. Read their stories.",
+    description: "500+ students placed. ₹1.2 Crore+ in salaries generated. Read their stories.",
     url: "https://digitalmagician.in/success-stories",
   },
 };
@@ -103,7 +103,7 @@ const stories = [
 ];
 
 const aggregateStats = [
-  { value: "127+", label: "Students Placed", icon: "👨‍🎓" },
+  { value: "500+", label: "Students Placed", icon: "👨‍🎓" },
   { value: "₹1.2Cr+", label: "Combined Annual Salaries", icon: "💰" },
   { value: "30 days", label: "Median Time to First Job", icon: "⚡" },
   { value: "4.9★", label: "Average Program Rating", icon: "⭐" },
@@ -119,7 +119,7 @@ export default function SuccessStoriesPage() {
             Real Students. Real Results.
           </span>
           <h1 className="hero-item hero-item-2 font-bold text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight">
-            127 Students
+            500+ Students
             <span className="block text-amber-400">Who Changed Their Lives</span>
           </h1>
           <p className="hero-item hero-item-3 text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
