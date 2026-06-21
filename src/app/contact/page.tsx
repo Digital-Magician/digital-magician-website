@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock, ArrowRight, MessageCircle } from "lucide-re
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Digital Magician — Sonipat",
+  title: "Contact Us — Sonipat",
   description:
     "Reach Digital Magician in Sonipat. Call, WhatsApp, or visit us. We respond to every inquiry within 2 hours — no bots, no call centres.",
 };

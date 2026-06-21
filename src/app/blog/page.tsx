@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import BlogClient from "./BlogClient";
 
 export const metadata: Metadata = {
-  title: "Blog — Digital Marketing Guides | Digital Magician",
+  title: "Blog — Digital Marketing Guides",
   description:
     "Practitioner-written guides on Google Ads, SEO, Meta Ads, AI tools, and digital marketing careers — from the agency managing ₹1 Crore+ in annual ad spend.",
   openGraph: {

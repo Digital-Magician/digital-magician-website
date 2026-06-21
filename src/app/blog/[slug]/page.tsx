@@ -25,7 +25,7 @@ export async function generateMetadata(
   if (!post) return {};
 
   return {
-    title: `${post.title} | Digital Magician Blog`,
+    title: `${post.title} | Blog`,
     description: post.description,
     authors: [{ name: post.author }],
     openGraph: {

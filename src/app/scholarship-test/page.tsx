@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Clock, Award, Zap, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Scholarship Test — 50% Fee Waiver | Digital Magician",
+  title: "Scholarship Test — 50% Fee Waiver",
   description:
     "Attempt Digital Magician's free scholarship test and win up to 50% fee waiver on any digital marketing program. 30 questions · 30 minutes · Results instant.",
   openGraph: {

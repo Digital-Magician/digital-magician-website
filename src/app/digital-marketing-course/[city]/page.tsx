@@ -10,6 +10,7 @@ import CountUp from "@/components/shared/CountUp";
 import NextBatchDate from "@/components/shared/NextBatchDate";
 import { getLocationBySlug, getAllLocationSlugs, locations } from "@/lib/data/locations";
 import { programs } from "@/lib/data/programs";
+import { serviceCourses, SERVICE_CITY_SLUGS } from "@/lib/data/services";
 
 // ── Static params ────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -55,6 +56,7 @@ export default async function LocationPage({
   const isDelhiNCR = location.region === "Delhi NCR";
 
   const featuredPrograms = programs.slice(0, 3);
+  const hasServicePages = SERVICE_CITY_SLUGS.includes(location.slug);
 
   // FAQs shared across every city page (rendered + used for FAQPage schema)
   const sharedFaqs = [
@@ -400,6 +402,45 @@ export default async function LocationPage({
           </AnimateOnScroll>
         </div>
       </section>
+
+      {/* ── Specialisation courses (service landing pages) ────────── */}
+      {hasServicePages && (
+        <section className="py-20 bg-midnight border-y border-white/[0.06]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimateOnScroll className="text-center mb-12">
+              <span className="tag mb-4">Specialisation Courses in {location.name}</span>
+              <h2 className="heading-lg text-3xl sm:text-4xl text-white mt-4">
+                Prefer to Master One Skill First?
+              </h2>
+              <p className="text-white/50 font-body mt-4 max-w-xl mx-auto">
+                Go deep on a single specialisation with a dedicated course in {location.name} — or get everything in the Full Stack program.
+              </p>
+            </AnimateOnScroll>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {serviceCourses.map((s, i) => (
+                <AnimateOnScroll key={s.key} delay={i * 60}>
+                  <Link
+                    href={`/${s.slug}/${location.slug}`}
+                    className="bento p-6 group hover:border-amber-brand/30 transition-colors h-full flex flex-col"
+                  >
+                    <span className="text-3xl mb-3">{s.icon}</span>
+                    <h3 className="font-heading font-bold text-white group-hover:text-amber-brand transition-colors">
+                      {s.name} in {location.name}
+                    </h3>
+                    <p className="text-white/50 text-xs font-body mt-2 mb-4 leading-relaxed flex-1">{s.tagline}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-amber-brand font-heading font-bold text-sm">₹{s.fee.toLocaleString("en-IN")}</span>
+                      <span className="text-amber-brand text-xs font-heading font-bold inline-flex items-center gap-1">
+                        Explore <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Alumni story ──────────────────────────────────────────── */}
       {location.studentStory && (

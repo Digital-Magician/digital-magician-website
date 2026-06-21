@@ -212,12 +212,6 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-export const batchDates = [
-  { program: "AI and Digital Marketing Dual Certification Program", startDate: "May 5, 2026", timing: "Mon / Wed / Fri, 7:00 to 9:00 PM", seatsLeft: 4, mode: "Hybrid (Online + Offline)" },
-  { program: "Performance Marketing Mastery", startDate: "May 12, 2026", timing: "Tue / Thu / Sat, 7:00 to 9:00 PM", seatsLeft: 6, mode: "Hybrid (Online + Offline)" },
-  { program: "Google Ads Mastery", startDate: "May 5, 2026", timing: "Mon / Wed / Fri, 9:00 to 11:00 AM", seatsLeft: 5, mode: "Hybrid (Online + Offline)" },
-];
-
 export const stats = [
   { value: 500, suffix: "+", label: "Students Trained", icon: "👨‍🎓" },
   { value: 4.9, suffix: "★", label: "Average Rating", icon: "⭐" },

@@ -5,7 +5,7 @@ import { programs } from "@/lib/data/programs";
 import FeeTag from "@/components/shared/FeeTag";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Programs in Sonipat | Digital Magician",
+  title: "Digital Marketing Programs in Sonipat",
   description:
     "6 specialised digital marketing programs — Full Stack, Google Ads, Meta Ads, SEO, Performance Marketing & Web Development. Live mentorship, real campaigns, placement support.",
   openGraph: {

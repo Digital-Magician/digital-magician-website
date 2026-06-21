@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllSlugs as getBlogSlugs } from "@/lib/blog";
 import { programs } from "@/lib/data/programs";
 import { getAllLocationSlugs } from "@/lib/data/locations";
+import { serviceCourses, SERVICE_CITY_SLUGS } from "@/lib/data/services";
 
 const BASE_URL = "https://digitalmagician.in";
 
@@ -48,6 +49,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // ── Service-course landing pages (/{service}/{city}) ──────────────────────
+  const serviceCoursePages: MetadataRoute.Sitemap = serviceCourses.flatMap((s) =>
+    SERVICE_CITY_SLUGS.map((city) => ({
+      url: `${BASE_URL}/${s.slug}/${city}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }))
+  );
+
   // ── Blog posts ────────────────────────────────────────────────────────────
   const blogSlugs = getBlogSlugs();
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
@@ -57,5 +68,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticPages, ...programPages, ...locationPages, ...blogPages];
+  return [...staticPages, ...programPages, ...serviceCoursePages, ...locationPages, ...blogPages];
 }

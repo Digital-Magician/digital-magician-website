@@ -5,7 +5,7 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import Marquee from "@/components/shared/Marquee";
 
 export const metadata: Metadata = {
-  title: "Alumni Stories | Digital Magician — 500+ Students. Real Salaries. Real Results.",
+  title: "Alumni Stories — 500+ Students. Real Salaries. Real Results.",
   description:
     "Meet Digital Magician alumni — working marketers earning ₹22,000 to ₹1,50,000 per month. Read their stories, learn from their journeys, and see where a real digital marketing education takes you.",
 };

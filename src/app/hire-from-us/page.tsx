@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Users, Zap, Shield, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hire Digital Marketing Talent | Digital Magician",
+  title: "Hire Digital Marketing Talent",
   description:
     "Hire pre-trained, job-ready digital marketing professionals from Digital Magician. Our graduates come with live campaign experience, industry certifications, and proven results.",
   openGraph: {

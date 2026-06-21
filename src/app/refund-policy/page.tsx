@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | Digital Magician — Placement Guarantee Explained",
+  title: "Refund Policy — Placement Guarantee Explained",
   description:
     "Digital Magician's refund policy for course fees. Full refund if placement conditions are met but placement not achieved. Clear, no-trap policy.",
 };

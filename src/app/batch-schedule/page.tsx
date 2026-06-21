@@ -2,17 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, Users, MapPin, Wifi, AlertCircle } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
+import { getUpcomingBatchDates } from "@/lib/date";
 
-export const metadata: Metadata = {
-  title: "Batch Schedule & Upcoming Classes | Digital Magician — Sonipat",
-  description:
-    "View upcoming Digital Magician batch dates. Next batch starts May 5, 2026 — only 4 seats left. Online and offline modes available. Book your seat on WhatsApp.",
-};
+// Regenerate daily so the rolling batch dates never go stale (always future).
+export const revalidate = 86400;
+
+export function generateMetadata(): Metadata {
+  const [nextDate] = getUpcomingBatchDates(1);
+  return {
+    title: "Batch Schedule & Upcoming Classes — Sonipat",
+    description: `View upcoming Digital Magician batch dates. Next batch starts ${nextDate} — only 4 seats left. Online and offline modes available. Book your seat on WhatsApp.`,
+  };
+}
 
 const batches = [
   {
     name: "Full Stack Digital Marketing",
-    startDate: "May 5, 2026",
     duration: "4 Months",
     mode: ["Offline", "Online"],
     timing: "Mon / Wed / Fri — 7:00 PM to 9:00 PM",
@@ -31,7 +36,6 @@ const batches = [
   },
   {
     name: "Performance Marketing",
-    startDate: "May 19, 2026",
     duration: "2 Months",
     mode: ["Offline", "Online"],
     timing: "Tue / Thu / Sat — 7:00 PM to 9:00 PM",
@@ -49,7 +53,6 @@ const batches = [
   },
   {
     name: "SEO Mastery",
-    startDate: "June 2, 2026",
     duration: "6 Weeks",
     mode: ["Online"],
     timing: "Mon / Wed / Fri — 8:00 PM to 9:30 PM",
@@ -67,7 +70,6 @@ const batches = [
   },
   {
     name: "Google Ads Mastery",
-    startDate: "June 16, 2026",
     duration: "6 Weeks",
     mode: ["Online"],
     timing: "Tue / Thu — 7:30 PM to 9:00 PM",
@@ -122,6 +124,14 @@ function StatusBadge({ status }: { status: string }) {
 }
 
 export default function BatchSchedulePage() {
+  // Rolling future start dates, spaced ~2 weeks apart, recomputed on each
+  // (re)generation so visitors never see a past date.
+  const startDates = getUpcomingBatchDates(batches.length);
+  const datedBatches = batches.map((batch, i) => ({
+    ...batch,
+    startDate: startDates[i],
+  }));
+
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────── */}
@@ -134,7 +144,7 @@ export default function BatchSchedulePage() {
         <div className="relative z-[10] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="hero-item hero-item-1 inline-flex items-center gap-2 glass-amber rounded-full px-5 py-2 mb-6">
             <Calendar className="w-3.5 h-3.5 text-amber-brand" />
-            <span className="text-amber-brand text-sm font-heading font-bold tracking-wide">Next Batch: May 5, 2026</span>
+            <span className="text-amber-brand text-sm font-heading font-bold tracking-wide">Next Batch: {startDates[0]}</span>
           </div>
           <h1 className="hero-item hero-item-2 heading-xl text-5xl sm:text-6xl text-white mb-5">
             Find Your Batch.<br />
@@ -150,7 +160,7 @@ export default function BatchSchedulePage() {
       {/* ── Batch Cards ───────────────────────────────────────────── */}
       <section className="py-20 bg-midnight">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          {batches.map((batch, i) => (
+          {datedBatches.map((batch, i) => (
             <AnimateOnScroll key={batch.name} delay={i * 80}>
               <div className={`bento p-7 sm:p-8 ${batch.status === "filling-fast" ? "border-amber-brand/30" : ""}`}>
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-5 mb-6">

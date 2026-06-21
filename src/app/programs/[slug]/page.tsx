@@ -23,7 +23,7 @@ export async function generateMetadata(
   if (!program) return {};
 
   return {
-    title: `${program.name} in Sonipat | Digital Magician`,
+    title: `${program.name} in Sonipat`,
     description: `${program.description} Duration: ${program.duration}. Fee: ₹${program.fee.toLocaleString("en-IN")}. Earn ${program.certifications} certifications.`,
     openGraph: {
       title: `${program.name} | Digital Magician`,
