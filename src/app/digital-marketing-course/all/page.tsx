@@ -5,9 +5,9 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import { getHaryanaLocations, getDelhiLocations } from "@/lib/data/locations";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Course Near You | Digital Magician — All Locations in Haryana & Delhi NCR",
+  title: "Digital Marketing Institute in Haryana & Delhi NCR — All Locations",
   description:
-    "Digital Magician serves students across all 22 Haryana districts and Delhi NCR. Online live batch available from anywhere. Offline classes at Sonipat campus. 100% placement guarantee.",
+    "Digital Magician is the digital marketing institute serving all 22 Haryana districts and Delhi NCR — live Google Ads, SEO & Meta Ads training with a 100% placement guarantee. Online live batch from anywhere, offline classes at the Sonipat campus.",
 };
 
 export default function AllLocationsPage() {
@@ -27,7 +27,7 @@ export default function AllLocationsPage() {
             <span className="text-amber-brand text-sm font-heading font-bold tracking-wide">Haryana & Delhi NCR</span>
           </div>
           <h1 className="hero-item hero-item-2 heading-xl text-4xl sm:text-5xl lg:text-6xl text-white mb-5">
-            Digital Marketing Training<br />
+            Digital Marketing Institute in Haryana<br />
             <em className="not-italic text-gradient-amber">Wherever You Are in North India</em>
           </h1>
           <p className="hero-item hero-item-3 text-white/60 text-lg max-w-2xl mx-auto font-body">

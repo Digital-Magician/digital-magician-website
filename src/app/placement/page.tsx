@@ -5,9 +5,9 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
 
 export const metadata: Metadata = {
-  title: "100% Placement Guarantee | Digital Magician — Placed in 30 Days or Full Refund",
+  title: "Digital Marketing Course With 100% Placement Guarantee",
   description:
-    "Digital Magician's placement guarantee is real and legally backed. 80% of graduates placed in 30 days. 10+ hiring companies. ₹1.2 Crore+ in student salaries. See the conditions — there are no traps.",
+    "A digital marketing course with a real, legally-backed placement guarantee — placed in 30 days or a full refund. 80% of graduates placed into digital marketing jobs across Sonipat & Delhi NCR. 10+ hiring companies. ₹1.2 Crore+ in student salaries.",
 };
 
 const stats = [

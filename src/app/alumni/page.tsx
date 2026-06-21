@@ -251,7 +251,7 @@ export default function AlumniPage() {
                 <span className="text-gradient-amber">On This Page Next</span>
               </h2>
               <p className="text-white/60 font-body mb-8 max-w-xl mx-auto">
-                Join the next batch starting May 5, 2026. Only 4 seats remaining.
+                Join the next batch — only 4 seats remaining.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link

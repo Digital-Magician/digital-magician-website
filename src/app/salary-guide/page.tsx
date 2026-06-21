@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, TrendingUp, MapPin, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Salary Guide 2026 — Haryana & Delhi NCR | Digital Magician",
+  title: "Digital Marketing Salary Guide 2026 — Haryana & Delhi NCR",
   description:
     "Real salary data for digital marketing roles in Haryana and Delhi NCR. Entry-level to senior, by specialisation and city. Based on 500+ student placement records.",
   openGraph: {

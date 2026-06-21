@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
+import NextBatchDate from "@/components/shared/NextBatchDate";
 import { getLocationBySlug, getAllLocationSlugs, locations } from "@/lib/data/locations";
 import { programs } from "@/lib/data/programs";
 
@@ -494,7 +495,7 @@ export default async function LocationPage({
                 <span className="text-gradient-amber">Get Started Today.</span>
               </h2>
               <p className="text-white/60 font-body mb-4 max-w-xl mx-auto">
-                Next batch starts <strong className="text-white">May 5, 2026</strong> — only 4 seats remaining.
+                Next batch starts <strong className="text-white"><NextBatchDate /></strong> — only 4 seats remaining.
               </p>
               <p className="text-white/40 text-sm font-body mb-8">
                 {isFar
