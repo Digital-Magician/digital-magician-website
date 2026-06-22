@@ -14,7 +14,7 @@ import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Course in Sonipat | Best AI Marketing Institute in India — Digital Magician",
+  title: "Digital Marketing Course in Sonipat | Best AI Marketing Institute in India",
   description:
     "India's most results-driven digital marketing institute, based in Sonipat, Haryana. 500+ students trained. ₹1.2 Crore+ in salaries generated. Master Google Ads, SEO, Meta Ads and AI Tools with a 100% placement guarantee. Online and offline classes available.",
 };
