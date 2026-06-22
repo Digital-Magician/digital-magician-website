@@ -24,7 +24,7 @@ export async function generateMetadata(
 
   return {
     title: program.metaTitle ?? `${program.name} in Sonipat`,
-    description: `${program.shortName} digital marketing course in Sonipat — ${program.duration}, 100% placement guarantee, live campaigns & real portfolio. Fee ₹${program.fee.toLocaleString("en-IN")}, EMI available.`,
+    description: `${program.shortName} digital marketing course in Sonipat — ${program.durationDetail ?? program.duration}. 100% placement guarantee, live campaigns. Fee ₹${program.fee.toLocaleString("en-IN")}, EMI available.`,
     alternates: { canonical: `/programs/${slug}` },
     openGraph: {
       title: `${program.name} | Digital Magician`,
@@ -128,7 +128,7 @@ export default async function ProgramPage({
                       {program.level}
                     </span>
                     <span className="text-xs font-semibold bg-white/5 border border-white/10 text-slate-400 px-3 py-1.5 rounded-full">
-                      {program.duration}
+                      {program.durationDetail ?? program.duration}
                     </span>
                     <span className="text-xs font-semibold bg-white/5 border border-white/10 text-slate-400 px-3 py-1.5 rounded-full">
                       {program.certifications} Certifications
@@ -194,7 +194,7 @@ export default async function ProgramPage({
                   {/* Details list */}
                   <div className="space-y-3 mb-6 text-sm">
                     {[
-                      { icon: <Clock className="w-4 h-4 text-amber-400" />, text: program.duration },
+                      { icon: <Clock className="w-4 h-4 text-amber-400" />, text: program.durationDetail ?? program.duration },
                       { icon: <Award className="w-4 h-4 text-amber-400" />, text: `${program.certifications} Certifications` },
                       { icon: <Zap className="w-4 h-4 text-amber-400" />, text: program.level },
                       { icon: <Users className="w-4 h-4 text-amber-400" />, text: "Hybrid — Online + Offline" },

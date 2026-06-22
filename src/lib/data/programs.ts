@@ -7,6 +7,7 @@ export const programs: Program[] = [
     shortName: "Full Stack",
     metaTitle: "Full Stack Digital Marketing Course in Sonipat (AI + Ads)",
     duration: "4 Months",
+    durationDetail: "4 Months Training + 2 Months Internship",
     level: "All Levels",
     fee: 45000,
     originalFee: 60000,

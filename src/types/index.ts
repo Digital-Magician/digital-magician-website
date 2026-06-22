@@ -3,7 +3,8 @@ export interface Program {
   name: string;
   shortName: string;
   metaTitle?: string; // SEO <title> override (falls back to `${name} in Sonipat`)
-  duration: string;
+  duration: string; // short form for compact pills/cards/schema, e.g. "4 Months"
+  durationDetail?: string; // fuller form shown on the program detail page, e.g. "4 Months Training + 2 Months Internship"
   level: "Beginner" | "Intermediate" | "All Levels";
   fee: number;
   originalFee?: number;
