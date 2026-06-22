@@ -81,12 +81,23 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://digitalmagician.in" },
+      { "@type": "ListItem", position: 2, name: `Digital Marketing Course in ${city}`, item: `https://digitalmagician.in/digital-marketing-course/${citySlug}` },
+      { "@type": "ListItem", position: 3, name: `${service.name} in ${city}`, item: `https://digitalmagician.in/${service.slug}/${citySlug}` },
+    ],
+  };
+
   const otherServices = serviceCourses.filter((s) => s.key !== service.key);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden">
