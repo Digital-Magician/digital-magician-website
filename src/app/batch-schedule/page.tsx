@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock, Users, MapPin, Wifi, AlertCircle } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import { getUpcomingBatchDates } from "@/lib/date";
+import { getProgramBySlug } from "@/lib/data/programs";
 
 // Regenerate daily so the rolling batch dates never go stale (always future).
 export const revalidate = 86400;
@@ -23,8 +24,6 @@ const batches = [
     timing: "Mon / Wed / Fri — 7:00 PM to 9:00 PM",
     seats: 4,
     totalSeats: 20,
-    fee: "₹45,000",
-    originalFee: "₹60,000",
     status: "filling-fast",
     highlights: [
       "Google Ads + Meta Ads + SEO + Content",
@@ -41,7 +40,6 @@ const batches = [
     timing: "Tue / Thu / Sat — 7:00 PM to 9:00 PM",
     seats: 8,
     totalSeats: 15,
-    fee: "₹18,000",
     status: "open",
     highlights: [
       "Google Ads + Meta Ads deep-dive",
@@ -58,7 +56,6 @@ const batches = [
     timing: "Mon / Wed / Fri — 8:00 PM to 9:30 PM",
     seats: 12,
     totalSeats: 20,
-    fee: "₹12,000",
     status: "open",
     highlights: [
       "Technical SEO + On-page + Off-page",
@@ -75,7 +72,6 @@ const batches = [
     timing: "Tue / Thu — 7:30 PM to 9:00 PM",
     seats: 15,
     totalSeats: 20,
-    fee: "₹10,000",
     status: "open",
     highlights: [
       "Search, Display, YouTube, Performance Max",
@@ -127,10 +123,19 @@ export default function BatchSchedulePage() {
   // Rolling future start dates, spaced ~2 weeks apart, recomputed on each
   // (re)generation so visitors never see a past date.
   const startDates = getUpcomingBatchDates(batches.length);
-  const datedBatches = batches.map((batch, i) => ({
-    ...batch,
-    startDate: startDates[i],
-  }));
+  // Fees are derived from the program data (single source of truth) so the
+  // batch schedule always matches the homepage / program pages.
+  const datedBatches = batches.map((batch, i) => {
+    const program = getProgramBySlug(batch.slug);
+    return {
+      ...batch,
+      startDate: startDates[i],
+      fee: program ? `₹${program.fee.toLocaleString("en-IN")}` : "",
+      originalFee: program?.originalFee
+        ? `₹${program.originalFee.toLocaleString("en-IN")}`
+        : undefined,
+    };
+  });
 
   return (
     <>
