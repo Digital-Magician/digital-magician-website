@@ -295,7 +295,7 @@ export default async function BlogPostPage({
               Learn by managing live client campaigns
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed max-w-md mx-auto mb-6">
-              Digital Magician trains you on real eSahayak agency accounts — not
+              Digital Magician trains you on real client accounts — not
               simulations. Every concept in this article is hands-on from Week 1.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

@@ -25,7 +25,7 @@ const stories = [
     salaryBefore: "₹0",
     salaryAfter: "₹28,000/month",
     timeToJob: "4 months",
-    quote: "Gaurav sir doesn't just teach — he prepares you for the real world. The live campaign experience on eSahayak's clients was the thing that got me hired.",
+    quote: "Gaurav sir doesn't just teach — he prepares you for the real world. The live campaign experience on real client accounts was the thing that got me hired.",
     highlight: "First job in 4 months",
     emoji: "👩‍💼",
     rating: 5,

@@ -17,7 +17,7 @@ const whyHire = [
   {
     icon: "📊",
     title: "Real Campaign Experience",
-    desc: "Every graduate has managed live campaigns on actual client accounts through our eSahayak agency. They've handled real budgets, optimised for real ROAS, and dealt with real-world campaign problems.",
+    desc: "Every graduate has managed live campaigns on actual client accounts through our in-house agency. They've handled real budgets, optimised for real ROAS, and dealt with real-world campaign problems.",
   },
   {
     icon: "🎓",

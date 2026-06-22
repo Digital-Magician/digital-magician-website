@@ -32,7 +32,7 @@ const guaranteeSteps = [
   {
     num: "03",
     title: "Build Your Portfolio",
-    desc: "Complete your live campaign project on a real eSahayak client account. This is the proof of work that separates you from every certificate-holder.",
+    desc: "Complete your live campaign project on a real client account. This is the proof of work that separates you from every certificate-holder.",
   },
   {
     num: "04",

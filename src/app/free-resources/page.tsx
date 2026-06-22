@@ -17,7 +17,7 @@ const resources = [
   {
     icon: "📋",
     title: "Google Ads Campaign Checklist",
-    desc: "A 47-point pre-launch checklist used in our eSahayak agency before going live on any Search campaign. Covers keyword research, match types, ad copy, extensions, conversion tracking, and bidding.",
+    desc: "A 47-point pre-launch checklist used in our in-house agency before going live on any Search campaign. Covers keyword research, match types, ad copy, extensions, conversion tracking, and bidding.",
     type: "PDF Checklist",
     cta: "Get Free Checklist",
     tag: "Google Ads",
@@ -44,7 +44,7 @@ const resources = [
   {
     icon: "🤖",
     title: "50 ChatGPT Prompts for Digital Marketers",
-    desc: "Exactly the prompts we use at eSahayak for ad copy, email sequences, content briefs, competitor analysis, and client reporting — ready to copy and customise.",
+    desc: "Exactly the prompts we use in our agency for ad copy, email sequences, content briefs, competitor analysis, and client reporting — ready to copy and customise.",
     type: "PDF Prompt Library",
     cta: "Get Prompt Library",
     tag: "AI Tools",
@@ -91,7 +91,7 @@ export default function FreeResourcesPage() {
             <span className="block text-amber-400">Yours for Free</span>
           </h1>
           <p className="hero-item hero-item-3 text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
-            Checklists, templates, swipe files, and prompts from the eSahayak agency
+            Checklists, templates, swipe files, and prompts from our in-house agency
             and the Digital Magician classroom. No email required — just send us a WhatsApp.
           </p>
         </div>

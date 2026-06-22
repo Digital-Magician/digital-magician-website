@@ -83,7 +83,7 @@ export const locations: LocationData[] = [
       insight: "Sonipat's proximity to Delhi NCR creates strong demand for digital marketers across manufacturing, industrial, and retail sectors. The Kundli-Manesar-Palwal industrial corridor generates consistent demand for performance marketers who can manage online lead generation. Starting salaries in Sonipat are ₹20,000–35,000; Delhi NCR roles for the same skills pay ₹28,000–55,000.",
     },
     faqs: [
-      { q: "Is Digital Magician the only digital marketing institute in Sonipat?", a: "There are a few institutes in Sonipat, but Digital Magician is the only one that gives you access to live client campaign management through our eSahayak agency. You're not learning on dummy accounts — you're working on real budgets from Week 1." },
+      { q: "Is Digital Magician the only digital marketing institute in Sonipat?", a: "There are a few institutes in Sonipat, but Digital Magician is the only one that gives you access to live client campaign management through our in-house agency. You're not learning on dummy accounts — you're working on real budgets from Week 1." },
       { q: "Can I get a job in Delhi NCR after this course?", a: "Yes — the majority of our placements are in Delhi, Gurgaon, Noida, and Faridabad. The skills are identical regardless of location. Several of our alumni also work remotely for Delhi-based agencies from Sonipat itself." },
       { q: "What is the fee for the course?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000) for both online and offline modes. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
       { q: "Which is the best digital marketing course in Sonipat for beginners?", a: "Our Full Stack Digital Marketing program is built for beginners and career-switchers in Sonipat — no prior experience needed. You learn Google Ads, Meta Ads, SEO, and AI tools on live campaigns and graduate with a 10-project portfolio and a 100% placement guarantee." },
@@ -125,7 +125,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "Should I attend offline classes in Sonipat or take the online batch from Panipat?", a: "Both are equally effective. The online batch is the same live class — you see the trainer's screen, ask questions in real time, and access recordings. If you prefer the classroom energy, Panipat to Sonipat via NH44 is a comfortable 40-minute commute. Several of our Panipat students do hybrid — offline 3–4 days a week, online when needed." },
       { q: "Are there digital marketing jobs available in Panipat itself?", a: "Yes. Panipat's textile and export companies are actively building digital marketing teams. E-commerce managers and Instagram/Meta Ads specialists are in high demand. That said, your salary ceiling is higher in Delhi NCR, and many Panipat graduates choose to work remotely for Delhi agencies." },
-      { q: "How is Digital Magician different from institutes in Panipat?", a: "The key difference is live campaign access. From Week 1, you manage real client campaigns through eSahayak, our active agency. No Panipat-based institute offers this. You also get a 100% placement guarantee — placed in 30 days or full refund." },
+      { q: "How is Digital Magician different from institutes in Panipat?", a: "The key difference is live campaign access. From Week 1, you manage real client campaigns through our in-house agency. No Panipat-based institute offers this. You also get a 100% placement guarantee — placed in 30 days or full refund." },
     ],
     studentStory: {
       name: "Arjun M.",
@@ -332,7 +332,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "Are there jobs in Faridabad itself or do I have to go to Delhi?", a: "Both. Faridabad has a growing market for digital talent — especially in manufacturing, healthcare, and real estate. But Delhi, Noida, and Gurugram (all 30–60 minutes away) significantly expand your options and salary ceiling." },
       { q: "Can I commute from Faridabad to Sonipat for offline classes?", a: "It's possible — about 90 minutes each way. Most Faridabad students opt for the online batch or visit offline once or twice a week and attend the rest online. We support flexible attendance." },
-      { q: "What makes Digital Magician better than Faridabad local institutes?", a: "Live agency access. From Day 1, you manage real eSahayak client campaigns — not dummy accounts. No Faridabad institute does this. That portfolio is what gets you hired." },
+      { q: "What makes Digital Magician better than Faridabad local institutes?", a: "Live agency access. From Day 1, you manage real client campaigns — not dummy accounts. No Faridabad institute does this. That portfolio is what gets you hired." },
     ],
   },
 
@@ -392,7 +392,7 @@ export const locations: LocationData[] = [
       insight: "Panchkula's IT and pharma ecosystem creates niche demand for technical digital marketers. SEO for tech companies and content-heavy B2B marketing are particularly in demand. Graduates from Panchkula regularly access Chandigarh, Mohali, and Delhi NCR job markets simultaneously — a geographic advantage that amplifies their career options.",
     },
     faqs: [
-      { q: "How does the online batch compare to Chandigarh institutes?", a: "The key differentiator is live campaign access. Chandigarh institutes teach tools. Digital Magician has you managing real eSahayak client accounts from Week 1. Your portfolio at the end contains real numbers — which is what gets you hired over candidates with only theoretical knowledge." },
+      { q: "How does the online batch compare to Chandigarh institutes?", a: "The key differentiator is live campaign access. Chandigarh institutes teach tools. Digital Magician has you managing real client accounts from Week 1. Your portfolio at the end contains real numbers — which is what gets you hired over candidates with only theoretical knowledge." },
       { q: "Can I access Chandigarh-area jobs after this course?", a: "Yes — and Delhi NCR jobs. Our placement network covers both regions. Many Panchkula graduates work remotely or take positions in Chandigarh's IT sector or Delhi NCR simultaneously." },
       { q: "Is the online fee lower than offline?", a: "No — both modes are priced identically. We don't charge less for online because the experience is equally valuable." },
     ],
@@ -829,7 +829,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "Can South Delhi students attend offline classes in Sonipat?", a: "Yes — from Saket or Lajpat Nagar, it's about 65 km via Sonipat Road. Many South Delhi students opt for our online batch and visit offline for key sessions." },
       { q: "Is Digital Magician suitable for students who want to work for South Delhi-based agencies?", a: "Absolutely. Our live campaign training is specifically designed to prepare you for competitive agency environments. Several of our graduates work at South Delhi agencies." },
-      { q: "What's different about Digital Magician vs a South Delhi institute?", a: "Real client accounts from Day 1. Most South Delhi institutes use demo accounts. At Digital Magician, your practicals are on real eSahayak client campaigns with real budgets. That's the portfolio that gets you hired." },
+      { q: "What's different about Digital Magician vs a South Delhi institute?", a: "Real client accounts from Day 1. Most South Delhi institutes use demo accounts. At Digital Magician, your practicals are on real client campaigns with real budgets. That's the portfolio that gets you hired." },
     ],
   },
 
@@ -887,7 +887,7 @@ export const locations: LocationData[] = [
       insight: "East Delhi has a growing base of digital marketing businesses and agencies — but the saturation of poorly-trained candidates keeps entry salaries lower than West or South Delhi. Digital Magician graduates consistently earn ₹5,000–10,000 more per month than local institute graduates at their first placement.",
     },
     faqs: [
-      { q: "How is Digital Magician different from the many institutes in Laxmi Nagar?", a: "One key difference: we put you inside real eSahayak client accounts from Week 1. Every institute in Laxmi Nagar uses demo accounts. Your Digital Magician portfolio has real ROAS numbers, real CTR data, and real conversion results. That's the difference in interviews." },
+      { q: "How is Digital Magician different from the many institutes in Laxmi Nagar?", a: "One key difference: we put you inside real client accounts from Week 1. Every institute in Laxmi Nagar uses demo accounts. Your Digital Magician portfolio has real ROAS numbers, real CTR data, and real conversion results. That's the difference in interviews." },
       { q: "Should I attend online or offline?", a: "For East Delhi students, the online batch is the most practical choice. The commute to Sonipat is 65–85 minutes each way — manageable but significant. The online experience is equally effective." },
       { q: "What placement support do I get?", a: "Access to our placement portal, dedicated job application support, mock interview preparation, and our alumni network across 500+ working marketers. We don't just introduce you to a WhatsApp group." },
     ],
