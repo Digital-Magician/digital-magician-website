@@ -139,6 +139,11 @@ export default async function ProgramPage({
                 <h1 className="hero-item hero-item-1 font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight">
                   {program.name}
                 </h1>
+                {program.slug === "full-stack-digital-marketing" && (
+                  <h2 className="hero-item hero-item-1 text-amber-400 font-semibold text-lg md:text-xl mb-4">
+                    Full Stack Digital Marketing Course in Sonipat — Online &amp; Offline
+                  </h2>
+                )}
                 <p className="hero-item hero-item-2 text-slate-400 text-lg leading-relaxed mb-8">
                   {program.description}
                 </p>
