@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { getComingMonday } from "@/lib/date";
 
@@ -64,9 +65,14 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-amber-brand flex items-center justify-center font-heading font-black text-midnight text-lg group-hover:shadow-amber transition-all duration-300">
-              DM
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Digital Magician logo"
+              width={36}
+              height={40}
+              priority
+              className="h-9 w-auto group-hover:opacity-90 transition-opacity"
+            />
             <div className="hidden sm:block">
               <span className="font-heading font-black text-white text-lg leading-none">Digital</span>
               <span className="font-heading font-black text-amber-brand text-lg leading-none"> Magician</span>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 
 const footerLinks = {
@@ -58,9 +59,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-amber-brand flex items-center justify-center font-heading font-black text-midnight text-lg">
-                DM
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Digital Magician logo"
+                width={40}
+                height={44}
+                className="h-10 w-auto"
+              />
               <div>
                 <span className="font-heading font-black text-white text-xl">Digital</span>
                 <span className="font-heading font-black text-amber-brand text-xl"> Magician</span>
