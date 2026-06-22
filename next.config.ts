@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
     ],
   },
   redirects: async () => [
+    // Canonical host: force www → non-www (avoids duplicate-host indexing)
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "www.digitalmagician.in" }],
+      destination: "https://digitalmagician.in/:path*",
+      permanent: true,
+    },
     // WordPress → Next.js 301 redirects
     { source: "/about-us",                               destination: "/about",                          permanent: true },
     { source: "/contact-us",                             destination: "/contact",                        permanent: true },
@@ -16,7 +23,7 @@ const nextConfig: NextConfig = {
     { source: "/courses/facebook-marketing-program",     destination: "/programs/meta-ads-mastery",      permanent: true },
     { source: "/courses/search-engine-mastery-program",  destination: "/programs/seo-mastery",           permanent: true },
     { source: "/courses/performance-marketing-program",  destination: "/programs/performance-marketing", permanent: true },
-    { source: "/digital-marketing-institutes-in-sonipat/", destination: "/blog/top-digital-marketing-institutes-sonipat-2026", permanent: true },
+    { source: "/digital-marketing-institutes-in-sonipat/", destination: "/digital-marketing-course/sonipat", permanent: true },
   ],
 };
 
