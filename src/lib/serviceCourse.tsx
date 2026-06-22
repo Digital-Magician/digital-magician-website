@@ -120,6 +120,9 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
               {service.name} in {city}
             </h1>
 
+            <p className="hero-item hero-item-3 text-white/90 text-base sm:text-lg max-w-2xl mx-auto font-body font-semibold mb-4">
+              The {service.name} in {city} is a {service.duration}, hands-on program at Digital Magician — taught on real client campaigns, online &amp; offline, with a 100% placement guarantee and a fee of ₹{service.fee.toLocaleString("en-IN")}.
+            </p>
             <p className="hero-item hero-item-3 text-white/65 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed font-body mb-8">
               {fill(service.intro, city)}
             </p>

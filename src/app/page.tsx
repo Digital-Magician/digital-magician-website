@@ -322,6 +322,39 @@ export default function HomePage() {
             ))}
           </div>
 
+          {/* Comparison table (AI / answer-engine friendly) */}
+          <AnimateOnScroll className="mt-12 mb-4">
+            <div className="bento p-0 overflow-x-auto">
+              <table className="w-full text-sm font-body border-collapse">
+                <caption className="sr-only">Digital Magician vs a typical digital marketing institute</caption>
+                <thead>
+                  <tr className="text-left text-white/50 border-b border-white/[0.08]">
+                    <th className="p-4 font-heading font-semibold">What you get</th>
+                    <th className="p-4 font-heading font-semibold text-amber-brand">Digital Magician</th>
+                    <th className="p-4 font-heading font-semibold">A typical institute</th>
+                  </tr>
+                </thead>
+                <tbody className="text-white/70">
+                  {[
+                    ["Live client campaigns", "Real budgets from Week 1", "Dummy accounts / theory"],
+                    ["Trainers", "Active practitioners (₹1 Cr+ ad spend/yr)", "Slide-readers"],
+                    ["Placement", "100% guarantee or full refund", "A WhatsApp group"],
+                    ["AI tools", "Built into every module", "Rarely covered"],
+                    ["Curriculum", "Updated every quarter", "Frozen for years"],
+                    ["Certifications", "10+ (Google, Meta & more)", "Institute certificate only"],
+                    ["Modes", "Online + offline, same fee", "Usually one mode"],
+                  ].map(([f, dm, other]) => (
+                    <tr key={f} className="border-b border-white/[0.05]">
+                      <td className="p-4 font-medium text-white/85">{f}</td>
+                      <td className="p-4 text-white">{dm}</td>
+                      <td className="p-4 text-white/45">{other}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </AnimateOnScroll>
+
           {/* Divider */}
           <AnimateOnScroll className="text-center mb-16">
             <div className="flex items-center gap-6 max-w-lg mx-auto">

@@ -360,6 +360,40 @@ export default async function LocationPage({
             </AnimateOnScroll>
           </div>
 
+          {/* Quick comparison table (AI/answer-engine friendly) */}
+          <AnimateOnScroll className="mt-8">
+            <div className="bento p-0 overflow-x-auto">
+              <table className="w-full text-sm font-body border-collapse">
+                <caption className="sr-only">Online vs offline digital marketing course in {location.name} — comparison</caption>
+                <thead>
+                  <tr className="text-left text-white/50 border-b border-white/[0.08]">
+                    <th className="p-4 font-heading font-semibold">Feature</th>
+                    <th className="p-4 font-heading font-semibold text-amber-brand">Online Live Batch</th>
+                    <th className="p-4 font-heading font-semibold">Offline Campus</th>
+                  </tr>
+                </thead>
+                <tbody className="text-white/70">
+                  {[
+                    ["Curriculum", "Identical", "Identical"],
+                    ["Trainers", "Same live trainers", "Same live trainers"],
+                    ["Real client campaigns", "Yes — shared on screen live", "Yes — in person"],
+                    ["Fees", `₹45,000 (Full Stack)`, `₹45,000 (Full Stack)`],
+                    ["Class recordings", "12-month replay access", "12-month replay access"],
+                    ["Location", "Anywhere in India", `Sonipat campus (${location.distanceFromSonipat} from ${location.name})`],
+                    ["Placement guarantee", "100% — same terms", "100% — same terms"],
+                    ["Best for", isFar ? `${location.name} students (recommended)` : "Students who can't commute daily", "Students near Sonipat"],
+                  ].map(([f, on, off]) => (
+                    <tr key={f} className="border-b border-white/[0.05]">
+                      <td className="p-4 font-medium text-white/85">{f}</td>
+                      <td className="p-4">{on}</td>
+                      <td className="p-4">{off}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </AnimateOnScroll>
+
           {/* PG accommodation note */}
           {location.pgNote && (
             <AnimateOnScroll className="mt-6">

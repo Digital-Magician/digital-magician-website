@@ -25,7 +25,7 @@ export async function generateMetadata(
   if (!post) return {};
 
   return {
-    title: `${post.title} | Blog`,
+    title: post.title,
     description: post.description,
     authors: [{ name: post.author }],
     alternates: { canonical: `/blog/${slug}` },
