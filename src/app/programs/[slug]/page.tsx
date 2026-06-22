@@ -23,7 +23,7 @@ export async function generateMetadata(
   if (!program) return {};
 
   return {
-    title: `${program.name} in Sonipat`,
+    title: program.metaTitle ?? `${program.name} in Sonipat`,
     description: `${program.shortName} digital marketing course in Sonipat — ${program.duration}, 100% placement guarantee, live campaigns & real portfolio. Fee ₹${program.fee.toLocaleString("en-IN")}, EMI available.`,
     alternates: { canonical: `/programs/${slug}` },
     openGraph: {

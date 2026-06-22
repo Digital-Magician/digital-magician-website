@@ -11,12 +11,34 @@ export const metadata: Metadata = {
   alternates: { canonical: "/digital-marketing-course/all" },
 };
 
+const allFaqs = [
+  { q: "Which cities does the digital marketing institute cover in Haryana?", a: "Digital Magician serves students across all 22 Haryana districts — Sonipat, Panipat, Karnal, Rohtak, Hisar, Ambala, Faridabad, Gurugram and more — plus every Delhi NCR zone. Offline classes run at our Sonipat campus; the live online batch reaches the entire region." },
+  { q: "Can I do the digital marketing course online from anywhere in Haryana?", a: "Yes. Our live online batch is a real-time class — you see the trainer's screen, ask questions live, work on real campaigns, and get 12-month recording access. Students from across Haryana and Delhi NCR learn entirely online with the same outcomes as offline." },
+  { q: "Is the online batch the same as the offline Sonipat classes?", a: "Identical curriculum, same trainer (Gaurav), same real client-campaign access, and the same 100% placement guarantee. The only difference is whether you attend at the Sonipat campus or join the live online session." },
+  { q: "Do you offer placement support across Haryana and Delhi NCR?", a: "Yes. Our placement network covers Sonipat, Delhi, Gurugram, Noida, and Faridabad, plus remote roles. 80% of graduates are placed within 30 days, backed by a written 100% placement guarantee or full refund." },
+  { q: "Is the course fee the same across all locations?", a: "Yes — the fee is identical whether you attend online or offline, from any city. The Full Stack program is ₹45,000 (reduced from ₹60,000) with EMI options; specialisation courses start from ₹10,000." },
+];
+
 export default function AllLocationsPage() {
   const haryanaLocations = getHaryanaLocations();
   const delhiLocations = getDelhiLocations();
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#09071c]" />
         <div className="absolute inset-0 z-[1] pattern-dots opacity-20" />
@@ -109,6 +131,53 @@ export default function AllLocationsPage() {
               </AnimateOnScroll>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Why Haryana + FAQ (unique content) */}
+      <section className="py-20 bg-[#07051a] border-y border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll>
+            <h2 className="heading-lg text-3xl sm:text-4xl text-white mb-6 text-center">
+              Why Learn Digital Marketing in Haryana?
+            </h2>
+            <div className="space-y-4 text-white/65 text-base font-body leading-relaxed">
+              <p>
+                Haryana sits on the edge of Delhi NCR — India&apos;s largest digital marketing job market — yet
+                trained digital marketers from Haryana are genuinely rare. From the Kundli–Manesar–Palwal
+                industrial corridor to Gurugram&apos;s agencies and the textile and agro businesses of Panipat,
+                Karnal and Rohtak, employers across the state are hiring digital marketers faster than local
+                talent can be trained. That gap is the opportunity for Haryana students.
+              </p>
+              <p>
+                As the leading <Link href="/digital-marketing-course/sonipat" className="text-amber-brand hover:underline">digital marketing institute in Sonipat</Link>,
+                Digital Magician trains students from every Haryana district either in person at our Sonipat
+                campus or through a fully live online batch. You learn Google Ads, Meta Ads, SEO, and AI tools
+                on real client campaigns — not theory — and graduate with a portfolio and a 100% placement
+                guarantee. Your pin code never caps your salary: graduates work locally, commute to Delhi NCR,
+                or work remotely for companies across India.
+              </p>
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll className="mt-12">
+            <h3 className="font-heading font-bold text-white text-xl mb-5 text-center">
+              Haryana &amp; Delhi NCR — Common Questions
+            </h3>
+            <div className="space-y-3">
+              {allFaqs.map((faq, i) => (
+                <details key={i} className="group bento p-0 overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                    <span className="font-heading font-semibold text-white text-sm">{faq.q}</span>
+                    <svg className="w-4 h-4 text-amber-brand flex-shrink-0 transition-transform group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6" /></svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-white/55 text-sm font-body leading-relaxed border-t border-white/[0.06] pt-4">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 

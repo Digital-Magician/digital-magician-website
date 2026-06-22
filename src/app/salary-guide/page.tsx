@@ -130,8 +130,8 @@ export default function SalaryGuidePage() {
             Based on 500+ Placement Records
           </span>
           <h1 className="hero-item hero-item-2 font-bold text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight">
-            What Digital Marketers
-            <span className="block text-amber-400">Actually Earn in 2026</span>
+            Digital Marketing Salary in Haryana &amp; Delhi NCR
+            <span className="block text-amber-400">What You&apos;ll Actually Earn in 2026</span>
           </h1>
           <p className="hero-item hero-item-3 text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
             Real salary data for Haryana and Delhi NCR — not inflated institute brochure numbers

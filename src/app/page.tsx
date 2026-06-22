@@ -107,6 +107,10 @@ export default function HomePage() {
               For It.
             </h1>
 
+            <h2 className="hero-item hero-item-2 text-amber-brand/90 font-heading font-semibold text-base sm:text-lg mb-6 tracking-wide">
+              India&apos;s #1 AI-Powered Digital Marketing Institute — Sonipat &amp; Online
+            </h2>
+
             {/* Sub-headline */}
             <p className="hero-item hero-item-3 text-white/70 text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-body">
               <strong className="text-white font-semibold">500+ students trained.</strong> ₹1.2 Crore+ in combined annual salaries generated.

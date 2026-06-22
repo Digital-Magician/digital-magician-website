@@ -25,8 +25,22 @@ const included = [
 ];
 
 export default function ProgramsPage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: programs.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.name,
+      url: `https://digitalmagician.in/programs/${p.slug}`,
+    })),
+  };
   return (
     <main className="min-h-screen pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="px-4 pb-16 text-center">
         <div className="max-w-3xl mx-auto">
@@ -34,8 +48,8 @@ export default function ProgramsPage() {
             6 Career-Defining Programs
           </span>
           <h1 className="hero-item hero-item-2 font-bold text-4xl md:text-5xl lg:text-6xl mb-5 leading-tight">
-            Pick Your Path to a
-            <span className="block text-amber-400">₹1 Lakh/Month Career</span>
+            Digital Marketing Courses in Sonipat
+            <span className="block text-amber-400">Your Path to a ₹1 Lakh/Month Career</span>
           </h1>
           <p className="hero-item hero-item-3 text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
             Every program includes live mentorship, real campaign experience on agency accounts,

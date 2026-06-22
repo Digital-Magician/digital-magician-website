@@ -2,6 +2,7 @@ export interface Program {
   slug: string;
   name: string;
   shortName: string;
+  metaTitle?: string; // SEO <title> override (falls back to `${name} in Sonipat`)
   duration: string;
   level: "Beginner" | "Intermediate" | "All Levels";
   fee: number;

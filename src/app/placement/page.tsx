@@ -70,9 +70,29 @@ const placements = [
   { name: "Vikram M.", role: "Digital Marketing Lead", company: "SaaS Startup, Gurugram", salary: "₹45,000/mo", time: "28 days after completion" },
 ];
 
+const placementFaqs = [
+  { q: "Is the 100% placement guarantee real, or is it full of conditions?", a: "It's real and legally backed by a written refund policy. The conditions are fair: complete all modules with a 75%+ score, submit assignments on time, build your portfolio during training, and apply to 30+ jobs within 4 months. Do that and stay unplaced, and you get a full refund." },
+  { q: "What happens if I'm not placed after the digital marketing course?", a: "If you meet the guarantee conditions and still aren't placed within the agreed window, we refund every rupee of your fee. In 5 years we've processed only 2 refunds — because the system works." },
+  { q: "Where do Digital Magician graduates get placed?", a: "Across Sonipat, Delhi, Gurugram, Noida, and Faridabad, plus remote roles for companies elsewhere in India. 80% of graduates are placed within 30 days, supported by 10+ active hiring partners." },
+  { q: "Does the placement guarantee apply to online students too?", a: "Yes. Online and offline students get identical placement support — resume reviews, mock interviews, the job portal, and direct referrals to hiring partners." },
+];
+
 export default function PlacementPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: placementFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative min-h-[65vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#09071c]" />
@@ -279,6 +299,33 @@ export default function PlacementPage() {
               ))}
             </div>
           </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* ── FAQ ───────────────────────────────────────────────────── */}
+      <section className="py-20 bg-midnight border-t border-white/[0.06]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll className="text-center mb-10">
+            <span className="tag mb-4">FAQs</span>
+            <h2 className="heading-lg text-3xl sm:text-4xl text-white mt-4">
+              Digital Marketing Course Placement Guarantee — How It Works
+            </h2>
+          </AnimateOnScroll>
+          <div className="space-y-3">
+            {placementFaqs.map((faq, i) => (
+              <AnimateOnScroll key={i} delay={i * 60}>
+                <details className="group bento p-0 overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                    <span className="font-heading font-semibold text-white text-sm">{faq.q}</span>
+                    <svg className="w-4 h-4 text-amber-brand flex-shrink-0 transition-transform group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6" /></svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-white/55 text-sm font-body leading-relaxed border-t border-white/[0.06] pt-4">
+                    {faq.a}
+                  </div>
+                </details>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 
