@@ -206,6 +206,39 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
         </div>
       </section>
 
+      {/* ── Local relevance (unique per city) ─────────────────────── */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll>
+            <div className="bento p-7 sm:p-9">
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="w-4 h-4 text-amber-brand" />
+                <span className="font-heading font-bold text-white text-base">
+                  {service.shortLabel} careers in {city}
+                </span>
+              </div>
+              <p className="text-white/65 text-sm font-body leading-relaxed mb-4">{location.jobMarket.insight}</p>
+              <p className="text-white/65 text-sm font-body leading-relaxed">{location.opportunity}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {location.mode === "home" ? (
+                  <span className="text-xs glass-amber text-amber-brand font-heading font-bold px-4 py-2 rounded-full">
+                    Offline classes in {city} + live online batch
+                  </span>
+                ) : location.mode === "far" ? (
+                  <span className="text-xs glass-amber text-amber-brand font-heading font-bold px-4 py-2 rounded-full">
+                    Live online batch recommended · {location.distanceFromSonipat} from our Sonipat campus
+                  </span>
+                ) : (
+                  <span className="text-xs glass-amber text-amber-brand font-heading font-bold px-4 py-2 rounded-full">
+                    Online &amp; offline · {location.distanceFromSonipat} ({location.travelTime}) from Sonipat
+                  </span>
+                )}
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
       {/* ── Enroll / program link ─────────────────────────────────── */}
       <section className="py-16 bg-midnight border-y border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -989,6 +989,80 @@ export const locations: LocationData[] = [
       { q: "What mode is best for South West Delhi students?", a: "Most prefer online — it's convenient and equally effective. Students who can manage the 60-minute commute to Sonipat 3 days a week also benefit from the classroom energy." },
     ],
   },
+
+  {
+    slug: "ganaur",
+    name: "Ganaur",
+    region: "Haryana",
+    distanceFromSonipat: "18 km",
+    travelTime: "20–25 minutes via NH44",
+    mode: "nearby",
+    metaTitle: "Digital Marketing Course in Ganaur — Live Training Just 20 Minutes Away",
+    metaDesc: "Digital marketing course for Ganaur students at Sonipat's top institute — only 18 km away. Live Google Ads, SEO & Meta Ads training, 100% placement guarantee. Online & offline, fees from ₹45,000 with EMI.",
+    heroHeadline: "Ganaur Students: World-Class Digital Marketing Training Is 20 Minutes Up NH44",
+    heroSubheadline: "You don't need to move to Delhi or Gurgaon to learn digital marketing. Sonipat's most results-driven institute is barely 18 km from Ganaur — with live client campaigns, a 100% placement guarantee, and an online batch you can join from home.",
+    eyebrowText: "Serving students from Ganaur",
+    localContext: {
+      heading: "Ganaur Is Closer to a Digital Career Than You Think",
+      body: "Ganaur sits right on the Sonipat–Panipat belt, surrounded by the grain market, agro-businesses, and the fast-growing industrial estates along NH44. These businesses are moving online — selling on WhatsApp, running Instagram pages, and listing on B2B marketplaces — but almost none can find a trained digital marketer locally. For a Ganaur student, that gap is the easiest career opening in the district.",
+    },
+    problemStatement: "Ganaur's agro and small-business economy is going digital, yet students still travel 60+ km to Delhi for courses that teach theory instead of real campaigns.",
+    opportunity: "A Digital Magician graduate from Ganaur can land Delhi-NCR-level roles, freelance for local mandi and agro businesses, or work remotely — all without leaving home.",
+    travelInfo: "Ganaur to our Sonipat campus is a quick 18 km — about 20 minutes straight down NH44. Offline classes run Mon/Wed/Fri, 7–9 PM. Prefer to stay home? The live online batch is the same class, same trainer, fully interactive.",
+    jobMarket: {
+      topRoles: ["Digital Marketing Executive", "Social Media Manager", "WhatsApp & Meta Ads Specialist", "E-commerce Catalogue Manager", "Freelance Marketing Consultant"],
+      insight: "Ganaur's proximity to Sonipat, Panipat, and the Kundli–Manesar–Palwal industrial corridor means graduates can access jobs across three hubs without relocating. Local agro-exporters, grain traders, and retail shops increasingly need someone to run their Instagram, WhatsApp Business, and marketplace listings — work a trained Ganaur marketer can do freelance for ₹15,000–40,000/month while building toward a full-time NCR role.",
+    },
+    faqs: [
+      { q: "How far is the institute from Ganaur, and can I commute for offline classes?", a: "Our Sonipat campus is just 18 km from Ganaur — roughly a 20-minute drive on NH44. Many students commute easily for the Mon/Wed/Fri evening classes. If commuting daily isn't convenient, the live online batch gives you the exact same class from home." },
+      { q: "Are there digital marketing opportunities near Ganaur?", a: "Yes. Agro-businesses, grain traders, and retailers around Ganaur and the NH44 industrial belt increasingly need digital marketers for social media, WhatsApp marketing, and online listings. You can start freelancing locally and target higher-paid Delhi NCR roles as your portfolio grows." },
+      { q: "What is the fee for the course for Ganaur students?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000), identical for online and offline. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
+    ],
+    studentStory: {
+      name: "Manish T.",
+      from: "Ganaur",
+      before: "B.Com student helping at the family grain business",
+      after: "Freelance social media manager for 3 local exporters",
+      quote: "I joined to help our own family business get online. By the end of the course I was running Instagram and WhatsApp campaigns for two other Ganaur traders too. The campus being 20 minutes away made it a no-brainer.",
+    },
+  },
+
+  {
+    slug: "sohna",
+    name: "Sohna",
+    region: "Haryana",
+    distanceFromSonipat: "95 km",
+    travelTime: "Online live batch recommended",
+    mode: "far",
+    metaTitle: "Digital Marketing Course in Sohna — Live Online Training With Placement",
+    metaDesc: "Digital marketing course for Sohna students — live online training from Sonipat's top institute, with real campaigns and a 100% placement guarantee. Google Ads, SEO, Meta Ads. Fees from ₹45,000 with EMI.",
+    heroHeadline: "Sohna's Gateway to Gurugram's Digital Marketing Jobs",
+    heroSubheadline: "Sohna sits on Gurugram's doorstep — one of India's highest-paying digital marketing markets. Digital Magician's live online batch trains you to that exact standard, with real client campaigns and a 100% placement guarantee, from your home in Sohna.",
+    eyebrowText: "Serving students from Sohna",
+    localContext: {
+      heading: "Sohna Is Closer to Gurugram's Salaries Than Its Competition Realises",
+      body: "Sohna's rapid development along Sohna Road and the KMP Expressway has tied it directly into the Gurugram economy — where digital marketers command the highest salaries in North India. Yet most Sohna students still settle for generic local computer courses. With Gurugram's agencies just a short commute (or a remote login) away, a properly trained Sohna marketer is positioned for roles that pay far above the local average.",
+    },
+    problemStatement: "Sohna students sit minutes from Gurugram's premium digital marketing jobs, but local courses don't teach the live-campaign skills those employers actually hire for.",
+    opportunity: "A Digital Magician graduate from Sohna can target Gurugram agency and in-house roles, or freelance for NCR brands remotely — with a real campaign portfolio that local certificate courses can't provide.",
+    travelInfo: "Sohna is around 95 km from our Sonipat campus, so we recommend the live online batch — the same live class, trainer, and real-campaign access, with recordings for replay. Offline visits are welcome whenever you want the campus experience.",
+    jobMarket: {
+      topRoles: ["Performance Marketer", "Google Ads Specialist", "Meta Ads Manager", "SEO Specialist", "Freelance Paid-Media Consultant"],
+      insight: "Sohna's integration with Gurugram via Sohna Road and the KMP Expressway opens access to North India's richest digital marketing job market. Entry-level performance marketers in Gurugram start around ₹30,000/month and mid-level roles reach ₹60,000–1,00,000. The deciding factor isn't a certificate — it's a live campaign portfolio, which is exactly what you build at Digital Magician.",
+    },
+    faqs: [
+      { q: "Sohna is far from Sonipat — how do classes work?", a: "Most Sohna students join our live online batch. It's a real-time class — you see the trainer's screen, ask questions live, work on real campaigns, and get 12-month recording access. It's the same curriculum and outcomes as offline, without the commute." },
+      { q: "Can this course help me get a job in Gurugram?", a: "Absolutely — that's the biggest opportunity for Sohna students. Gurugram has North India's highest digital marketing salaries, and our placement support targets exactly those roles. You graduate with a campaign portfolio Gurugram employers respect." },
+      { q: "What does the course cost for Sohna students?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000), with EMI options. Specialisation courses start from ₹10,000. The fee is identical for online and offline. Ask us on WhatsApp for the current batch." },
+    ],
+    studentStory: {
+      name: "Rohit S.",
+      from: "Sohna",
+      before: "BBA graduate doing odd sales jobs near Sohna Road",
+      after: "Performance Marketing Associate at a Gurugram agency",
+      quote: "I took the online batch from Sohna and never felt I was missing out. The live campaign work is what got me the Gurugram interview — and the job. My commute now is shorter than my old sales job.",
+    },
+  },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

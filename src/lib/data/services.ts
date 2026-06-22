@@ -22,9 +22,21 @@ export interface ServiceCourse {
   faqs: { q: string; a: string }[]; // may include {city}
 }
 
-// Cities these service pages are generated for. Phase 2 = Sonipat only;
-// Phase 3 expands this list (each slug must exist in locations.ts).
-export const SERVICE_CITY_SLUGS = ["sonipat"];
+// Cities these service pages are generated for. Each slug must exist in
+// locations.ts. Curated to nearby Haryana + key Delhi NCR cities with real
+// demand (rather than every district) to keep each page unique, not thin.
+export const SERVICE_CITY_SLUGS = [
+  "sonipat",
+  "ganaur",
+  "panipat",
+  "karnal",
+  "kurukshetra",
+  "rohtak",
+  "faridabad",
+  "gurugram",
+  "sohna",
+  "panchkula",
+];
 
 export const serviceCourses: ServiceCourse[] = [
   {
