@@ -267,7 +267,7 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
             </div>
             <div className="flex flex-col gap-3 shrink-0 w-full md:w-auto">
               <Link href={`/programs/${service.programSlug}`} className="btn-primary px-7 py-3.5 text-sm gap-2 justify-center">
-                View Full Program <ArrowRight className="w-4 h-4" />
+                View the full {service.shortLabel} program <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn-ghost px-7 py-3.5 text-sm justify-center">
                 Reserve My Seat

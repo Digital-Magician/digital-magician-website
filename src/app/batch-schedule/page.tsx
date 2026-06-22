@@ -249,7 +249,7 @@ export default function BatchSchedulePage() {
                     href={`/programs/${batch.slug}`}
                     className="btn-ghost px-6 py-3 text-sm gap-2 flex-1 justify-center"
                   >
-                    View Full Curriculum
+                    {batch.name} curriculum
                   </Link>
                 </div>
               </div>

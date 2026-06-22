@@ -270,6 +270,13 @@ export default async function LocationPage({
                   <p className="text-white/50 text-sm font-body leading-relaxed">
                     {location.jobMarket.insight}
                   </p>
+                  <Link
+                    href="/salary-guide"
+                    className="inline-flex items-center gap-1.5 text-amber-brand text-sm font-heading font-semibold mt-4 hover:gap-2.5 transition-all"
+                  >
+                    See the digital marketing salary guide for Haryana &amp; Delhi NCR
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
               </div>
             </AnimateOnScroll>
@@ -436,7 +443,7 @@ export default async function LocationPage({
                     href={`/programs/${program.slug}`}
                     className="btn-ghost text-sm px-4 py-2.5 gap-2 justify-center group"
                   >
-                    View Curriculum
+                    View the {program.shortName} curriculum
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                 </div>

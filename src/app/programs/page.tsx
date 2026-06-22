@@ -109,7 +109,7 @@ export default function ProgramsPage() {
                   <div className="text-slate-500 text-xs">+ Placement Support</div>
                 </div>
                 <span className="inline-flex items-center gap-2 bg-amber-500 group-hover:bg-amber-400 text-slate-900 font-bold px-5 py-2.5 rounded-xl text-sm transition-colors">
-                  View Program <ArrowRight className="w-4 h-4" />
+                  View {program.shortName} <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </Link>
