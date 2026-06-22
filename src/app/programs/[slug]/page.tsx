@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { programs, getProgramBySlug } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
+import { serviceCourses } from "@/lib/data/services";
 import FeeTag from "@/components/shared/FeeTag";
 
 // ── Static params ──────────────────────────────────────────────────────────
@@ -48,6 +49,10 @@ export default async function ProgramPage({
   const programTestimonials = testimonials
     .filter((t) => t.program.toLowerCase().includes(program.shortName.toLowerCase()))
     .slice(0, 3);
+
+  // Matching location-specific landing page (boosts those pages via a
+  // relevant link from this high-authority program page).
+  const geoService = serviceCourses.find((s) => s.programSlug === program.slug);
 
   const whatsappMsg = encodeURIComponent(
     `Hi! I am interested in the ${program.name} at Digital Magician, Sonipat. Can you tell me more?`
@@ -161,6 +166,24 @@ export default async function ProgramPage({
                 <p className="hero-item hero-item-2 text-slate-400 text-lg leading-relaxed mb-8">
                   {program.description}
                 </p>
+
+                {geoService ? (
+                  <p className="hero-item hero-item-2 text-sm text-slate-400 mb-8 -mt-4">
+                    📍 Based in Haryana?{" "}
+                    <Link href={`/${geoService.slug}/sonipat`} className="text-amber-400 font-medium hover:underline">
+                      {geoService.name} in Sonipat
+                    </Link>{" "}
+                    has the fees, batch dates, and local placement details.
+                  </p>
+                ) : (
+                  <p className="hero-item hero-item-2 text-sm text-slate-400 mb-8 -mt-4">
+                    📍 Based in Haryana? See the{" "}
+                    <Link href="/digital-marketing-course/sonipat" className="text-amber-400 font-medium hover:underline">
+                      digital marketing course in Sonipat
+                    </Link>{" "}
+                    for local fees, batches, and placement.
+                  </p>
+                )}
 
                 {/* Outcomes */}
                 <div className="hero-item hero-item-3 grid sm:grid-cols-2 gap-3 mb-8">
