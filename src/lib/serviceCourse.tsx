@@ -241,7 +241,7 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
           </AnimateOnScroll>
           <div className="space-y-3">
             {service.faqs.map((faq, i) => (
-              <AnimateOnScroll key={faq.q} delay={i * 60}>
+              <AnimateOnScroll key={i} delay={i * 60}>
                 <details className="group bento p-0 overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
                     <span className="font-heading font-semibold text-white text-sm">{fill(faq.q, city)}</span>
