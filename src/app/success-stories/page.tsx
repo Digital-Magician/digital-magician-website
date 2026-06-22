@@ -231,16 +231,16 @@ export default function SuccessStoriesPage() {
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto mb-8 text-sm leading-relaxed">
             The next batch starts soon. Seats are limited to keep the mentor-to-student ratio
-            high enough that Gaurav can give each student real attention.
+            high enough that we can give each student real attention.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20read%20the%20success%20stories%20and%20want%20to%20know%20more%20about%20enrolling."
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20read%20the%20success%20stories%20and%20want%20to%20know%20more%20about%20enrolling."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"
             >
-              Talk to Gaurav on WhatsApp
+              Talk to Digital Magician on WhatsApp
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link

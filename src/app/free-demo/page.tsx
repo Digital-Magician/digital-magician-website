@@ -6,14 +6,14 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 export const metadata: Metadata = {
   title: "Free Demo Class — Watch Before You Enroll",
   description:
-    "Watch a free Digital Magician demo class before you enroll. See how Gaurav teaches from live client campaigns, not slides. No registration needed for the recorded demo — just click and watch.",
+    "Watch a free Digital Magician demo class before you enroll. See how Digital Magician teaches from live client campaigns, not slides. No registration needed for the recorded demo — just click and watch.",
 };
 
 const whatYouGet = [
-  { icon: "🎯", title: "A real Google Ads campaign breakdown", desc: "Gaurav walks through an actual client campaign — targeting, bidding, copy — not a hypothetical example." },
+  { icon: "🎯", title: "A real Google Ads campaign breakdown", desc: "Your trainer walks through an actual client campaign — targeting, bidding, copy — not a hypothetical example." },
   { icon: "📊", title: "Live GA4 dashboard walkthrough", desc: "How to read analytics data the way agencies do: what metrics matter, what to ignore, and what to act on." },
-  { icon: "🤖", title: "AI tools in action", desc: "ChatGPT for ad copy, keyword research with AI, and a prompt sequence Gaurav uses every week for real clients." },
-  { icon: "💬", title: "Q&A from real students", desc: "You'll hear the questions actual students ask — and Gaurav's unfiltered answers. No rehearsed script." },
+  { icon: "🤖", title: "AI tools in action", desc: "ChatGPT for ad copy, keyword research with AI, and a prompt sequence our trainers use every week for real clients." },
+  { icon: "💬", title: "Q&A from real students", desc: "You'll hear the questions actual students ask — and the trainer's unfiltered answers. No rehearsed script." },
 ];
 
 const demoModules = [
@@ -54,7 +54,7 @@ export default function FreeDemoPage() {
                 <em className="not-italic text-gradient-amber">You Decide</em>
               </h1>
               <p className="hero-item hero-item-3 text-white/65 text-lg leading-relaxed font-body mb-8">
-                Gaurav teaches a full 60-minute live demo class — real campaigns, real data, no sales pitch.
+                Our trainer teaches a full 60-minute live demo class — real campaigns, real data, no sales pitch.
                 Watch it free. Then decide if Digital Magician is right for you.
               </p>
               <div className="hero-item hero-item-4 flex flex-wrap gap-4 text-sm text-white/50 font-body mb-8">
@@ -71,7 +71,7 @@ export default function FreeDemoPage() {
               </div>
               <div className="hero-item hero-item-5 flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20watch%20the%20free%20demo%20class%20and%20get%20the%20link."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20watch%20the%20free%20demo%20class%20and%20get%20the%20link."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center"
@@ -81,7 +81,7 @@ export default function FreeDemoPage() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20attend%20the%20next%20live%20demo%20class."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20attend%20the%20next%20live%20demo%20class."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-ghost px-8 py-4 text-base gap-2 w-full sm:w-auto justify-center"
@@ -100,7 +100,7 @@ export default function FreeDemoPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-brand/10 via-transparent to-indigo-deep/20" />
                 {/* Play button */}
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20watch%20the%20free%20demo%20class%20and%20get%20the%20link."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20watch%20the%20free%20demo%20class%20and%20get%20the%20link."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative z-10 flex flex-col items-center gap-4"
@@ -207,7 +207,7 @@ export default function FreeDemoPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20watch%20the%20free%20demo%20class%20and%20get%20the%20link."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20watch%20the%20free%20demo%20class%20and%20get%20the%20link."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center"
@@ -217,7 +217,7 @@ export default function FreeDemoPage() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20enroll%20at%20Digital%20Magician."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20enroll%20at%20Digital%20Magician."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-ghost px-8 py-4 text-base gap-2 w-full sm:w-auto justify-center"

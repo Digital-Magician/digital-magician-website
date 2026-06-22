@@ -123,7 +123,7 @@ export const locations: LocationData[] = [
       insight: "Panipat's booming textile and handloom sector is rapidly shifting to online sales — and needs performance marketers who understand product-based advertising. The city's proximity to Delhi NCR also means graduates can access roles in Sonipat, Panipat, and Delhi simultaneously. Freelance consultants from Panipat are now earning ₹40,000–80,000/month servicing local exporters and D2C brands.",
     },
     faqs: [
-      { q: "Should I attend offline classes in Sonipat or take the online batch from Panipat?", a: "Both are equally effective. The online batch is the same live class — you see Gaurav's screen, ask questions in real time, and access recordings. If you prefer the classroom energy, Panipat to Sonipat via NH44 is a comfortable 40-minute commute. Several of our Panipat students do hybrid — offline 3–4 days a week, online when needed." },
+      { q: "Should I attend offline classes in Sonipat or take the online batch from Panipat?", a: "Both are equally effective. The online batch is the same live class — you see the trainer's screen, ask questions in real time, and access recordings. If you prefer the classroom energy, Panipat to Sonipat via NH44 is a comfortable 40-minute commute. Several of our Panipat students do hybrid — offline 3–4 days a week, online when needed." },
       { q: "Are there digital marketing jobs available in Panipat itself?", a: "Yes. Panipat's textile and export companies are actively building digital marketing teams. E-commerce managers and Instagram/Meta Ads specialists are in high demand. That said, your salary ceiling is higher in Delhi NCR, and many Panipat graduates choose to work remotely for Delhi agencies." },
       { q: "How is Digital Magician different from institutes in Panipat?", a: "The key difference is live campaign access. From Week 1, you manage real client campaigns through eSahayak, our active agency. No Panipat-based institute offers this. You also get a 100% placement guarantee — placed in 30 days or full refund." },
     ],
@@ -146,7 +146,7 @@ export const locations: LocationData[] = [
     metaTitle: "Digital Marketing Course in Karnal — Placement Guaranteed",
     metaDesc: "Digital marketing course for Karnal students — live campaigns in Google Ads, SEO & Meta Ads, 100% placement guarantee. Online batch, 75 km from Sonipat.",
     heroHeadline: "Karnal Students Are Landing Digital Marketing Jobs in Delhi NCR. Here's How.",
-    heroSubheadline: "North India's most results-driven digital marketing institute is 75 km away — and our online live batch makes the distance irrelevant. Same Gaurav. Same campaigns. Same placement guarantee.",
+    heroSubheadline: "North India's most results-driven digital marketing institute is 75 km away — and our online live batch makes the distance irrelevant. Same expert trainers. Same campaigns. Same placement guarantee.",
     eyebrowText: "Serving students from Karnal",
     localContext: {
       heading: "Karnal's Professionals Are Switching to Digital — and Winning",
@@ -155,7 +155,7 @@ export const locations: LocationData[] = [
     problemStatement: "Karnal students either settle for outdated local coaching or spend heavily on Delhi-based institutes — without guarantees of actual placement.",
     opportunity: "Digital Magician's live online batch brings genuine agency-level training to Karnal students, with placement rates that Delhi institutes rarely match.",
     travelInfo: "Sonipat is 75 km from Karnal — about 65–75 minutes on NH44. Our online batch is the preferred choice for Karnal students: live sessions, same curriculum, same fees.",
-    pgNote: "If you'd like to attend offline classes and prefer to stay closer to campus, we help arrange PG accommodation in Sonipat starting from ₹5,000–8,000/month. Many outstation students choose this for the first 1–2 months to get maximum face time with Gaurav.",
+    pgNote: "If you'd like to attend offline classes and prefer to stay closer to campus, we help arrange PG accommodation in Sonipat starting from ₹5,000–8,000/month. Many outstation students choose this for the first 1–2 months to get maximum face time with our trainers.",
     jobMarket: {
       topRoles: ["Digital Marketing Executive", "Google Ads Specialist", "SEO Manager", "Content Marketer", "Agri-tech Marketing Executive"],
       insight: "Karnal's emerging food processing, dairy, and healthcare sectors have growing digital marketing needs. Meanwhile, Karnal's educated workforce makes it a strong base for remote work and freelancing. Graduates who build strong portfolios during training regularly land remote roles with Delhi/Gurugram agencies at ₹30,000–55,000/month.",
@@ -231,7 +231,7 @@ export const locations: LocationData[] = [
     },
     faqs: [
       { q: "Are there digital marketing jobs in Rohtak itself?", a: "Yes — and the market is growing. Healthcare, educational institutions, and retail businesses in Rohtak are building marketing teams. But your ceiling is much higher if you're also targeting Delhi, Gurugram, and Faridabad — which is exactly what our placement support covers." },
-      { q: "How does the online batch work for Rohtak students?", a: "Our online batch is a completely live class — not recorded lectures. You join via Zoom at 7 PM on Mon/Wed/Fri and see Gaurav's live screen as he manages real campaigns. Every session is also recorded for 12-month replay access." },
+      { q: "How does the online batch work for Rohtak students?", a: "Our online batch is a completely live class — not recorded lectures. You join via Zoom at 7 PM on Mon/Wed/Fri and see the trainer's live screen as he manages real campaigns. Every session is also recorded for 12-month replay access." },
       { q: "Is there any scholarship or fee discount?", a: "Yes — we run a Scholarship Test that can reduce fees by up to 50%. Check our scholarship test page for the next test date and eligibility criteria." },
     ],
   },
@@ -261,7 +261,7 @@ export const locations: LocationData[] = [
       insight: "Hisar's commercial vibrancy in steel, textile, and agriculture means there are growing local digital roles. But the real opportunity for Hisar graduates is remote work — digital marketing is one of the few fields where a Hisar resident can earn a Delhi salary without leaving home. Our graduates regularly land remote positions paying ₹28,000–50,000/month.",
     },
     faqs: [
-      { q: "Since Hisar is far, is the online batch the right choice?", a: "For most Hisar students, yes. The online batch is completely live — not pre-recorded. You interact with Gaurav in real time, ask questions, and manage real client campaigns digitally. The experience is virtually identical to offline. Your results and placement access are exactly the same." },
+      { q: "Since Hisar is far, is the online batch the right choice?", a: "For most Hisar students, yes. The online batch is completely live — not pre-recorded. You interact with our trainers in real time, ask questions, and manage real client campaigns digitally. The experience is virtually identical to offline. Your results and placement access are exactly the same." },
       { q: "Can I actually get a job remotely from Hisar?", a: "Many of our graduates now work remotely for agencies in Delhi, Gurugram, and Noida from their home cities. Digital marketing is one of the most remote-friendly professions — clients care about results, not your location. We actively support remote job placements." },
       { q: "What about PG accommodation if I want to attend offline?", a: "We help connect Hisar students with PG accommodations in Sonipat starting from ₹5,000/month. It's a comfortable stay close to the campus. Many outstation students find the live-in environment energising — you're surrounded by other working marketers." },
     ],
@@ -291,7 +291,7 @@ export const locations: LocationData[] = [
       body: "Ambala's famous scientific instruments industry and cantonment commerce have significant online presence needs. The city's strategic position on NH44 between Delhi and Chandigarh means local businesses serve national markets — and need digital marketers who can build and manage that online reach. Yet most local training options remain stuck in basic computer courses that don't address modern digital marketing.",
     },
     problemStatement: "Ambala students often choose between outdated local institutes and expensive relocations to Delhi or Chandigarh — neither of which delivers real-world training.",
-    opportunity: "The live online batch removes the geography barrier entirely — Ambala students get the same Gaurav, the same campaigns, and the same placement outcomes as Delhi students.",
+    opportunity: "The live online batch removes the geography barrier entirely — Ambala students get the same expert trainers, the same campaigns, and the same placement outcomes as Delhi students.",
     travelInfo: "Ambala to Sonipat is 145 km — about 2 hours on NH44. We recommend the live online batch for Ambala students. If you prefer offline, PG accommodation near campus is available.",
     pgNote: "For Ambala students choosing offline mode, we connect you with PG accommodation in Sonipat at ₹5,000–8,000/month. Many students from Punjab and Haryana stay nearby for the course duration.",
     jobMarket: {
@@ -532,7 +532,7 @@ export const locations: LocationData[] = [
     metaTitle: "Digital Marketing Course in Fatehabad — Live Online Classes",
     metaDesc: "Digital marketing course for Fatehabad students — learn live in Google Ads, SEO, Meta Ads & AI tools. Online batch with a 100% placement guarantee.",
     heroHeadline: "Fatehabad Students: Your Digital Career Doesn't Require Moving to Delhi",
-    heroSubheadline: "Live online training from an institute that has placed 500+ students. Same curriculum, same placement guarantee, same Gaurav — from your home in Fatehabad.",
+    heroSubheadline: "Live online training from an institute that has placed 500+ students. Same curriculum, same placement guarantee, same expert trainers — from your home in Fatehabad.",
     eyebrowText: "Serving students from Fatehabad",
     localContext: {
       heading: "Fatehabad's Agricultural Economy Needs Digital Entrepreneurs",
@@ -757,8 +757,8 @@ export const locations: LocationData[] = [
       insight: "Charkhi Dadri graduates primarily pursue remote roles or target Rohtak and Delhi NCR. The city's improving connectivity means graduates have growing in-person options while remote work remains the primary career path.",
     },
     faqs: [
-      { q: "How does the live online batch work exactly?", a: "You join a Zoom session at 7 PM on Mon/Wed/Fri. Gaurav's screen is shared live — you see real campaigns, ask questions, and interact exactly as you would in a classroom. Sessions are recorded for 12-month replay." },
-      { q: "Is there support after the course ends?", a: "Yes. You get access to our placement portal and alumni WhatsApp group indefinitely. Gaurav and the team actively help with job applications, portfolio review, and interview preparation." },
+      { q: "How does the live online batch work exactly?", a: "You join a Zoom session at 7 PM on Mon/Wed/Fri. the trainer's screen is shared live — you see real campaigns, ask questions, and interact exactly as you would in a classroom. Sessions are recorded for 12-month replay." },
+      { q: "Is there support after the course ends?", a: "Yes. You get access to our placement portal and alumni WhatsApp group indefinitely. Our team actively helps with job applications, portfolio review, and interview preparation." },
     ],
   },
 

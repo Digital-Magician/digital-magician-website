@@ -98,7 +98,7 @@ const faqs = [
   },
   {
     q: "Are there any EMI options?",
-    a: "Yes. We offer 2-month and 3-month EMI plans with no interest. Ask Gaurav on WhatsApp for details.",
+    a: "Yes. We offer 2-month and 3-month EMI plans with no interest. Ask us on WhatsApp for details.",
   },
   {
     q: "Can I enroll in multiple programs?",
@@ -237,7 +237,7 @@ export default function BatchSchedulePage() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href={`https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20enroll%20in%20the%20${encodeURIComponent(batch.name)}%20batch%20starting%20${encodeURIComponent(batch.startDate)}.`}
+                    href={`https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20enroll%20in%20the%20${encodeURIComponent(batch.name)}%20batch%20starting%20${encodeURIComponent(batch.startDate)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary px-6 py-3 text-sm gap-2 group flex-1 justify-center"
@@ -267,7 +267,7 @@ export default function BatchSchedulePage() {
               <div>
                 <div className="font-heading font-semibold text-white mb-1">Can&apos;t find a time that works?</div>
                 <p className="text-white/50 text-sm font-body leading-relaxed">
-                  We occasionally run weekend batches for working professionals. WhatsApp Gaurav to check availability
+                  We occasionally run weekend batches for working professionals. WhatsApp us to check availability
                   or get notified when the next batch opens.
                   <Link
                     href="https://wa.me/917988227240?text=Hi!%20I%20want%20to%20know%20about%20weekend%20or%20custom%20batch%20options."

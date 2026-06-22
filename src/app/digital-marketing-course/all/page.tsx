@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const allFaqs = [
   { q: "Which cities does the digital marketing institute cover in Haryana?", a: "Digital Magician serves students across all 22 Haryana districts — Sonipat, Panipat, Karnal, Rohtak, Hisar, Ambala, Faridabad, Gurugram and more — plus every Delhi NCR zone. Offline classes run at our Sonipat campus; the live online batch reaches the entire region." },
   { q: "Can I do the digital marketing course online from anywhere in Haryana?", a: "Yes. Our live online batch is a real-time class — you see the trainer's screen, ask questions live, work on real campaigns, and get 12-month recording access. Students from across Haryana and Delhi NCR learn entirely online with the same outcomes as offline." },
-  { q: "Is the online batch the same as the offline Sonipat classes?", a: "Identical curriculum, same trainer (Gaurav), same real client-campaign access, and the same 100% placement guarantee. The only difference is whether you attend at the Sonipat campus or join the live online session." },
+  { q: "Is the online batch the same as the offline Sonipat classes?", a: "Identical curriculum, same expert trainers, same real client-campaign access, and the same 100% placement guarantee. The only difference is whether you attend at the Sonipat campus or join the live online session." },
   { q: "Do you offer placement support across Haryana and Delhi NCR?", a: "Yes. Our placement network covers Sonipat, Delhi, Gurugram, Noida, and Faridabad, plus remote roles. 80% of graduates are placed within 30 days, backed by a written 100% placement guarantee or full refund." },
   { q: "Is the course fee the same across all locations?", a: "Yes — the fee is identical whether you attend online or offline, from any city. The Full Stack program is ₹45,000 (reduced from ₹60,000) with EMI options; specialisation courses start from ₹10,000." },
 ];
@@ -55,7 +55,7 @@ export default function AllLocationsPage() {
           </h1>
           <p className="hero-item hero-item-3 text-white/60 text-lg max-w-2xl mx-auto font-body">
             Our Sonipat campus serves students in person. Our live online batch serves the entire region.
-            Same curriculum. Same Gaurav. Same placement guarantee. Your location is not a barrier.
+            Same curriculum. Same expert trainers. Same placement guarantee. Your location is not a barrier.
           </p>
         </div>
       </section>
@@ -191,12 +191,12 @@ export default function AllLocationsPage() {
                 <span className="text-gradient-amber">We Still Cover You.</span>
               </h2>
               <p className="text-white/60 font-body mb-8 max-w-lg mx-auto">
-                Our live online batch is open to students anywhere in India. Same Gaurav, same campaigns,
+                Our live online batch is open to students anywhere in India. Same expert trainers, same campaigns,
                 same 100% placement guarantee — from wherever you are.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20know%20about%20the%20online%20batch%20at%20Digital%20Magician."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20about%20the%20online%20batch%20at%20Digital%20Magician."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center"

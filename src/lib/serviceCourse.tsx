@@ -46,7 +46,7 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
   const city = location.name;
 
   const whatsapp = `https://wa.me/917988227240?text=${encodeURIComponent(
-    `Hi Gaurav! I'm from ${city} and want to know about the ${service.name} at Digital Magician.`
+    `Hi Digital Magician! I'm from ${city} and want to know about the ${service.name} at Digital Magician.`
   )}`;
 
   const courseSchema = {
@@ -131,7 +131,7 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
 
             <div className="hero-item hero-item-5 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center">
-                Talk to Gaurav — Free <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Talk to Digital Magician — Free <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link href="/free-demo" className="btn-ghost px-8 py-4 text-base gap-2 w-full sm:w-auto justify-center">
                 Watch a Free Demo First
@@ -248,7 +248,7 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
                 Ready to enroll in the {service.name}?
               </h2>
               <p className="text-white/60 text-sm font-body leading-relaxed">
-                See the full syllabus, batch dates, and EMI options on the program page — or message Gaurav directly to reserve your seat in {city}.
+                See the full syllabus, batch dates, and EMI options on the program page — or message us directly to reserve your seat in {city}.
               </p>
             </div>
             <div className="flex flex-col gap-3 shrink-0 w-full md:w-auto">

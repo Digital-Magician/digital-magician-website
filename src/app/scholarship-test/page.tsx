@@ -33,7 +33,7 @@ const faqs = [
   { q: "How many times can I attempt the test?", a: "Once per 7-day period. If you score below 70%, you can retake it after 7 days. Your best score is used." },
   { q: "Is the waiver applicable to all programs?", a: "Yes — all 6 programs at Digital Magician. Full Stack, Performance Marketing, Google Ads, Meta Ads, SEO Mastery, and Web Development." },
   { q: "Do I need to know digital marketing to attempt?", a: "No. The test is designed for aspiring students, not professionals. Basic awareness of the internet and marketing is enough to attempt." },
-  { q: "How do I claim the waiver after passing?", a: "After completing the test, you'll receive a scholarship code on WhatsApp. Share it when you speak to Gaurav about enrollment — it's automatically applied to your fee." },
+  { q: "How do I claim the waiver after passing?", a: "After completing the test, you'll receive a scholarship code on WhatsApp. Share it when you speak to us about enrollment — it's automatically applied to your fee." },
   { q: "Can I combine the scholarship with EMI?", a: "Yes. The fee waiver applies to the total fee, and you can pay the reduced amount in 3 EMIs." },
 ];
 
@@ -66,7 +66,7 @@ export default function ScholarshipTestPage() {
           {/* CTA */}
           <div className="hero-item hero-item-5 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20attempt%20the%20scholarship%20test.%20Please%20share%20the%20link."
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20attempt%20the%20scholarship%20test.%20Please%20share%20the%20link."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors text-lg"
@@ -144,7 +144,7 @@ export default function ScholarshipTestPage() {
           <h2 className="font-bold text-2xl text-white text-center mb-8">How It Works</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { step: "01", title: "Get the link", desc: "Message Gaurav on WhatsApp — we'll send the test link within minutes." },
+              { step: "01", title: "Get the link", desc: "Message us on WhatsApp — we'll send the test link within minutes." },
               { step: "02", title: "Attempt the test", desc: "30 questions, 30 minutes. Multiple choice. Done on your phone or laptop." },
               { step: "03", title: "Instant results", desc: "See your score immediately. Your scholarship code is generated on the spot." },
               { step: "04", title: "Claim your waiver", desc: "Share your code when enrolling and we apply the discount to your fee." },
@@ -189,7 +189,7 @@ export default function ScholarshipTestPage() {
             There's no reason not to attempt it.
           </p>
           <a
-            href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20attempt%20the%20scholarship%20test.%20Please%20share%20the%20link."
+            href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20attempt%20the%20scholarship%20test.%20Please%20share%20the%20link."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"

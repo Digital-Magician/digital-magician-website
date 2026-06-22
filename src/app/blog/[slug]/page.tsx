@@ -291,7 +291,7 @@ export default async function BlogPostPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-6 py-3 rounded-xl transition-colors text-sm"
               >
-                Talk to Gaurav
+                Talk to Digital Magician
                 <ArrowRight className="w-4 h-4" />
               </a>
               <Link

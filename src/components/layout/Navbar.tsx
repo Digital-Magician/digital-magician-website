@@ -133,7 +133,7 @@ export default function Navbar() {
               Free Scholarship Test
             </Link>
             <Link
-              href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20courses."
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20courses."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-amber px-5 py-2.5 rounded-lg text-sm font-heading font-bold"
@@ -187,7 +187,7 @@ export default function Navbar() {
                 Free Scholarship Test
               </Link>
               <Link
-                href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20courses."
+                href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20courses."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}

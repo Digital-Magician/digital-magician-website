@@ -255,7 +255,7 @@ export default function AlumniPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20enroll%20at%20Digital%20Magician."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20enroll%20at%20Digital%20Magician."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center"

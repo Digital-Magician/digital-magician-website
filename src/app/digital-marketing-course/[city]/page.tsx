@@ -167,12 +167,12 @@ export default async function LocationPage({
             {/* CTAs */}
             <div className="hero-item hero-item-5 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href={`https://wa.me/917988227240?text=Hi%20Gaurav!%20I%27m%20from%20${encodeURIComponent(location.name)}%20and%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician.`}
+                href={`https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%27m%20from%20${encodeURIComponent(location.name)}%20and%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center"
               >
-                Talk to Gaurav — Free
+                Talk to Digital Magician — Free
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -289,7 +289,7 @@ export default async function LocationPage({
                 </div>
                 <div className="space-y-3 mb-6">
                   {[
-                    "Same live Gaurav — no pre-recorded videos",
+                    "Same live trainers — no pre-recorded videos",
                     "See real client campaigns on screen in real time",
                     "Ask questions, get answers live",
                     "All sessions recorded for 12-month replay",
@@ -546,7 +546,7 @@ export default async function LocationPage({
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href={`https://wa.me/917988227240?text=Hi%20Gaurav!%20I%27m%20from%20${encodeURIComponent(location.name)}%20and%20want%20to%20enroll%20at%20Digital%20Magician.`}
+                  href={`https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%27m%20from%20${encodeURIComponent(location.name)}%20and%20want%20to%20enroll%20at%20Digital%20Magician.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-8 py-4 text-base gap-2 group w-full sm:w-auto justify-center"

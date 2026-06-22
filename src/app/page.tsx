@@ -46,7 +46,7 @@ const whyUs = [
 const faqs = [
   { q: "Is the 100% placement guarantee actually real — or is it full of conditions?", a: "It's real, and the conditions are fair. Complete all modules with 75%+ score, submit assignments on time, build your portfolio during training, and apply to 30+ jobs within 4 months. If you do all that and still aren't placed, we refund every rupee. No loopholes." },
   { q: "I have zero marketing experience. Will I be able to keep up?", a: "That's who this is designed for. We start from 'what is digital marketing' and go all the way to managing real client campaigns. 60% of our students had no prior marketing experience. Today they're running campaigns for companies across India." },
-  { q: "Can I attend while working a full-time job?", a: "Yes. Classes are Mon/Wed/Fri from 7–9 PM. Every session is recorded and accessible for 12 months. You can attend from Sonipat in person or join the same live class online — identical experience, identical access to Gaurav." },
+  { q: "Can I attend while working a full-time job?", a: "Yes. Classes are Mon/Wed/Fri from 7–9 PM. Every session is recorded and accessible for 12 months. You can attend from Sonipat in person or join the same live class online — identical experience, identical access to our trainers." },
   { q: "What's the actual difference between online and offline mode?", a: "The content is identical: same live class, same curriculum, same real campaign projects. Offline students get the campus energy in Sonipat. Online students join the live Zoom with full interaction and screen sharing. Most students prefer hybrid: come to campus when they can, join online when they cannot." },
   { q: "How long before I can start earning after the course?", a: "Most Full Stack graduates land jobs within 30 days. Freelancers often start getting clients within 2–3 months. Our fastest: Sakshi from Panipat was earning ₹60,000/month freelancing 3 months after completing the SEO course." },
   { q: "What certifications will I actually earn?", a: "For the Full Stack program: Google Ads Search Certification, Google Analytics 4 Certification, Meta Blueprint certification, and 7+ more — all issued directly by Google, Meta, and industry platforms. Plus your Digital Magician completion certificate. Total: 10+ credentials on your resume." },
@@ -468,7 +468,7 @@ export default function HomePage() {
                 step: "01",
                 icon: "🎯",
                 title: "Orientation & Goal Setting",
-                desc: "Week 1. Gaurav maps your background to your target outcome. You join a cohort of driven learners. The intensity is real from Day 1.",
+                desc: "Week 1. We map your background to your target outcome. You join a cohort of driven learners. The intensity is real from Day 1.",
               },
               {
                 step: "02",
@@ -776,7 +776,7 @@ export default function HomePage() {
                 ))}
               </div>
               <Link href="/about" className="btn-ghost px-8 py-4 text-sm gap-2 inline-flex">
-                Read Gaurav&apos;s Full Story <ArrowRight className="w-4 h-4" />
+                Read the Full Story <ArrowRight className="w-4 h-4" />
               </Link>
             </AnimateOnScroll>
           </div>

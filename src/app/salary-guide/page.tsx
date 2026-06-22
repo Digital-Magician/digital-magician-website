@@ -317,12 +317,12 @@ export default function SalaryGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20read%20the%20salary%20guide%20and%20want%20to%20know%20more%20about%20your%20programs."
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20read%20the%20salary%20guide%20and%20want%20to%20know%20more%20about%20your%20programs."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"
             >
-              Talk to Gaurav on WhatsApp
+              Talk to Digital Magician on WhatsApp
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link

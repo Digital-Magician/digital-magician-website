@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function WhatsAppButton() {
   const message = encodeURIComponent(
-    "Hi Gaurav! I want to know more about your digital marketing courses at Digital Magician."
+    "Hi Digital Magician! I want to know more about your digital marketing courses at Digital Magician."
   );
 
   return (

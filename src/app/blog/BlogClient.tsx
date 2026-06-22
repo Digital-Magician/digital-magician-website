@@ -277,7 +277,7 @@ export default function BlogClient({ posts }: { posts: PostPreview[] }) {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-3.5 rounded-xl transition-colors"
             >
-              Talk to Gaurav on WhatsApp
+              Talk to Digital Magician on WhatsApp
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link

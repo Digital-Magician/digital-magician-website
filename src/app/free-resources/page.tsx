@@ -173,7 +173,7 @@ export default function FreeResourcesPage() {
               The best free resource: a 60-minute demo class
             </h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Watch Gaurav teach a real module — no registration, no email, just 60 minutes of
+              Watch our trainer teach a real module — no registration, no email, just 60 minutes of
               actual class content. See exactly how we teach before you decide to enroll.
             </p>
           </div>

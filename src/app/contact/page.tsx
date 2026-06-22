@@ -15,7 +15,7 @@ const contactMethods = [
     title: "WhatsApp (Fastest)",
     value: "+91 79882 27240",
     sub: "Reply in under 30 minutes",
-    href: "https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician.",
+    href: "https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician.",
     cta: "Chat Now",
     highlight: true,
   },
@@ -55,15 +55,15 @@ const faqs = [
   },
   {
     q: "Can I visit the institute before enrolling?",
-    a: "Absolutely. We encourage it. Visit us any weekday between 10 AM and 6 PM. You'll see the classroom, meet Gaurav if available, and get a full walkthrough of the program — no pressure, no sales script.",
+    a: "Absolutely. We encourage it. Visit us any weekday between 10 AM and 6 PM. You'll see the classroom, meet our trainers if available, and get a full walkthrough of the program — no pressure, no sales script.",
   },
   {
     q: "I'm not from Sonipat. Can I still attend?",
-    a: "Yes. We have students from Panipat, Delhi, Rohtak, Karnal, and beyond. Our online mode offers the identical live class experience — same Gaurav, same curriculum, same Q&A. Many students do hybrid.",
+    a: "Yes. We have students from Panipat, Delhi, Rohtak, Karnal, and beyond. Our online mode offers the identical live class experience — same expert trainers, same curriculum, same Q&A. Many students do hybrid.",
   },
   {
     q: "What if I have questions after enrolling?",
-    a: "Students get direct access to Gaurav via our private WhatsApp group. Post-class doubts are resolved within 24 hours. We also schedule one-on-one sessions for complex questions.",
+    a: "Students get direct access to our trainers via our private WhatsApp group. Post-class doubts are resolved within 24 hours. We also schedule one-on-one sessions for complex questions.",
   },
 ];
 
@@ -195,13 +195,13 @@ export default function ContactPage() {
                   The Fastest Way to Reach Us
                 </h3>
                 <p className="text-white/60 font-body text-sm mb-6 leading-relaxed">
-                  Skip the form. Just WhatsApp Gaurav directly. Get answers about fees, batches,
+                  Skip the form. Just WhatsApp Digital Magician directly. Get answers about fees, batches,
                   placement, and the curriculum in a real conversation — not a PDF.
                 </p>
                 <div className="space-y-3 mb-8">
                   {[
                     "Response in under 30 minutes",
-                    "Talk directly to Gaurav or his team",
+                    "Talk directly to the Digital Magician team",
                     "No automated replies",
                     "Free 30-min counselling call included",
                   ].map((item) => (
@@ -212,13 +212,13 @@ export default function ContactPage() {
                   ))}
                 </div>
                 <Link
-                  href="https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician."
+                  href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20about%20the%20digital%20marketing%20course%20at%20Digital%20Magician."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full justify-center px-6 py-4 text-base gap-2 group"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  WhatsApp Gaurav Now
+                  WhatsApp Us Now
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

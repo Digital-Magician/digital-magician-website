@@ -78,12 +78,12 @@ export default function HireFromUsPage() {
           </p>
           <div className="hero-item hero-item-4 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/917988227240?text=Hi%20Gaurav!%20We%20are%20looking%20to%20hire%20a%20digital%20marketing%20professional.%20Can%20we%20discuss?"
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20We%20are%20looking%20to%20hire%20a%20digital%20marketing%20professional.%20Can%20we%20discuss?"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"
             >
-              Talk to Gaurav About Hiring
+              Talk to Digital Magician About Hiring
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
@@ -177,7 +177,7 @@ export default function HireFromUsPage() {
           <h2 className="font-bold text-2xl text-white mb-2">Open Positions From Our Partners</h2>
           <p className="text-slate-400 text-sm mb-6">
             If you're a graduate looking for a job — these companies are actively hiring.
-            WhatsApp Gaurav with your portfolio to be considered.
+            WhatsApp us with your portfolio to be considered.
           </p>
           <div className="space-y-3">
             {currentlyHiring.map((job) => (
@@ -189,7 +189,7 @@ export default function HireFromUsPage() {
                 <div className="flex items-center gap-4">
                   <span className="text-amber-400 font-semibold text-sm">{job.salary}</span>
                   <a
-                    href={`https://wa.me/917988227240?text=Hi%20Gaurav!%20I%20am%20interested%20in%20the%20${encodeURIComponent(job.role)}%20position%20at%20${encodeURIComponent(job.company)}.%20Here%20is%20my%20portfolio.`}
+                    href={`https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20am%20interested%20in%20the%20${encodeURIComponent(job.role)}%20position%20at%20${encodeURIComponent(job.company)}.%20Here%20is%20my%20portfolio.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-semibold bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 px-3 py-1.5 rounded-lg transition-colors"
@@ -214,7 +214,7 @@ export default function HireFromUsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/917988227240?text=Hi%20Gaurav!%20We%20want%20to%20hire%20a%20digital%20marketer.%20Here%20is%20our%20requirement:"
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20We%20want%20to%20hire%20a%20digital%20marketer.%20Here%20is%20our%20requirement:"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"
