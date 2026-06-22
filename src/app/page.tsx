@@ -14,9 +14,10 @@ import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Course in Sonipat | Best AI Marketing Institute in India",
+  title: "Best AI Digital Marketing Institute in India — Sonipat",
   description:
-    "India's most results-driven digital marketing institute, based in Sonipat, Haryana. 500+ students trained. ₹1.2 Crore+ in salaries generated. Master Google Ads, SEO, Meta Ads and AI Tools with a 100% placement guarantee. Online and offline classes available.",
+    "North India's #1 digital marketing institute in Sonipat — master Google Ads, SEO, Meta Ads & AI tools with a 100% placement guarantee. 500+ students trained.",
+  alternates: { canonical: "/" },
 };
 
 const tools = [
@@ -111,6 +112,17 @@ export default function HomePage() {
               <strong className="text-white font-semibold">500+ students trained.</strong> ₹1.2 Crore+ in combined annual salaries generated.
               Placed in 30 days, or we refund{" "}
               <strong className="text-amber-brand font-semibold">every single rupee.</strong>
+            </p>
+
+            <p className="hero-item hero-item-3 text-white/55 text-base mb-10 max-w-2xl mx-auto font-body">
+              India&apos;s most results-driven{" "}
+              <Link
+                href="/digital-marketing-course/sonipat"
+                className="text-amber-brand underline underline-offset-4 decoration-amber-brand/40 hover:decoration-amber-brand transition-colors"
+              >
+                digital marketing course in Sonipat
+              </Link>
+              {" "}— now available online &amp; offline across Haryana and Delhi NCR.
             </p>
 
             {/* CTAs */}

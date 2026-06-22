@@ -7,7 +7,8 @@ import { getHaryanaLocations, getDelhiLocations } from "@/lib/data/locations";
 export const metadata: Metadata = {
   title: "Digital Marketing Institute in Haryana & Delhi NCR — All Locations",
   description:
-    "Digital Magician is the digital marketing institute serving all 22 Haryana districts and Delhi NCR — live Google Ads, SEO & Meta Ads training with a 100% placement guarantee. Online live batch from anywhere, offline classes at the Sonipat campus.",
+    "Digital marketing institute serving all Haryana & Delhi NCR — live Google Ads, SEO & Meta Ads training, 100% placement. Online & offline (Sonipat).",
+  alternates: { canonical: "/digital-marketing-course/all" },
 };
 
 export default function AllLocationsPage() {

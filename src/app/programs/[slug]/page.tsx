@@ -24,11 +24,13 @@ export async function generateMetadata(
 
   return {
     title: `${program.name} in Sonipat`,
-    description: `${program.description} Duration: ${program.duration}. Fee: ₹${program.fee.toLocaleString("en-IN")}. Earn ${program.certifications} certifications.`,
+    description: `${program.shortName} digital marketing course in Sonipat — ${program.duration}, 100% placement guarantee, live campaigns & real portfolio. Fee ₹${program.fee.toLocaleString("en-IN")}, EMI available.`,
+    alternates: { canonical: `/programs/${slug}` },
     openGraph: {
       title: `${program.name} | Digital Magician`,
       description: program.description,
       url: `https://digitalmagician.in/programs/${slug}`,
+      images: ["/og-image.png"],
     },
   };
 }

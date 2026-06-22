@@ -7,11 +7,13 @@ import FeeTag from "@/components/shared/FeeTag";
 export const metadata: Metadata = {
   title: "Digital Marketing Programs in Sonipat",
   description:
-    "6 specialised digital marketing programs — Full Stack, Google Ads, Meta Ads, SEO, Performance Marketing & Web Development. Live mentorship, real campaigns, placement support.",
+    "6 specialised digital marketing courses in Sonipat — Full Stack, Google Ads, Meta Ads, SEO, Performance Marketing & Web Dev. Live, with placement support.",
+  alternates: { canonical: "/programs" },
   openGraph: {
     title: "Digital Marketing Programs | Digital Magician",
     description: "Choose from 6 career-defining programs with live mentorship and 100% placement guarantee.",
     url: "https://digitalmagician.in/programs",
+    images: ["/og-image.png"],
   },
 };
 

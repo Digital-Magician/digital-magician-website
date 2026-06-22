@@ -28,6 +28,7 @@ export async function generateMetadata(
     title: `${post.title} | Blog`,
     description: post.description,
     authors: [{ name: post.author }],
+    alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -35,11 +36,13 @@ export async function generateMetadata(
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      images: ["/og-image.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: ["/og-image.png"],
     },
   };
 }

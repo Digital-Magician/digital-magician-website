@@ -28,13 +28,13 @@ export async function buildServiceMetadata(
   if (!service || !location) return { title: "Not Found" };
   const city = location.name;
   const title = `${service.name} in ${city} — Fees, Syllabus & 100% Placement`;
-  const description = `${service.name} in ${city} with live projects and a 100% placement guarantee. ${service.tagline} Fees ₹${service.fee.toLocaleString("en-IN")}, ${service.duration}, online & offline. Learn from practitioners at Digital Magician.`;
+  const description = `${service.name} in ${city} — live projects & 100% placement guarantee. ${service.tagline} Fees ₹${service.fee.toLocaleString("en-IN")}, ${service.duration}, online & offline.`;
   const url = `https://digitalmagician.in/${service.slug}/${citySlug}`;
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title: `${service.name} in ${city} | Digital Magician`, description, url },
+    openGraph: { title: `${service.name} in ${city} | Digital Magician`, description, url, images: ["/og-image.png"] },
   };
 }
 

@@ -7,7 +7,8 @@ import CountUp from "@/components/shared/CountUp";
 export const metadata: Metadata = {
   title: "Digital Marketing Course With 100% Placement Guarantee",
   description:
-    "A digital marketing course with a real, legally-backed placement guarantee — placed in 30 days or a full refund. 80% of graduates placed into digital marketing jobs across Sonipat & Delhi NCR. 10+ hiring companies. ₹1.2 Crore+ in student salaries.",
+    "A digital marketing course with a real, legally-backed placement guarantee — placed in 30 days or a full refund. 80% placed, 10+ hiring partners.",
+  alternates: { canonical: "/placement" },
 };
 
 const stats = [

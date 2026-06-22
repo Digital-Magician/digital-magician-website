@@ -67,7 +67,7 @@ export const locations: LocationData[] = [
     travelTime: "You're already here",
     mode: "home",
     metaTitle: "Digital Marketing Course in Sonipat | Best Institute, 100% Placement",
-    metaDesc: "Join the best digital marketing course in Sonipat — live Google Ads, SEO & Meta Ads training and classes with a 100% placement guarantee. 500+ students placed. Online & offline. Fees from ₹45,000, EMI available.",
+    metaDesc: "The best digital marketing course in Sonipat — live Google Ads, SEO & Meta Ads training with a 100% placement guarantee. Fees ₹45,000, EMI available.",
     heroHeadline: "The Best Digital Marketing Course in Sonipat — With a Real 100% Placement Guarantee",
     heroSubheadline: "You don't need to travel to Delhi to get Delhi-level digital marketing training. It's right here — with real campaigns, real results, and a 100% placement guarantee.",
     eyebrowText: "Located in Sonipat, Haryana",

@@ -5,11 +5,13 @@ import { ArrowRight, TrendingUp, MapPin, Briefcase } from "lucide-react";
 export const metadata: Metadata = {
   title: "Digital Marketing Salary Guide 2026 — Haryana & Delhi NCR",
   description:
-    "Real salary data for digital marketing roles in Haryana and Delhi NCR. Entry-level to senior, by specialisation and city. Based on 500+ student placement records.",
+    "Real digital marketing salary data for Haryana & Delhi NCR (2026) — by role, experience & city. Based on 500+ student placements.",
+  alternates: { canonical: "/salary-guide" },
   openGraph: {
     title: "Digital Marketing Salary Guide 2026 | Digital Magician",
     description: "What can you actually earn in digital marketing in North India? Real data from 500+ placement records.",
     url: "https://digitalmagician.in/salary-guide",
+    images: ["/og-image.png"],
   },
 };
 
