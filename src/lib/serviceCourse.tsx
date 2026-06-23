@@ -256,16 +256,14 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
       {/* ── Enroll / program link ─────────────────────────────────── */}
       <section className="py-16 bg-midnight border-y border-white/[0.06]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bento gradient-border rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-1 text-center md:text-left">
-              <h2 className="font-heading font-bold text-2xl text-white mb-2">
-                Ready to enroll in the {service.name}?
-              </h2>
-              <p className="text-white/60 text-sm font-body leading-relaxed">
-                See the full syllabus, batch dates, and EMI options on the program page — or message us directly to reserve your seat in {city}.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 shrink-0 w-full md:w-auto">
+          <div className="bento gradient-border rounded-2xl p-8 md:p-10 text-center">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-3">
+              Ready to enroll in the {service.name}?
+            </h2>
+            <p className="text-white/60 text-sm sm:text-base font-body leading-relaxed max-w-xl mx-auto mb-7">
+              See the full syllabus, batch dates, and EMI options on the program page — or message us directly to reserve your seat in {city}.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href={`/programs/${service.programSlug}`} className="btn-primary px-7 py-3.5 text-sm gap-2 justify-center">
                 View the full {service.shortLabel} program <ArrowRight className="w-4 h-4" />
               </Link>
