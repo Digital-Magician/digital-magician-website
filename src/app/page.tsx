@@ -92,10 +92,10 @@ export default function HomePage() {
             </div>
 
             {/* Main headline */}
-            <h1 className="hero-item hero-item-2 heading-xl text-5xl sm:text-6xl lg:text-7xl xl:text-[82px] text-white mb-6">
+            <h1 className="hero-item hero-item-2 heading-xl text-4xl sm:text-6xl lg:text-7xl xl:text-[82px] text-white mb-6">
               Stop{" "}
               <em className="not-italic text-gradient-amber">Learning</em>{" "}
-              Digital Marketing.
+              Digital Marketing.{" "}
               <br className="hidden sm:block" />
               Start{" "}
               <span className="relative inline-block">
