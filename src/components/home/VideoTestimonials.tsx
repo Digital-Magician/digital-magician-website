@@ -1,26 +1,36 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 // Hosted on Vercel Blob (Mumbai/bom1) — served from Vercel's CDN, not the repo.
 const BLOB_BASE = "https://8nzeeq56npf9ud4y.public.blob.vercel-storage.com/testimonials";
 const VIDEOS = Array.from({ length: 9 }, (_, i) => `${BLOB_BASE}/testimonial-${i + 1}.mp4`);
 
-function VideoCard({ src }: { src: string }) {
+function VideoCard({
+  src,
+  idx,
+  active,
+  setActive,
+  canHover,
+}: {
+  src: string;
+  idx: number;
+  active: number | null;
+  setActive: (v: number | null | ((p: number | null) => number | null)) => void;
+  canHover: boolean;
+}) {
   const ref = useRef<HTMLVideoElement>(null);
+  const isActive = active === idx;
 
-  // Only play while on-screen (saves CPU/bandwidth with many videos).
+  // Play only while on-screen (saves CPU/bandwidth across many clips).
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) v.play().catch(() => {});
-        else {
-          v.pause();
-          v.muted = true; // re-mute anything that scrolls away
-        }
+        else v.pause();
       },
       { threshold: 0.4 }
     );
@@ -28,23 +38,31 @@ function VideoCard({ src }: { src: string }) {
     return () => io.disconnect();
   }, []);
 
-  const unmute = () => {
+  // Sound follows the active card; everything else stays muted.
+  useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    v.muted = false;
-    v.volume = 1;
-    v.play().catch(() => {});
-  };
-  const mute = () => {
-    const v = ref.current;
-    if (v) v.muted = true;
-  };
+    v.muted = !isActive;
+    if (isActive) {
+      v.volume = 1;
+      v.play().catch(() => {});
+    }
+  }, [isActive]);
+
+  // Desktop: hover to unmute. Touch: tap to toggle.
+  const handlers = canHover
+    ? {
+        onMouseEnter: () => setActive(idx),
+        onMouseLeave: () => setActive((p) => (p === idx ? null : p)),
+      }
+    : {
+        onClick: () => setActive((p) => (p === idx ? null : idx)),
+      };
 
   return (
     <div
-      className="group/v relative mr-4 sm:mr-5 shrink-0 w-[280px] sm:w-[340px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:border-amber-brand/40 transition-colors"
-      onMouseEnter={unmute}
-      onMouseLeave={mute}
+      {...handlers}
+      className="group/v relative mr-3 sm:mr-4 shrink-0 w-[190px] sm:w-[230px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 bg-black shadow-[0_8px_30px_rgba(0,0,0,0.4)] cursor-pointer hover:border-amber-brand/40 transition-colors"
     >
       <video
         ref={ref}
@@ -53,21 +71,30 @@ function VideoCard({ src }: { src: string }) {
         loop
         playsInline
         preload="metadata"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover object-center"
       />
-      {/* Muted state hint (hidden while hovering = unmuted) */}
-      <div className="pointer-events-none absolute bottom-2.5 right-2.5 flex items-center gap-1.5 rounded-full bg-black/55 backdrop-blur-sm px-2.5 py-1 text-white text-[11px] font-heading font-semibold group-hover/v:opacity-0 transition-opacity">
-        <VolumeX className="w-3.5 h-3.5" /> Hover to unmute
-      </div>
-      {/* Unmuted indicator (shown on hover) */}
-      <div className="pointer-events-none absolute bottom-2.5 right-2.5 flex items-center gap-1.5 rounded-full bg-amber-brand/90 text-midnight px-2.5 py-1 text-[11px] font-heading font-bold opacity-0 group-hover/v:opacity-100 transition-opacity">
-        <Volume2 className="w-3.5 h-3.5" /> Playing
-      </div>
+      {/* state badge */}
+      {isActive ? (
+        <div className="pointer-events-none absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-amber-brand/95 text-midnight px-3 py-1 text-[11px] font-heading font-bold">
+          <Volume2 className="w-3.5 h-3.5" /> Playing
+        </div>
+      ) : (
+        <div className="pointer-events-none absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-black/55 backdrop-blur-sm px-3 py-1 text-white text-[11px] font-heading font-semibold">
+          <VolumeX className="w-3.5 h-3.5" /> {canHover ? "Hover" : "Tap"} to unmute
+        </div>
+      )}
     </div>
   );
 }
 
 export default function VideoTestimonials() {
+  const [active, setActive] = useState<number | null>(null);
+  const [canHover, setCanHover] = useState(false);
+
+  useEffect(() => {
+    setCanHover(window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+  }, []);
+
   return (
     <section className="py-16 sm:py-20 bg-[#07051a] border-y border-white/[0.06] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
@@ -76,18 +103,24 @@ export default function VideoTestimonials() {
           Hear It Straight From Our Students
         </h2>
         <p className="text-white/50 font-body mt-3 text-sm sm:text-base">
-          Real results, in their own words. Hover any clip to unmute and listen.
+          Real results, in their own words. {canHover ? "Hover" : "Tap"} any clip to unmute and listen.
         </p>
       </div>
 
-      {/* Scrolling video carousel (pauses on hover) */}
-      <div className="overflow-hidden" aria-label="Student video testimonials">
-        <div className="marquee-track" style={{ animationDuration: "70s" }}>
+      {/* Scrolling video carousel (pauses while a clip is active / hovered) */}
+      <div className="overflow-hidden">
+        <div
+          className="marquee-track"
+          style={{
+            animationDuration: "80s",
+            animationPlayState: active !== null ? "paused" : undefined,
+          }}
+        >
           {VIDEOS.map((src, i) => (
-            <VideoCard key={`a-${i}`} src={src} />
+            <VideoCard key={`a-${i}`} src={src} idx={i} active={active} setActive={setActive} canHover={canHover} />
           ))}
           {VIDEOS.map((src, i) => (
-            <VideoCard key={`b-${i}`} src={src} />
+            <VideoCard key={`b-${i}`} src={src} idx={i + 9} active={active} setActive={setActive} canHover={canHover} />
           ))}
         </div>
       </div>

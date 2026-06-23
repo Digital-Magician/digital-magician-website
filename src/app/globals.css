@@ -14,13 +14,18 @@
 }
 
 /* ── Base ─────────────────────────────────────────────────────── */
-html { scroll-behavior: smooth; }
+/* overflow-x: clip on the root kills horizontal scroll from reveal-right /
+   marquee transforms (clip, not hidden, so smooth-scroll + sticky still work). */
+html { scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   background-color: var(--midnight);
   color: white;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  /* Contain horizontal overflow from reveal-right/marquee transforms without
+     breaking position: sticky (clip, not hidden). */
+  overflow-x: clip;
 }
 
 ::-webkit-scrollbar { width: 4px; }
