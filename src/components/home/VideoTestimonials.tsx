@@ -3,7 +3,9 @@
 import { useEffect, useRef } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-const VIDEOS = Array.from({ length: 9 }, (_, i) => `/testimonials/testimonial-${i + 1}.mp4`);
+// Hosted on Vercel Blob (Mumbai/bom1) — served from Vercel's CDN, not the repo.
+const BLOB_BASE = "https://8nzeeq56npf9ud4y.public.blob.vercel-storage.com/testimonials";
+const VIDEOS = Array.from({ length: 9 }, (_, i) => `${BLOB_BASE}/testimonial-${i + 1}.mp4`);
 
 function VideoCard({ src }: { src: string }) {
   const ref = useRef<HTMLVideoElement>(null);
