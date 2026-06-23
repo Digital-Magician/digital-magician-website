@@ -10,6 +10,7 @@ import CountUp from "@/components/shared/CountUp";
 import Marquee from "@/components/shared/Marquee";
 import NextBatchDate from "@/components/shared/NextBatchDate";
 import FeeTag from "@/components/shared/FeeTag";
+import VideoTestimonials from "@/components/home/VideoTestimonials";
 import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 
@@ -184,6 +185,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          VIDEO TESTIMONIALS (below hero)
+      ═══════════════════════════════════════════════════════════ */}
+      <VideoTestimonials />
 
       {/* ═══════════════════════════════════════════════════════════
           TOOLS MARQUEE
