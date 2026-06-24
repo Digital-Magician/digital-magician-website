@@ -11,6 +11,7 @@ import NextBatchDate from "@/components/shared/NextBatchDate";
 import { getLocationBySlug, getAllLocationSlugs, locations } from "@/lib/data/locations";
 import { programs } from "@/lib/data/programs";
 import { serviceCourses, SERVICE_CITY_SLUGS } from "@/lib/data/services";
+import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 // ── Static params ────────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -535,6 +536,9 @@ export default async function LocationPage({
           </div>
         </section>
       )}
+
+      {/* ── Video testimonials ────────────────────────────────────── */}
+      <VideoTestimonials />
 
       {/* ── FAQs ──────────────────────────────────────────────────── */}
       <section className="py-24 bg-[#07051a]">

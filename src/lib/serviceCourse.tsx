@@ -11,6 +11,7 @@ import {
   serviceCourses, getServiceCourse, SERVICE_CITY_SLUGS, type ServiceCourse,
 } from "@/lib/data/services";
 import { getLocationBySlug } from "@/lib/data/locations";
+import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 const fill = (text: string, city: string) => text.replaceAll("{city}", city);
 
@@ -274,6 +275,9 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
           </div>
         </div>
       </section>
+
+      {/* ── Video testimonials ────────────────────────────────────── */}
+      <VideoTestimonials />
 
       {/* ── FAQs ──────────────────────────────────────────────────── */}
       <section className="py-20">

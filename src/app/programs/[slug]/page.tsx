@@ -9,6 +9,7 @@ import { programs, getProgramBySlug } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
 import { serviceCourses } from "@/lib/data/services";
 import FeeTag from "@/components/shared/FeeTag";
+import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 // ── Static params ──────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -372,6 +373,9 @@ export default async function ProgramPage({
             </div>
           </section>
         )}
+
+        {/* ── Video testimonials ──────────────────────────────────────────── */}
+        <VideoTestimonials />
 
         {/* ── FAQs ────────────────────────────────────────────────────────── */}
         <section className="py-16 px-4 bg-white/[0.02]">
