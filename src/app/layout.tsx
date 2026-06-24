@@ -144,6 +144,24 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Meta Pixel */}
+
+        {/* Google Analytics (GA4) — production only, to keep dev traffic out */}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-GSWH7SDY4H"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-GSWH7SDY4H');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
