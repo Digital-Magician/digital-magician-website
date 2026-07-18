@@ -20,6 +20,8 @@ export interface BlogPost {
   readTime: string;
   featured: boolean;
   coverEmoji: string; // emoji used as hero visual
+  coverImage?: string | null; // optional real cover image (overrides generated banner)
+  faqs?: { q: string; a: string }[] | null; // optional FAQ block → renders + FAQPage schema
   content: string;   // raw MDX string
 }
 
@@ -67,6 +69,8 @@ export function getAllPosts(): BlogPost[] {
       readTime: data.readTime ?? estimateReadTime(content),
       featured: data.featured ?? false,
       coverEmoji: data.coverEmoji ?? "📝",
+      coverImage: data.coverImage ?? null,
+      faqs: data.faqs ?? null,
       content,
     } satisfies BlogPost;
   });
@@ -95,6 +99,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
     readTime: data.readTime ?? estimateReadTime(content),
     featured: data.featured ?? false,
     coverEmoji: data.coverEmoji ?? "📝",
+    coverImage: data.coverImage ?? null,
+    faqs: data.faqs ?? null,
     content,
   };
 }

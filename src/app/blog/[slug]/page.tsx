@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar, ArrowRight, User } from "lucide-react";
 import { evaluate } from "@mdx-js/mdx";
+import remarkGfm from "remark-gfm";
 import * as jsxRuntime from "react/jsx-runtime";
 import {
   getPostBySlug,
@@ -36,13 +37,12 @@ export async function generateMetadata(
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
-      images: ["/og-image.png"],
+      // og:image is supplied automatically by ./opengraph-image (per-post branded PNG)
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["/og-image.png"],
     },
   };
 }
@@ -140,6 +140,7 @@ export default async function BlogPostPage({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { default: MDXContent } = await evaluate(post.content, {
     ...(jsxRuntime as any),
+    remarkPlugins: [remarkGfm], // GFM tables, strikethrough, autolinks
   });
 
   const related = getRelatedPosts(slug, post.category, 3);
@@ -177,6 +178,19 @@ export default async function BlogPostPage({
     ],
   };
 
+  // Optional FAQPage schema (only when the post declares `faqs` in frontmatter)
+  const faqSchema = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
@@ -187,6 +201,12 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <main className="min-h-screen pt-24 pb-20">
         <div className="max-w-3xl mx-auto px-4">
@@ -201,27 +221,46 @@ export default async function BlogPostPage({
 
           {/* ── Article header ────────────────────────────────────────── */}
           <header className="mb-10">
-            {/* Category */}
-            <div className="flex flex-wrap items-center gap-3 mb-5">
-              <span
-                className={`text-xs font-semibold px-3 py-1 rounded-full border ${catColor}`}
-              >
-                {post.category}
-              </span>
-              {post.featured && (
-                <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">
-                  Featured
-                </span>
-              )}
-            </div>
-
-            {/* Emoji + Title */}
-            <div className="flex items-start gap-5 mb-5">
-              <span className="text-6xl shrink-0 leading-none">{post.coverEmoji}</span>
-              <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-                {post.title}
-              </h1>
-            </div>
+            {/* Cover: real image if provided, otherwise a branded gradient banner */}
+            {post.coverImage ? (
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={post.coverImage}
+                  alt={post.title}
+                  className="w-full aspect-[1200/525] object-cover rounded-2xl border border-white/10 mb-7"
+                />
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${catColor}`}>
+                    {post.category}
+                  </span>
+                  {post.featured && (
+                    <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">Featured</span>
+                  )}
+                </div>
+                <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-5">
+                  {post.title}
+                </h1>
+              </>
+            ) : (
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 mb-8 bg-gradient-to-br from-[#0b0a1f] via-[#09071c] to-[#140b05] p-7 sm:p-9 flex flex-col justify-between gap-8 min-h-[300px] sm:min-h-[340px]">
+                <div className="absolute -top-24 -right-16 w-72 h-72 rounded-full bg-amber-500/15 blur-3xl pointer-events-none" />
+                <div className="relative flex flex-wrap items-center gap-3">
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${catColor}`}>
+                    {post.category}
+                  </span>
+                  {post.featured && (
+                    <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">Featured</span>
+                  )}
+                </div>
+                <div className="relative flex items-end gap-4 sm:gap-5">
+                  <span className="text-5xl sm:text-6xl shrink-0 leading-none">{post.coverEmoji}</span>
+                  <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                    {post.title}
+                  </h1>
+                </div>
+              </div>
+            )}
 
             {/* Description */}
             <p className="text-slate-400 text-lg leading-relaxed mb-6">
@@ -251,6 +290,26 @@ export default async function BlogPostPage({
           <article className="prose-custom">
             <MDXContent components={mdxComponents} />
           </article>
+
+          {/* ── FAQ (rendered + FAQPage schema when frontmatter has `faqs`) ── */}
+          {post.faqs && post.faqs.length > 0 && (
+            <section className="mt-14">
+              <h2 className="font-bold text-2xl text-white mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-3">
+                {post.faqs.map((f) => (
+                  <details key={f.q} className="bento p-0 overflow-hidden group">
+                    <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none">
+                      <span className="font-semibold text-white text-sm">{f.q}</span>
+                      <svg className="w-4 h-4 text-amber-400 shrink-0 transition-transform group-open:rotate-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6" /></svg>
+                    </summary>
+                    <div className="px-5 pb-5 text-slate-400 text-sm leading-relaxed border-t border-white/10 pt-4">
+                      {f.a}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* ── Tags ──────────────────────────────────────────────────── */}
           {post.tags.length > 0 && (
