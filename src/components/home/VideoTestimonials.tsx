@@ -3,9 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-// Hosted on Vercel Blob (Mumbai/bom1) — served from Vercel's CDN, not the repo.
-const BLOB_BASE = "https://8nzeeq56npf9ud4y.public.blob.vercel-storage.com/testimonials";
-const VIDEOS = Array.from({ length: 9 }, (_, i) => `${BLOB_BASE}/testimonial-${i + 1}.mp4`);
+// Compressed clips (≤5MB each) served from /public with a 1-year immutable
+// cache header (see next.config.ts). Set NEXT_PUBLIC_TESTIMONIALS_BASE to an
+// external origin (e.g. a Cloudflare R2 public URL) to serve them from there
+// instead — no code change needed.
+const VIDEO_BASE = process.env.NEXT_PUBLIC_TESTIMONIALS_BASE?.replace(/\/$/, "") || "/testimonials";
+const VIDEOS = Array.from({ length: 9 }, (_, i) => `${VIDEO_BASE}/testimonial-${i + 1}.mp4`);
 
 function VideoCard({
   src,

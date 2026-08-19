@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "res.cloudinary.com" },
     ],
   },
+  headers: async () => [
+    // Testimonial videos never change: cache for a year so repeat visitors
+    // (and the CDN) don't re-download them. Keeps Fast Origin Transfer low.
+    {
+      source: "/testimonials/:file*",
+      headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+    },
+  ],
   redirects: async () => [
     // Canonical host: force www → non-www (avoids duplicate-host indexing)
     {
