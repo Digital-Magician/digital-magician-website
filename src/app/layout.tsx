@@ -95,7 +95,7 @@ const structuredData = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "115",
+    reviewCount: "122",
     bestRating: "5",
   },
 };

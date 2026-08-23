@@ -153,7 +153,7 @@ export default function HomePage() {
             {/* Proof strip */}
             <div className="hero-item hero-item-5 flex flex-wrap items-center justify-center gap-5 sm:gap-8 text-sm text-white/50 font-body">
               {[
-                { icon: "⭐", text: "4.9★, 115+ Google Reviews" },
+                { icon: "⭐", text: "4.9★, 122 Google Reviews" },
                 { icon: "🎓", text: "500+ Students Trained" },
                 { icon: "🏆", text: "10+ Certifications Included" },
                 { icon: "✅", text: "100% Placement or Refund" },
@@ -258,7 +258,7 @@ export default function HomePage() {
                 <div className="stat-number text-5xl mb-1">
                   <CountUp end={4.9} suffix="" decimals={1} />
                 </div>
-                <div className="text-white/50 text-xs font-body">Average rating, 115+ Google Reviews</div>
+                <div className="text-white/50 text-xs font-body">Average rating, 122 Google Reviews</div>
               </div>
             </AnimateOnScroll>
 

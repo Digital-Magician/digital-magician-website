@@ -72,7 +72,7 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-      reviewCount: "115",
+      reviewCount: "122",
       bestRating: "5",
     },
   };

@@ -207,7 +207,7 @@ export default function AboutPage() {
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-amber-brand fill-amber-brand" />
                     ))}
-                    <span className="text-white/50 text-xs ml-2 font-body">4.9, 115+ Google reviews</span>
+                    <span className="text-white/50 text-xs ml-2 font-body">4.9, 122 Google reviews</span>
                   </div>
                   <p className="text-white/50 text-xs font-body italic">
                     &ldquo;The trainer showed us his actual client dashboard during class. I have never seen that in any other course.&rdquo;

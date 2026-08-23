@@ -86,7 +86,7 @@ export default async function ProgramPage({
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-      reviewCount: "115",
+      reviewCount: "122",
       bestRating: "5",
     },
   };
