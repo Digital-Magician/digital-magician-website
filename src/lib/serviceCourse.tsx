@@ -11,6 +11,7 @@ import {
   serviceCourses, getServiceCourse, SERVICE_CITY_SLUGS, type ServiceCourse,
 } from "@/lib/data/services";
 import { getLocationBySlug } from "@/lib/data/locations";
+import { pageTitle, metaDescription } from "@/lib/seo";
 import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 const fill = (text: string, city: string) => text.replaceAll("{city}", city);
@@ -28,11 +29,15 @@ export async function buildServiceMetadata(
   const location = getLocationBySlug(citySlug);
   if (!service || !location) return { title: "Not Found" };
   const city = location.name;
-  const title = `${service.name} in ${city} — Fees, Syllabus & 100% Placement`;
-  const description = `${service.name} in ${city} — live projects & 100% placement guarantee. ${service.tagline} Fees ₹${service.fee.toLocaleString("en-IN")}, ${service.duration}, online & offline.`;
+  // Longest case is "Performance Marketing Course in Kurukshetra: Fees & Syllabus" (60),
+  // so every one of the 50 service pages stays inside the title limit.
+  const title = `${service.name} in ${city}: Fees & Syllabus`;
+  const description = metaDescription(
+    `${service.name} in ${city}: live client projects, ${service.certifications} certifications and a 100% placement guarantee. Fee ₹${service.fee.toLocaleString("en-IN")}, ${service.duration}, online and offline.`
+  );
   const url = `https://digitalmagician.in/${service.slug}/${citySlug}`;
   return {
-    title,
+    title: { absolute: pageTitle(title) },
     description,
     alternates: { canonical: url },
     openGraph: { title: `${service.name} in ${city} | Digital Magician`, description, url, images: ["/og-image.png"] },

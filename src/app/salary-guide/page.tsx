@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, TrendingUp, MapPin, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Salary Guide 2026 — Haryana & Delhi NCR",
+  title: { absolute: pageTitle("Digital Marketing Salary Guide 2026: Haryana & Delhi NCR") },
   description:
     "Real digital marketing salary data for Haryana & Delhi NCR (2026) — by role, experience & city. Based on 500+ student placements.",
   alternates: { canonical: "/salary-guide" },

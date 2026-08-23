@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Star, TrendingUp, Quote } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import Marquee from "@/components/shared/Marquee";
 
 export const metadata: Metadata = {
-  title: "Alumni Stories — 500+ Students. Real Salaries. Real Results.",
+  title: { absolute: pageTitle("Alumni Stories: 500+ Students, Real Salaries") },
   description:
-    "Meet Digital Magician alumni — working marketers earning ₹22,000 to ₹1,50,000 per month. Read their stories, learn from their journeys, and see where a real digital marketing education takes you.",
+    "Digital Magician alumni are working marketers earning Rs 22,000 to Rs 1,50,000 a month. Read their stories and see where a real education takes you.",
 };
 
 const alumni = [
@@ -182,7 +183,7 @@ export default function AlumniPage() {
                   {/* Before → After */}
                   <div className="flex items-center gap-2 mb-4">
                     <div className="flex-1 bg-white/[0.04] rounded-lg px-3 py-2">
-                      <div className="text-white/30 text-[10px] font-heading font-bold tracking-widest uppercase mb-0.5">Before</div>
+                      <div className="text-white/60 text-[10px] font-heading font-bold tracking-widest uppercase mb-0.5">Before</div>
                       <div className="text-white/55 text-xs font-body">{person.before}</div>
                     </div>
                     <ArrowRight className="w-4 h-4 text-amber-brand flex-shrink-0" />
@@ -224,7 +225,7 @@ export default function AlumniPage() {
       <section className="py-16 bg-[#07051a] relative overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#07051a] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#07051a] to-transparent z-10 pointer-events-none" />
-        <p className="text-center text-white/25 text-[10px] font-heading font-bold tracking-[0.2em] uppercase mb-6">
+        <p className="text-center text-white/60 text-[10px] font-heading font-bold tracking-[0.2em] uppercase mb-6">
           What Alumni Say
         </p>
         <Marquee speed="slow" reverse>
@@ -233,7 +234,7 @@ export default function AlumniPage() {
               <div className="glass rounded-2xl px-5 py-4">
                 <p className="text-white/55 text-xs font-body italic leading-relaxed mb-3">&ldquo;{p.quote.slice(0, 90)}…&rdquo;</p>
                 <div className="font-heading font-bold text-amber-brand text-xs">{p.name}</div>
-                <div className="text-white/35 text-[10px] font-body">{p.after}</div>
+                <div className="text-white/60 text-[10px] font-body">{p.after}</div>
               </div>
             </div>
           ))}

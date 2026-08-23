@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import { MapPin, Wifi, ArrowRight } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import { getHaryanaLocations, getDelhiLocations } from "@/lib/data/locations";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Institute in Haryana & Delhi NCR — All Locations",
+  title: { absolute: pageTitle("Digital Marketing Institute in Haryana & Delhi NCR") },
   description:
     "Digital marketing institute serving all Haryana & Delhi NCR — live Google Ads, SEO & Meta Ads training, 100% placement. Online & offline (Sonipat).",
   alternates: { canonical: "/digital-marketing-course/all" },
@@ -77,13 +78,13 @@ export default function AllLocationsPage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="font-heading font-bold text-white group-hover:text-amber-brand transition-colors">{loc.name}</div>
-                      <div className="text-white/35 text-xs font-body mt-0.5">{loc.distanceFromSonipat} from Sonipat</div>
+                      <div className="text-white/60 text-xs font-body mt-0.5">{loc.distanceFromSonipat} from Sonipat</div>
                     </div>
                     <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-amber-brand group-hover:translate-x-0.5 transition-all flex-shrink-0 mt-0.5" />
                   </div>
                   <div className="flex items-center gap-2">
                     {loc.mode !== "far" && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-heading font-bold bg-white/5 text-white/35">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-heading font-bold bg-white/5 text-white/60">
                         <MapPin className="w-2.5 h-2.5" /> Offline
                       </span>
                     )}
@@ -115,12 +116,12 @@ export default function AllLocationsPage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="font-heading font-bold text-white group-hover:text-amber-brand transition-colors">{loc.name}</div>
-                      <div className="text-white/35 text-xs font-body mt-0.5">{loc.distanceFromSonipat} from Sonipat</div>
+                      <div className="text-white/60 text-xs font-body mt-0.5">{loc.distanceFromSonipat} from Sonipat</div>
                     </div>
                     <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-amber-brand group-hover:translate-x-0.5 transition-all flex-shrink-0 mt-0.5" />
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-heading font-bold bg-white/5 text-white/35">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-heading font-bold bg-white/5 text-white/60">
                       <MapPin className="w-2.5 h-2.5" /> Offline reachable
                     </span>
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-heading font-bold bg-amber-brand/10 text-amber-brand/70">

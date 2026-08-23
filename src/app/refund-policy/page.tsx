@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Refund Policy — Placement Guarantee Explained",
+  title: { absolute: pageTitle("Refund Policy: Placement Guarantee Explained") },
   description:
     "Digital Magician's refund policy for course fees. Full refund if placement conditions are met but placement not achieved. Clear, no-trap policy.",
 };

@@ -8,16 +8,23 @@ import { Volume2, VolumeX } from "lucide-react";
 // external origin (e.g. a Cloudflare R2 public URL) to serve them from there
 // instead — no code change needed.
 const VIDEO_BASE = process.env.NEXT_PUBLIC_TESTIMONIALS_BASE?.replace(/\/$/, "") || "/testimonials";
-const VIDEOS = Array.from({ length: 9 }, (_, i) => `${VIDEO_BASE}/testimonial-${i + 1}.mp4`);
+const VIDEOS = Array.from({ length: 9 }, (_, i) => ({
+  src: `${VIDEO_BASE}/testimonial-${i + 1}.mp4`,
+  // Poster shows instantly so cards are never blank, which lets us skip
+  // preloading the video itself (18 metadata requests per page otherwise).
+  poster: `/testimonials/poster-${i + 1}.jpg`,
+}));
 
 function VideoCard({
   src,
+  poster,
   idx,
   active,
   setActive,
   canHover,
 }: {
   src: string;
+  poster: string;
   idx: number;
   active: number | null;
   setActive: (v: number | null | ((p: number | null) => number | null)) => void;
@@ -30,6 +37,16 @@ function VideoCard({
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
+    // Two-stage: start buffering while the card is still just off-screen
+    // (preload="none" means nothing is fetched until now), then play once it
+    // is actually visible. Keeps page load free of 18 video requests without
+    // making playback feel late.
+    const warm = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && v.readyState === 0) v.load();
+      },
+      { rootMargin: "300px" }
+    );
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) v.play().catch(() => {});
@@ -37,8 +54,12 @@ function VideoCard({
       },
       { threshold: 0.4 }
     );
+    warm.observe(v);
     io.observe(v);
-    return () => io.disconnect();
+    return () => {
+      warm.disconnect();
+      io.disconnect();
+    };
   }, []);
 
   // Sound follows the active card; everything else stays muted.
@@ -70,10 +91,11 @@ function VideoCard({
       <video
         ref={ref}
         src={src}
+        poster={poster}
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
         className="w-full h-full object-cover object-center"
       />
       {/* state badge */}
@@ -119,11 +141,11 @@ export default function VideoTestimonials() {
             animationPlayState: active !== null ? "paused" : undefined,
           }}
         >
-          {VIDEOS.map((src, i) => (
-            <VideoCard key={`a-${i}`} src={src} idx={i} active={active} setActive={setActive} canHover={canHover} />
+          {VIDEOS.map((v, i) => (
+            <VideoCard key={`a-${i}`} src={v.src} poster={v.poster} idx={i} active={active} setActive={setActive} canHover={canHover} />
           ))}
-          {VIDEOS.map((src, i) => (
-            <VideoCard key={`b-${i}`} src={src} idx={i + 9} active={active} setActive={setActive} canHover={canHover} />
+          {VIDEOS.map((v, i) => (
+            <VideoCard key={`b-${i}`} src={v.src} poster={v.poster} idx={i + 9} active={active} setActive={setActive} canHover={canHover} />
           ))}
         </div>
       </div>

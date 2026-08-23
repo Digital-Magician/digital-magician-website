@@ -201,7 +201,7 @@ export default function HomePage() {
         <div className="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-[#07051a] to-transparent z-10 pointer-events-none" />
 
         {/* Label */}
-        <p className="text-center text-white/30 text-[10px] font-heading font-bold tracking-[0.2em] uppercase mb-5">
+        <p className="text-center text-white/60 text-[10px] font-heading font-bold tracking-[0.2em] uppercase mb-5">
           50+ Industry Tools You&apos;ll Master
         </p>
 
@@ -637,14 +637,14 @@ export default function HomePage() {
               </p>
               {t.salaryBefore && (
                 <div className="flex items-center gap-3 mb-4 text-xs font-body">
-                  <span className="text-white/40 line-through">{t.salaryBefore}</span>
+                  <span className="text-white/60 line-through">{t.salaryBefore}</span>
                   <ArrowRight className="w-3 h-3 text-amber-brand flex-shrink-0" />
                   <span className="text-amber-brand font-semibold">{t.salaryAfter}</span>
                 </div>
               )}
               <div>
                 <div className="font-heading font-bold text-white text-sm">{t.name}</div>
-                <div className="text-white/45 text-xs font-body">{t.role} · {t.program}</div>
+                <div className="text-white/60 text-xs font-body">{t.role} · {t.program}</div>
               </div>
             </div>
           ))}
@@ -664,14 +664,14 @@ export default function HomePage() {
               </p>
               {t.salaryBefore && (
                 <div className="flex items-center gap-3 mb-4 text-xs font-body">
-                  <span className="text-white/40 line-through">{t.salaryBefore}</span>
+                  <span className="text-white/60 line-through">{t.salaryBefore}</span>
                   <ArrowRight className="w-3 h-3 text-amber-brand flex-shrink-0" />
                   <span className="text-amber-brand font-semibold">{t.salaryAfter}</span>
                 </div>
               )}
               <div>
                 <div className="font-heading font-bold text-white text-sm">{t.name}</div>
-                <div className="text-white/45 text-xs font-body">{t.role} · {t.program}</div>
+                <div className="text-white/60 text-xs font-body">{t.role} · {t.program}</div>
               </div>
             </div>
           ))}
@@ -782,7 +782,7 @@ export default function HomePage() {
                     ].map((s) => (
                       <div key={s.l} className="text-center">
                         <div className="font-heading font-black text-2xl text-amber-brand">{s.v}</div>
-                        <div className="text-white/45 text-xs font-body">{s.l}</div>
+                        <div className="text-white/60 text-xs font-body">{s.l}</div>
                       </div>
                     ))}
                   </div>

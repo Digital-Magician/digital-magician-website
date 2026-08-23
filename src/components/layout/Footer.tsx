@@ -104,17 +104,19 @@ export default function Footer() {
                 href="https://instagram.com/digitalmagician.in"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Digital Magician on Instagram"
                 className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-white/60 hover:text-amber-brand transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5" aria-hidden="true" />
               </a>
               <a
                 href="https://facebook.com/digitalmagician.in"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Digital Magician on Facebook"
                 className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-white/60 hover:text-amber-brand transition-colors"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -122,9 +124,11 @@ export default function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-5">
+              {/* h2: footer columns are top-level page sections. Using h4 here
+                  skipped a level on every page whose last heading was an h2. */}
+              <h2 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-5">
                 {category}
-              </h4>
+              </h2>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.href}>
@@ -145,7 +149,7 @@ export default function Footer() {
       {/* Location Links */}
       <div className="border-t border-white/[0.05] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-white/25 text-[10px] font-heading font-bold tracking-[0.2em] uppercase mb-4">
+          <p className="text-white/60 text-[10px] font-heading font-bold tracking-[0.2em] uppercase mb-4">
             Courses Available Across North India
           </p>
           <div className="flex flex-wrap gap-2">
@@ -153,7 +157,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="inline-flex items-center px-3 py-1.5 rounded-full border border-white/[0.05] text-white/30 text-xs font-body hover:border-amber-brand/25 hover:text-amber-brand/70 transition-all"
+                className="inline-flex items-center px-3 py-1.5 rounded-full border border-white/[0.05] text-white/60 text-xs font-body hover:border-amber-brand/25 hover:text-amber-brand/70 transition-all"
               >
                 {link.label}
               </Link>

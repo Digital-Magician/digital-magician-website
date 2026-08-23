@@ -11,6 +11,7 @@ import {
   getRelatedPosts,
   CATEGORY_COLORS,
 } from "@/lib/blog";
+import { pageTitle, metaDescription } from "@/lib/seo";
 
 // ── Static params ──────────────────────────────────────────────────────────
 export async function generateStaticParams() {
@@ -26,8 +27,8 @@ export async function generateMetadata(
   if (!post) return {};
 
   return {
-    title: post.title,
-    description: post.description,
+    title: { absolute: pageTitle(post.title) },
+    description: metaDescription(post.description),
     authors: [{ name: post.author }],
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {

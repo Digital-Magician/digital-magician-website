@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Shield, Clock, TrendingUp, Award, Users, AlertCircle } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Course With 100% Placement Guarantee",
+  title: { absolute: pageTitle("Digital Marketing Course With 100% Placement Guarantee") },
   description:
     "A digital marketing course with a real, legally-backed placement guarantee — placed in 30 days or a full refund. 80% placed, 10+ hiring partners.",
   alternates: { canonical: "/placement" },
@@ -223,7 +224,7 @@ export default function PlacementPage() {
                   <div className="font-heading font-bold text-white mb-0.5">{p.name}</div>
                   <div className="text-amber-brand/80 text-xs font-body mb-1">{p.role}</div>
                   <div className="text-white/40 text-xs font-body mb-4">{p.company}</div>
-                  <div className="flex items-center gap-1.5 text-white/30 text-xs font-body">
+                  <div className="flex items-center gap-1.5 text-white/60 text-xs font-body">
                     <Clock className="w-3 h-3" />
                     {p.time}
                   </div>

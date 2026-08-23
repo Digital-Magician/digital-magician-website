@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, AlertCircle, Mail } from "lucide-react";
 export const metadata: Metadata = {
   title: "Write for Us | Blog",
   description:
-    "Contribute to the Digital Magician blog. We publish practitioner-written articles on Google Ads, SEO, Meta Ads, AI tools, and digital marketing careers in India.",
+    "Contribute to the Digital Magician blog. We publish practitioner-written articles on Google Ads, SEO, Meta Ads, AI tools and marketing careers in India.",
   openGraph: {
     title: "Write for Us | Digital Magician",
     description: "Share your digital marketing expertise with our audience of students and professionals across North India.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, Users, MapPin, Wifi, AlertCircle } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
@@ -11,8 +12,8 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   const [nextDate] = getUpcomingBatchDates(1);
   return {
-    title: "Batch Schedule & Upcoming Classes — Sonipat",
-    description: `View upcoming Digital Magician batch dates. Next batch starts ${nextDate} — only 4 seats left. Online and offline modes available. Book your seat on WhatsApp.`,
+    title: { absolute: pageTitle("Batch Schedule & Upcoming Classes in Sonipat") },
+    description: `Upcoming Digital Magician batch dates. Next batch starts ${nextDate}, only 4 seats left. Online and offline available. Book your seat on WhatsApp.`,
   };
 }
 
@@ -192,13 +193,13 @@ export default function BatchSchedulePage() {
                   <div className="text-right flex-shrink-0">
                     <div className="stat-number text-3xl">
                       {"originalFee" in batch && batch.originalFee ? (
-                        <span className="line-through text-white/30 font-normal mr-2 text-[0.6em] align-middle">
+                        <span className="line-through text-white/60 font-normal mr-2 text-[0.6em] align-middle">
                           {batch.originalFee}
                         </span>
                       ) : null}
                       {batch.fee}
                     </div>
-                    <div className="text-white/35 text-xs font-body">one-time fee</div>
+                    <div className="text-white/60 text-xs font-body">one-time fee</div>
                   </div>
                 </div>
 
@@ -228,7 +229,7 @@ export default function BatchSchedulePage() {
 
                 {/* Seat bar */}
                 <div className="mb-6">
-                  <div className="flex justify-between text-xs font-body text-white/35 mb-1.5">
+                  <div className="flex justify-between text-xs font-body text-white/60 mb-1.5">
                     <span>Seats filled</span>
                     <span>{batch.totalSeats - batch.seats} / {batch.totalSeats}</span>
                   </div>

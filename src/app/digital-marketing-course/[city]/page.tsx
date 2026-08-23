@@ -11,6 +11,7 @@ import NextBatchDate from "@/components/shared/NextBatchDate";
 import { getLocationBySlug, getAllLocationSlugs, locations } from "@/lib/data/locations";
 import { programs } from "@/lib/data/programs";
 import { serviceCourses, SERVICE_CITY_SLUGS } from "@/lib/data/services";
+import { pageTitle, metaDescription } from "@/lib/seo";
 import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 // ── Static params ────────────────────────────────────────────────────────────
@@ -29,8 +30,8 @@ export async function generateMetadata({
   if (!location) return { title: "Not Found" };
 
   return {
-    title: location.metaTitle,
-    description: location.metaDesc,
+    title: { absolute: pageTitle(location.metaTitle) },
+    description: metaDescription(location.metaDesc),
     alternates: {
       canonical: `https://digitalmagician.in/digital-marketing-course/${location.slug}`,
     },
@@ -324,7 +325,7 @@ export default async function LocationPage({
                     </div>
                   ))}
                 </div>
-                <div className="text-white/35 text-xs font-body">
+                <div className="text-white/60 text-xs font-body">
                   Schedule: Mon / Wed / Fri · 7:00 PM – 9:00 PM IST
                 </div>
               </div>
@@ -361,7 +362,7 @@ export default async function LocationPage({
                     </div>
                   ))}
                 </div>
-                <div className="text-white/35 text-xs font-body">
+                <div className="text-white/60 text-xs font-body">
                   Schedule: Mon / Wed / Fri · 7:00 PM – 9:00 PM
                 </div>
               </div>
@@ -438,7 +439,7 @@ export default async function LocationPage({
                   <p className="text-white/50 text-xs font-body mb-4 leading-relaxed flex-1">{program.tagline}</p>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-amber-brand font-heading font-bold">{program.fee}</span>
-                    <span className="text-white/35 text-xs font-body">{program.duration}</span>
+                    <span className="text-white/60 text-xs font-body">{program.duration}</span>
                   </div>
                   <Link
                     href={`/programs/${program.slug}`}
@@ -517,11 +518,11 @@ export default async function LocationPage({
                   <div>
                     <div className="font-heading font-bold text-white">{location.studentStory.name}</div>
                     <div className="text-amber-brand text-sm font-body">{location.studentStory.after}</div>
-                    <div className="text-white/35 text-xs font-body mt-0.5">From {location.studentStory.from}</div>
+                    <div className="text-white/60 text-xs font-body mt-0.5">From {location.studentStory.from}</div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="glass rounded-xl px-4 py-2 text-center">
-                      <div className="text-white/35 text-[10px] font-heading font-bold uppercase tracking-widest">Before</div>
+                      <div className="text-white/60 text-[10px] font-heading font-bold uppercase tracking-widest">Before</div>
                       <div className="text-white/60 text-xs font-body mt-0.5">{location.studentStory.before}</div>
                     </div>
                     <ArrowRight className="w-4 h-4 text-amber-brand flex-shrink-0" />
@@ -625,7 +626,7 @@ export default async function LocationPage({
       {/* ── Location index (internal linking) ────────────────────── */}
       <section className="py-16 bg-[#07051a] border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-white/25 text-xs font-heading font-bold tracking-[0.2em] uppercase mb-6">
+          <p className="text-center text-white/60 text-xs font-heading font-bold tracking-[0.2em] uppercase mb-6">
             Digital Marketing Course Available Across North India
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
@@ -636,7 +637,7 @@ export default async function LocationPage({
                 <Link
                   key={loc.slug}
                   href={`/digital-marketing-course/${loc.slug}`}
-                  className="inline-flex items-center px-3 py-1.5 rounded-full border border-white/[0.06] text-white/35 text-xs font-body hover:border-amber-brand/30 hover:text-amber-brand transition-all"
+                  className="inline-flex items-center px-3 py-1.5 rounded-full border border-white/[0.06] text-white/60 text-xs font-body hover:border-amber-brand/30 hover:text-amber-brand transition-all"
                 >
                   {loc.name}
                 </Link>

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Award, Users, TrendingUp, Target, CheckCircle, Star, MapPin } from "lucide-react";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
 
 export const metadata: Metadata = {
-  title: "About Us | AI Marketing Institute in Sonipat, India",
+  title: { absolute: pageTitle("About Us: AI Marketing Institute in Sonipat, India") },
   description:
-    "Meet the team behind Digital Magician, Sonipat's leading AI and digital marketing institute. 500+ students trained. Founded by a practitioner who built two agencies and a Rs 20 Lacs MRR startup before starting to teach.",
+    "Meet the team behind Digital Magician, Sonipat's AI and digital marketing institute. 500+ students trained, founded by a practitioner who built two agencies.",
 };
 
 const timeline = [

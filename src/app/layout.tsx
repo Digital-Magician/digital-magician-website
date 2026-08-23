@@ -16,7 +16,8 @@ const montserrat = Montserrat({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
+  // 300 dropped: no font-light usage anywhere, so it was a wasted font file.
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -118,8 +119,9 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
 
-        {/* Meta Pixel */}
-        <Script id="meta-pixel" strategy="afterInteractive">
+        {/* Meta Pixel — lazyOnload keeps ~180KB of pixel JS off the critical
+            path; it still fires PageView once the page has loaded. */}
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -150,9 +152,9 @@ export default function RootLayout({
           <>
             <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-GSWH7SDY4H"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

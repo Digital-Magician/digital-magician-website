@@ -212,7 +212,7 @@ export default function SuccessStoriesPage() {
 
         {/* ── Honesty note ──────────────────────────────────────────────── */}
         <div className="mb-16 bento border border-white/10 p-6 md:p-8">
-          <h3 className="font-bold text-white text-lg mb-3">A note on honesty</h3>
+          <h2 className="font-bold text-white text-lg mb-3">A note on honesty</h2>
           <p className="text-slate-400 text-sm leading-relaxed mb-3">
             These results are real. Every salary figure above is based on actual offer letters we have seen.
             We don't round up. We don't average in outliers to inflate the numbers.
