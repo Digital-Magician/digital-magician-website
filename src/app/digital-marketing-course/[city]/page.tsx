@@ -326,7 +326,7 @@ export default async function LocationPage({
                   ))}
                 </div>
                 <div className="text-white/60 text-xs font-body">
-                  Schedule: Mon / Wed / Fri · 7:00 PM – 9:00 PM IST
+                  Schedule: 5 days a week · Morning, afternoon and evening batches available
                 </div>
               </div>
             </AnimateOnScroll>
@@ -363,7 +363,7 @@ export default async function LocationPage({
                   ))}
                 </div>
                 <div className="text-white/60 text-xs font-body">
-                  Schedule: Mon / Wed / Fri · 7:00 PM – 9:00 PM
+                  Schedule: 5 days a week · Morning, afternoon and evening batches available
                 </div>
               </div>
             </AnimateOnScroll>
