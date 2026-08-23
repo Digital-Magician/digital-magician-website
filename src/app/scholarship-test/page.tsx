@@ -5,10 +5,10 @@ import { ArrowRight, CheckCircle, Clock, Award, Zap, AlertCircle } from "lucide-
 export const metadata: Metadata = {
   title: "Scholarship Test — 50% Fee Waiver",
   description:
-    "Attempt Digital Magician's free scholarship test and win up to 50% fee waiver on any digital marketing program. 30 questions · 30 minutes · Results instant.",
+    "Take Digital Magician's free scholarship test at our Sonipat centre and win up to 50% fee waiver. 30 questions, 30 minutes, results on the spot.",
   openGraph: {
     title: "Scholarship Test — Win 50% Off | Digital Magician",
-    description: "Answer 30 questions in 30 minutes. Score 70%+ to claim a 50% fee waiver on any program.",
+    description: "Visit our Sonipat centre, answer 30 questions in 30 minutes, and score 70%+ to claim a 50% fee waiver.",
     url: "https://digitalmagician.in/scholarship-test",
   },
 };
@@ -29,11 +29,13 @@ const topics = [
 ];
 
 const faqs = [
-  { q: "Is the scholarship test really free?", a: "Yes, 100% free. No credit card, no registration fee. Just your time — 30 minutes." },
+  { q: "Can I take the scholarship test online?", a: "No. The test is taken in person at our Model Town centre in Sonipat. We do not share a test link, because taking it here is what keeps the scholarship fair for everyone. Message us on WhatsApp and we will book you a slot." },
+  { q: "Is the scholarship test really free?", a: "Yes, 100% free. No registration fee, nothing to pay to attempt it. All it costs you is 30 minutes and a visit to our Sonipat centre." },
+  { q: "Where do I take the test?", a: "At our office above Dr. Batra's Clinic, near Mittal Nursing Home, 8 Marla, Model Town, Sonipat, Haryana 131001. Book a slot on WhatsApp first so a seat and a system are free when you arrive." },
   { q: "How many times can I attempt the test?", a: "Once per 7-day period. If you score below 70%, you can retake it after 7 days. Your best score is used." },
   { q: "Is the waiver applicable to all programs?", a: "Yes — all 6 programs at Digital Magician. Full Stack, Performance Marketing, Google Ads, Meta Ads, SEO Mastery, and Web Development." },
   { q: "Do I need to know digital marketing to attempt?", a: "No. The test is designed for aspiring students, not professionals. Basic awareness of the internet and marketing is enough to attempt." },
-  { q: "How do I claim the waiver after passing?", a: "After completing the test, you'll receive a scholarship code on WhatsApp. Share it when you speak to us about enrollment — it's automatically applied to your fee." },
+  { q: "How do I claim the waiver after passing?", a: "We record your score against your name the same day you take the test. When you enrol, the waiver is already applied to your fee. Nothing for you to keep track of." },
   { q: "Can I combine the scholarship with EMI?", a: "Yes. The fee waiver applies to the total fee, and you can pay the reduced amount in 3 EMIs." },
 ];
 
@@ -51,27 +53,27 @@ export default function ScholarshipTestPage() {
             <span className="block text-amber-400">Save Up to 50%.</span>
           </h1>
           <p className="hero-item hero-item-3 text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-            Attempt our free 30-question scholarship test and earn a fee waiver on any Digital Magician
-            program. Takes 30 minutes. Results are instant.
+            Take our free 30-question scholarship test at the Sonipat centre and earn a fee waiver on any
+            Digital Magician program. Takes 30 minutes, and you get your result before you leave.
           </p>
 
           {/* Quick stats */}
           <div className="hero-item hero-item-4 flex flex-wrap justify-center gap-6 mb-10 text-sm text-slate-400">
             <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-amber-400" /> 30 minutes</span>
             <span className="flex items-center gap-2"><Award className="w-4 h-4 text-amber-400" /> 30 questions</span>
-            <span className="flex items-center gap-2"><Zap className="w-4 h-4 text-amber-400" /> Instant results</span>
+            <span className="flex items-center gap-2"><Zap className="w-4 h-4 text-amber-400" /> Taken at our centre</span>
             <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-amber-400" /> Free to attempt</span>
           </div>
 
           {/* CTA */}
           <div className="hero-item hero-item-5 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20attempt%20the%20scholarship%20test.%20Please%20share%20the%20link."
+              href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20book%20a%20slot%20for%20the%20scholarship%20test%20at%20your%20Sonipat%20centre."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors text-lg"
             >
-              Get Test Link on WhatsApp
+              Book Your Test Slot
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link
@@ -144,10 +146,10 @@ export default function ScholarshipTestPage() {
           <h2 className="font-bold text-2xl text-white text-center mb-8">How It Works</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { step: "01", title: "Get the link", desc: "Message us on WhatsApp — we'll send the test link within minutes." },
-              { step: "02", title: "Attempt the test", desc: "30 questions, 30 minutes. Multiple choice. Done on your phone or laptop." },
-              { step: "03", title: "Instant results", desc: "See your score immediately. Your scholarship code is generated on the spot." },
-              { step: "04", title: "Claim your waiver", desc: "Share your code when enrolling and we apply the discount to your fee." },
+              { step: "01", title: "Book your slot", desc: "Message us on WhatsApp and we will fix a time for you to come in." },
+              { step: "02", title: "Visit the centre", desc: "Come to our Model Town office in Sonipat and take the test there. 30 questions, 30 minutes." },
+              { step: "03", title: "Get your score", desc: "We check it while you wait and tell you your waiver before you leave." },
+              { step: "04", title: "Claim your waiver", desc: "The waiver is recorded against your name and applied when you enrol." },
             ].map((s) => (
               <div key={s.step} className="bento p-6 text-center">
                 <div className="text-3xl font-black text-amber-400/30 mb-3">{s.step}</div>
@@ -185,16 +187,16 @@ export default function ScholarshipTestPage() {
             Ready to save up to ₹22,500?
           </h2>
           <p className="text-slate-400 max-w-lg mx-auto mb-8 text-sm leading-relaxed">
-            A 50% waiver on our Full Stack program saves you ₹22,500. The test takes 30 minutes.
-            There's no reason not to attempt it.
+            A 50% waiver on our Full Stack program saves you ₹22,500. The test takes 30 minutes at our
+            Sonipat centre, and you can see a class while you are here.
           </p>
           <a
-            href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20attempt%20the%20scholarship%20test.%20Please%20share%20the%20link."
+            href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20book%20a%20slot%20for%20the%20scholarship%20test%20at%20your%20Sonipat%20centre."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-colors"
           >
-            Get My Test Link
+            Book My Test Slot
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

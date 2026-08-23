@@ -77,7 +77,7 @@ export const locations: LocationData[] = [
     },
     problemStatement: "Most Sonipat students travel 60 km to Delhi for digital marketing courses — and come back with certificates but no real campaign experience.",
     opportunity: "Digital Magician is built in Sonipat, for Sonipat — and our students land jobs in Delhi NCR without ever having to relocate.",
-    travelInfo: "Our institute is located in Sonipat. Offline classes on Mon/Wed/Fri, 7–9 PM.",
+    travelInfo: "Our institute is located in Sonipat. Offline classes on Monday to Friday, with 7:30 AM, 9:00 AM, 12:30 PM and 5:30 PM batches.",
     jobMarket: {
       topRoles: ["Digital Marketing Executive", "SEO Specialist", "Social Media Manager", "Content Strategist", "E-commerce Manager"],
       insight: "Sonipat's proximity to Delhi NCR creates strong demand for digital marketers across manufacturing, industrial, and retail sectors. The Kundli-Manesar-Palwal industrial corridor generates consistent demand for performance marketers who can manage online lead generation. Starting salaries in Sonipat are ₹20,000–35,000; Delhi NCR roles for the same skills pay ₹28,000–55,000.",
@@ -87,7 +87,7 @@ export const locations: LocationData[] = [
       { q: "Can I get a job in Delhi NCR after this course?", a: "Yes — the majority of our placements are in Delhi, Gurgaon, Noida, and Faridabad. The skills are identical regardless of location. Several of our alumni also work remotely for Delhi-based agencies from Sonipat itself." },
       { q: "What is the fee for the course?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000) for both online and offline modes. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
       { q: "Which is the best digital marketing course in Sonipat for beginners?", a: "Our Full Stack Digital Marketing program is built for beginners and career-switchers in Sonipat — no prior experience needed. You learn Google Ads, Meta Ads, SEO, and AI tools on live campaigns and graduate with a 10-project portfolio and a 100% placement guarantee." },
-      { q: "Do you offer digital marketing training and classes for working professionals in Sonipat?", a: "Yes. We run offline classes in Sonipat (Mon/Wed/Fri, 7–9 PM) and a live online batch, so working professionals and college students can attend without disrupting their schedule. Every class is recorded with 12-month access." },
+      { q: "Do you offer digital marketing training and classes for working professionals in Sonipat?", a: "Yes. We run offline classes in Sonipat (Monday to Friday, with 7:30 AM, 9:00 AM, 12:30 PM and 5:30 PM batches) and a live online batch, so working professionals and college students can attend without disrupting their schedule. Every class is recorded with 12-month access." },
       { q: "Will I get a job after the digital marketing course in Sonipat?", a: "Yes — placement is guaranteed in writing or you get a full refund. 80% of our graduates are placed within 30 days, most in Delhi NCR roles (Gurgaon, Noida, Faridabad) or working remotely from Sonipat. You also get our job portal and interview preparation." },
     ],
     studentStory: {
@@ -132,7 +132,7 @@ export const locations: LocationData[] = [
       from: "Panipat",
       before: "Diploma in textile design, no digital experience",
       after: "Meta Ads Specialist for a Panipat textile exporter",
-      quote: "I started with zero knowledge of Facebook Ads. Now I manage ₹3 lakh monthly ad spend for a Panipat exporter. Driving to Sonipat 3 days a week was worth every kilometre.",
+      quote: "I started with zero knowledge of Facebook Ads. Now I manage ₹3 lakh monthly ad spend for a Panipat exporter. Driving to Sonipat for class was worth every kilometre.",
     },
   },
 
@@ -199,7 +199,7 @@ export const locations: LocationData[] = [
       insight: "Kurukshetra graduates entering digital marketing have a surprising advantage: the education sector around Kurukshetra is a ready market. Coaching institutes, colleges, and EdTech companies need digital marketers who understand the student mindset. Combined with access to Delhi NCR jobs, Kurukshetra graduates are placed in roles ranging from ₹22,000 to ₹45,000 as starters.",
     },
     faqs: [
-      { q: "I'm a Kurukshetra University student. Can I do this alongside my degree?", a: "Yes. Our Mon/Wed/Fri 7–9 PM schedule is specifically designed to not conflict with college timings. Many of our enrolled students are in their final year of BA, BBA, or MBA. The live online batch is ideal for university students." },
+      { q: "I'm a Kurukshetra University student. Can I do this alongside my degree?", a: "Yes. Our Monday to Friday schedule, with four slots between 7:30 AM and 5:30 PM, is specifically designed to not conflict with college timings. Many of our enrolled students are in their final year of BA, BBA, or MBA. The live online batch is ideal for university students." },
       { q: "What's the difference between Digital Magician and doing a digital marketing course at KUK?", a: "KUK offers digital marketing as a module within broader MBA or BBA programs — taught from theory with no live client access. Digital Magician is a specialised institute where you manage real campaigns on real accounts from Week 1. We also provide a placement guarantee that university programs simply don't." },
       { q: "Do I need to know anything before joining?", a: "No prerequisites at all. 60% of our students come from non-marketing backgrounds. We start from first principles and move quickly into practical work. If you know how to use a smartphone, you can start." },
     ],
@@ -231,7 +231,7 @@ export const locations: LocationData[] = [
     },
     faqs: [
       { q: "Are there digital marketing jobs in Rohtak itself?", a: "Yes — and the market is growing. Healthcare, educational institutions, and retail businesses in Rohtak are building marketing teams. But your ceiling is much higher if you're also targeting Delhi, Gurugram, and Faridabad — which is exactly what our placement support covers." },
-      { q: "How does the online batch work for Rohtak students?", a: "Our online batch is a completely live class — not recorded lectures. You join via Zoom at 7 PM on Mon/Wed/Fri and see the trainer's live screen as he manages real campaigns. Every session is also recorded for 12-month replay access." },
+      { q: "How does the online batch work for Rohtak students?", a: "Our online batch is a completely live class — not recorded lectures. You join via Zoom at your chosen slot, Monday to Friday and see the trainer's live screen as he manages real campaigns. Every session is also recorded for 12-month replay access." },
       { q: "Is there any scholarship or fee discount?", a: "Yes — we run a Scholarship Test that can reduce fees by up to 50%. Check our scholarship test page for the next test date and eligibility criteria." },
     ],
   },
@@ -486,7 +486,7 @@ export const locations: LocationData[] = [
     },
     faqs: [
       { q: "Is there demand for digital marketers in Jind?", a: "Yes and growing. Healthcare institutions, schools, coaching centres, and manufacturing companies in Jind are building digital marketing teams. The supply is thin — so trained graduates have real leverage." },
-      { q: "What's the easiest way to attend from Jind?", a: "Our live online batch is the most convenient — you join from home at 7 PM Mon/Wed/Fri. If you want offline, Jind to Sonipat is about 90 minutes and manageable 3 days a week." },
+      { q: "What's the easiest way to attend from Jind?", a: "Our live online batch is the most convenient — you join from home at your chosen slot, Monday to Friday. If you want offline, Jind to Sonipat is about 90 minutes, which some students do for the morning slot." },
       { q: "Do you support remote job placements?", a: "Yes. A significant portion of our placements are remote roles with Delhi NCR agencies. This is particularly relevant for Jind students who want career growth without relocation." },
     ],
   },
@@ -540,14 +540,14 @@ export const locations: LocationData[] = [
     },
     problemStatement: "Fatehabad students with digital ambitions have had few quality options close to home — until live online training made location irrelevant.",
     opportunity: "Digital Magician's online batch is Fatehabad students' fastest path to a digital career without the cost and disruption of moving to Delhi.",
-    travelInfo: "Fatehabad to Sonipat is 200+ km. Our live online batch is the recommended choice. Sessions are Mon/Wed/Fri, 7–9 PM.",
+    travelInfo: "Fatehabad to Sonipat is 200+ km. Our live online batch is the recommended choice. Sessions are Monday to Friday, with 7:30 AM, 9:00 AM, 12:30 PM and 5:30 PM batches.",
     pgNote: "For offline attendance, PG in Sonipat starts at ₹5,000/month. Contact us on WhatsApp for options.",
     jobMarket: {
       topRoles: ["Digital Marketing Executive", "Social Media Manager", "Google Ads Specialist", "Remote Freelance Consultant", "Content Creator"],
       insight: "Fatehabad graduates entering digital marketing primarily target remote opportunities with Delhi NCR agencies. The combination of low local cost of living and Delhi-level remote salaries creates excellent income-to-expense ratios for Fatehabad-based remote digital marketers.",
     },
     faqs: [
-      { q: "How do I join the online batch from Fatehabad?", a: "You need a laptop or desktop, a stable internet connection, and a Zoom account. We send you the class link after enrolment. All sessions are live at 7 PM Mon/Wed/Fri." },
+      { q: "How do I join the online batch from Fatehabad?", a: "You need a laptop or desktop, a stable internet connection, and a Zoom account. We send you the class link after enrolment. All sessions are live at your chosen slot, Monday to Friday." },
       { q: "Is there demand for digital marketers from Fatehabad?", a: "Remote demand, yes — and it's growing. Delhi NCR agencies actively hire remote talent. A Fatehabad-based digital marketer working remotely for a Delhi agency is a very real and common career path from our program." },
     ],
   },
@@ -638,7 +638,7 @@ export const locations: LocationData[] = [
     },
     faqs: [
       { q: "Can engineering or science graduates switch to digital marketing?", a: "Yes — in fact, technical graduates often excel at digital marketing because of their analytical mindset. Google Ads optimisation, GA4 analysis, and technical SEO are natural fits for analytical thinkers. Several of our best performers have engineering backgrounds." },
-      { q: "How do I attend classes from Mahendragarh?", a: "Our live online batch runs at 7 PM Mon/Wed/Fri via Zoom. You need a laptop and internet — that's it. All sessions are recorded for replay within 24 hours." },
+      { q: "How do I attend classes from Mahendragarh?", a: "Our live online batch runs Monday to Friday via Zoom, at the slot you pick. You need a laptop and internet — that's it. All sessions are recorded for replay within 24 hours." },
     ],
   },
 
@@ -697,7 +697,7 @@ export const locations: LocationData[] = [
       insight: "Palwal graduates have direct access to Faridabad, Delhi, and Noida job markets. Industrial sectors in Palwal and Faridabad are growing their digital marketing teams. Starting salaries for trained digital marketers in this corridor range from ₹25,000–50,000.",
     },
     faqs: [
-      { q: "Is Palwal close enough for offline classes in Sonipat?", a: "Yes — 80 km is manageable, especially if you're coming 3 days a week. Many students do it. The online batch is equally effective for those who prefer to save commute time." },
+      { q: "Is Palwal close enough for offline classes in Sonipat?", a: "Yes — 80 km is manageable, especially if you pick a slot that suits your travel. Many students do it. The online batch is equally effective for those who prefer to save commute time." },
       { q: "What are the job options from Palwal?", a: "Faridabad (20 km), Delhi (60 km), and Noida (70 km) are all accessible. Palwal graduates are among the best-positioned in Haryana for NCR roles." },
     ],
   },
@@ -757,7 +757,7 @@ export const locations: LocationData[] = [
       insight: "Charkhi Dadri graduates primarily pursue remote roles or target Rohtak and Delhi NCR. The city's improving connectivity means graduates have growing in-person options while remote work remains the primary career path.",
     },
     faqs: [
-      { q: "How does the live online batch work exactly?", a: "You join a Zoom session at 7 PM on Mon/Wed/Fri. the trainer's screen is shared live — you see real campaigns, ask questions, and interact exactly as you would in a classroom. Sessions are recorded for 12-month replay." },
+      { q: "How does the live online batch work exactly?", a: "You join a Zoom session at your chosen slot, Monday to Friday. the trainer's screen is shared live — you see real campaigns, ask questions, and interact exactly as you would in a classroom. Sessions are recorded for 12-month replay." },
       { q: "Is there support after the course ends?", a: "Yes. You get access to our placement portal and alumni WhatsApp group indefinitely. Our team actively helps with job applications, portfolio review, and interview preparation." },
     ],
   },
@@ -859,7 +859,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "How long does it take from Dwarka to Sonipat?", a: "From Dwarka, it's about 55–60 km — roughly 55–65 minutes on NH44 during non-peak hours. Evening commute at 7 PM is usually smooth. Alternatively, our live online batch is equally effective." },
       { q: "Is there demand for digital marketers near Dwarka or do I need to go to Gurugram?", a: "Both. Dwarka's commercial sector is growing, but Gurugram's MNC market is 20–30 minutes via the expressway. West Delhi graduates are among the best-placed for Gurugram roles." },
-      { q: "Do I need a laptop for the online batch?", a: "Yes — a basic laptop with internet is all you need. We'll send you the Zoom link after enrolment. Classes are 7–9 PM on Mon/Wed/Fri." },
+      { q: "Do I need a laptop for the online batch?", a: "Yes — a basic laptop with internet is all you need. We'll send you the Zoom link after enrolment. Classes run Monday to Friday, with four slots to choose from on Monday to Friday." },
     ],
   },
 
@@ -926,7 +926,7 @@ export const locations: LocationData[] = [
       from: "Rohini, Delhi",
       before: "Office administrator, no marketing experience",
       after: "Performance Marketing Manager, Delhi agency",
-      quote: "I commuted from Rohini 3 times a week. The 50-minute drive each way was worth it — I learned more in 4 months than colleagues who'd been 'working in marketing' for 2 years.",
+      quote: "I commuted from Rohini for my slot. The 50-minute drive each way was worth it — I learned more in 4 months than colleagues who'd been 'working in marketing' for 2 years.",
     },
   },
 
@@ -986,7 +986,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "How close is Dwarka to Gurugram for jobs?", a: "Dwarka to Cyber City Gurugram is 20–25 minutes via Dwarka Expressway. This is genuinely one of India's most advantageous commutes for digital marketing career access. Our placement network covers Gurugram extensively." },
       { q: "Is Digital Magician relevant for students targeting Gurugram MNCs?", a: "Specifically yes. Gurugram MNCs require live campaign portfolios — real ROAS numbers, real GA4 data, real attribution reports. That's exactly what you build at Digital Magician." },
-      { q: "What mode is best for South West Delhi students?", a: "Most prefer online — it's convenient and equally effective. Students who can manage the 60-minute commute to Sonipat 3 days a week also benefit from the classroom energy." },
+      { q: "What mode is best for South West Delhi students?", a: "Most prefer online — it's convenient and equally effective. Students who can manage the 60-minute commute to Sonipat also benefit from the classroom energy." },
     ],
   },
 
@@ -1008,13 +1008,13 @@ export const locations: LocationData[] = [
     },
     problemStatement: "Ganaur's agro and small-business economy is going digital, yet students still travel 60+ km to Delhi for courses that teach theory instead of real campaigns.",
     opportunity: "A Digital Magician graduate from Ganaur can land Delhi-NCR-level roles, freelance for local mandi and agro businesses, or work remotely — all without leaving home.",
-    travelInfo: "Ganaur to our Sonipat campus is a quick 18 km — about 20 minutes straight down NH44. Offline classes run Mon/Wed/Fri, 7–9 PM. Prefer to stay home? The live online batch is the same class, same trainer, fully interactive.",
+    travelInfo: "Ganaur to our Sonipat campus is a quick 18 km — about 20 minutes straight down NH44. Offline classes run Monday to Friday, with 7:30 AM, 9:00 AM, 12:30 PM and 5:30 PM batches. Prefer to stay home? The live online batch is the same class, same trainer, fully interactive.",
     jobMarket: {
       topRoles: ["Digital Marketing Executive", "Social Media Manager", "WhatsApp & Meta Ads Specialist", "E-commerce Catalogue Manager", "Freelance Marketing Consultant"],
       insight: "Ganaur's proximity to Sonipat, Panipat, and the Kundli–Manesar–Palwal industrial corridor means graduates can access jobs across three hubs without relocating. Local agro-exporters, grain traders, and retail shops increasingly need someone to run their Instagram, WhatsApp Business, and marketplace listings — work a trained Ganaur marketer can do freelance for ₹15,000–40,000/month while building toward a full-time NCR role.",
     },
     faqs: [
-      { q: "How far is the institute from Ganaur, and can I commute for offline classes?", a: "Our Sonipat campus is just 18 km from Ganaur — roughly a 20-minute drive on NH44. Many students commute easily for the Mon/Wed/Fri evening classes. If commuting daily isn't convenient, the live online batch gives you the exact same class from home." },
+      { q: "How far is the institute from Ganaur, and can I commute for offline classes?", a: "Our Sonipat campus is just 18 km from Ganaur — roughly a 20-minute drive on NH44. Many students commute easily for the Monday to Friday evening classes. If commuting daily isn't convenient, the live online batch gives you the exact same class from home." },
       { q: "Are there digital marketing opportunities near Ganaur?", a: "Yes. Agro-businesses, grain traders, and retailers around Ganaur and the NH44 industrial belt increasingly need digital marketers for social media, WhatsApp marketing, and online listings. You can start freelancing locally and target higher-paid Delhi NCR roles as your portfolio grows." },
       { q: "What is the fee for the course for Ganaur students?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000), identical for online and offline. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
     ],

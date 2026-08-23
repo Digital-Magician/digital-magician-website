@@ -178,7 +178,7 @@ export default function ContactPage() {
                     <div>
                       <div className="font-heading font-bold text-white mb-1">Class Timings</div>
                       <div className="text-white/55 font-body text-sm leading-relaxed">
-                        Mon / Wed / Fri: 7 PM – 9 PM<br />
+                        Class batches, Mon to Fri: 7:30 AM, 9:00 AM, 12:30 PM, 5:30 PM<br />
                         Weekend batches available on request
                       </div>
                     </div>
