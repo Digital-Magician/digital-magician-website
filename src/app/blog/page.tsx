@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
 import BlogClient from "./BlogClient";
 
+// Re-render hourly so scheduled posts publish themselves on their date
+// instead of waiting for the next deploy.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Blog — Digital Marketing Guides",
   description:

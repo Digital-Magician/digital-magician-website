@@ -38,6 +38,19 @@ function formatDate(dateStr: string): string {
   });
 }
 
+/**
+ * A post is live once its date has arrived (compared in IST, which is the
+ * audience's timezone). Future-dated posts are scheduled: they sit in the repo
+ * but stay invisible until the day they are due.
+ */
+export function isPublished(dateStr: string): boolean {
+  const today = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+  );
+  today.setHours(0, 0, 0, 0);
+  return new Date(`${dateStr}T00:00:00`) <= today;
+}
+
 function estimateReadTime(content: string): string {
   const words = content.trim().split(/\s+/).length;
   const minutes = Math.ceil(words / 200);
@@ -75,8 +88,10 @@ export function getAllPosts(): BlogPost[] {
     } satisfies BlogPost;
   });
 
-  // Sort by date descending
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // Hide scheduled posts, then sort by date descending
+  return posts
+    .filter((p) => isPublished(p.date))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
@@ -85,6 +100,9 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
+
+  // Not live yet: behave as if it does not exist.
+  if (!isPublished(data.date ?? "2026-01-01")) return null;
 
   return {
     slug,
@@ -124,5 +142,9 @@ export function getAllSlugs(): string[] {
   return fs
     .readdirSync(CONTENT_DIR)
     .filter((f) => f.endsWith(".mdx"))
+    .filter((f) => {
+      const { data } = matter(fs.readFileSync(path.join(CONTENT_DIR, f), "utf-8"));
+      return isPublished(data.date ?? "2026-01-01");
+    })
     .map((f) => f.replace(/\.mdx$/, ""));
 }

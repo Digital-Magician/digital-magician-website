@@ -13,6 +13,10 @@ import {
 } from "@/lib/blog";
 import { pageTitle, metaDescription } from "@/lib/seo";
 
+// Re-render hourly so scheduled posts publish themselves on their date
+// instead of waiting for the next deploy.
+export const revalidate = 3600;
+
 // ── Static params ──────────────────────────────────────────────────────────
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
