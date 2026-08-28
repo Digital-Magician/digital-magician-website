@@ -12,6 +12,7 @@ import {
 } from "@/lib/data/services";
 import { getLocationBySlug } from "@/lib/data/locations";
 import { pageTitle, metaDescription } from "@/lib/seo";
+import ToolIcon from "@/components/shared/ToolIcon";
 import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 const fill = (text: string, city: string) => text.replaceAll("{city}", city);
@@ -190,7 +191,8 @@ export async function renderServiceCourse(serviceKey: string, citySlug: string) 
               </div>
               <div className="flex flex-wrap gap-2">
                 {service.tools.map((tool) => (
-                  <span key={tool} className="text-xs bg-white/6 border border-white/10 text-white/70 font-body px-3 py-1.5 rounded-full">
+                  <span key={tool} className="text-xs bg-white/6 border border-white/10 text-white/70 font-body px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
+                    <ToolIcon tool={tool} className="w-3.5 h-3.5" />
                     {tool}
                   </span>
                 ))}

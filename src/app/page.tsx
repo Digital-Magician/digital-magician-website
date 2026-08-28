@@ -13,6 +13,7 @@ import FeeTag from "@/components/shared/FeeTag";
 import VideoTestimonials from "@/components/home/VideoTestimonials";
 import { programs } from "@/lib/data/programs";
 import { testimonials } from "@/lib/data/testimonials";
+import ToolIcon from "@/components/shared/ToolIcon";
 
 export const metadata: Metadata = {
   title: "Best AI Digital Marketing Institute in India — Sonipat",
@@ -209,7 +210,7 @@ export default function HomePage() {
           {tools.map((tool) => (
             <div key={tool} className="flex-shrink-0 mx-2.5">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/55 text-xs font-heading font-semibold tracking-wide whitespace-nowrap hover:border-amber-brand/40 hover:text-amber-brand hover:bg-amber-brand/[0.06] transition-all duration-300 cursor-default">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-brand/50 flex-shrink-0" />
+                <ToolIcon tool={tool} />
                 {tool}
               </span>
             </div>
@@ -798,11 +799,11 @@ export default function HomePage() {
                 Right Now.
               </h2>
               <p className="text-white/65 text-lg font-body leading-relaxed mb-8">
-                Digital Magician was built by practitioners, not academics. Gaurav has managed over Rs 1 Crore in live ad spend across Google and Meta. He co-founded 10x Estates and 10x Admissions, two active performance marketing agencies serving clients across India. What he teaches, he does every day.
+                Digital Magician was built by practitioners, not academics. Gaurav has managed over Rs 1 Crore in live ad spend across Google and Meta. He co-founded Digital Magicians (digitalmagicians.in), a digital marketing agency working exclusively with healthcare professionals. What he teaches, he does every day.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Co-Founder of 10x Estates and 10x Admissions, active performance marketing agencies",
+                  "Co-Founder of Digital Magicians, a digital marketing agency for healthcare professionals",
                   "Managed Rs 1 Crore+ in Google and Meta ad budgets",
                   "7+ years of performance marketing experience across India",
                   "Students placed at companies across Delhi NCR, Haryana and major Indian cities",
@@ -840,9 +841,10 @@ export default function HomePage() {
               {tools.map((tool, i) => (
                 <div
                   key={tool}
-                  className="bento px-5 py-2.5 text-sm font-heading font-semibold text-white/65 hover:text-amber-brand hover:border-amber-brand/25 transition-all cursor-default"
+                  className="bento px-5 py-2.5 text-sm font-heading font-semibold text-white/65 hover:text-amber-brand hover:border-amber-brand/25 transition-all cursor-default inline-flex items-center gap-2"
                   style={{ animationDelay: `${i * 0.05}s` }}
                 >
+                  <ToolIcon tool={tool} className="w-4 h-4" />
                   {tool}
                 </div>
               ))}

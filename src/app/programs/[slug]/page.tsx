@@ -10,6 +10,7 @@ import { testimonials } from "@/lib/data/testimonials";
 import { serviceCourses } from "@/lib/data/services";
 import FeeTag from "@/components/shared/FeeTag";
 import { pageTitle, metaDescription } from "@/lib/seo";
+import ToolIcon from "@/components/shared/ToolIcon";
 import VideoTestimonials from "@/components/home/VideoTestimonials";
 
 // ── Static params ──────────────────────────────────────────────────────────
@@ -331,8 +332,9 @@ export default async function ProgramPage({
               {program.tools.map((tool) => (
                 <span
                   key={tool}
-                  className="bento px-5 py-2.5 text-sm font-semibold text-slate-300 rounded-full"
+                  className="bento px-5 py-2.5 text-sm font-semibold text-slate-300 rounded-full inline-flex items-center gap-2"
                 >
+                  <ToolIcon tool={tool} className="w-4 h-4" />
                   {tool}
                 </span>
               ))}

@@ -151,8 +151,9 @@ export default function AboutPage() {
                     had never actually managed a live campaign.
                   </p>
                   <p>
-                    By the time he started teaching, he had already built two performance marketing
-                    agencies: 10x Estates and 10x Admissions. He had taken a Rs 60 Lacs funded startup
+                    By the time he started teaching, he had already co-founded Digital Magicians
+                    (digitalmagicians.in), a digital marketing agency working only with
+                    healthcare professionals. He had taken a Rs 60 Lacs funded startup
                     to Rs 2.55 Crores in profit in 14 months using the exact strategies he now teaches.
                     He had scaled a legal tech venture to Rs 20 Lacs MRR.
                   </p>
@@ -193,7 +194,7 @@ export default function AboutPage() {
                     "Rs 1 Crore+ annual ad spend managed",
                     "Google Ads and Meta certified",
                     "50+ brands served across India",
-                    "Co-Founder, 10x Estates and 10x Admissions",
+                    "Co-Founder, Digital Magicians (digitalmagicians.in)",
                     "Trainer to 500+ working marketers",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
