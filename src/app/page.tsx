@@ -799,11 +799,11 @@ export default function HomePage() {
                 Right Now.
               </h2>
               <p className="text-white/65 text-lg font-body leading-relaxed mb-8">
-                Digital Magician was built by practitioners, not academics. Gaurav has managed over Rs 1 Crore in live ad spend across Google and Meta. He co-founded Digital Magicians (digitalmagicians.in), a digital marketing agency working exclusively with healthcare professionals. What he teaches, he does every day.
+                Digital Magician was built by practitioners, not academics. Gaurav has managed over Rs 1 Crore in live ad spend across Google and Meta. He founded Digital Magicians (digitalmagicians.in), a digital marketing agency working exclusively with healthcare professionals. What he teaches, he does every day.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Co-Founder of Digital Magicians, a digital marketing agency for healthcare professionals",
+                  "Founder of Digital Magicians, a digital marketing agency for healthcare professionals",
                   "Managed Rs 1 Crore+ in Google and Meta ad budgets",
                   "7+ years of performance marketing experience across India",
                   "Students placed at companies across Delhi NCR, Haryana and major Indian cities",
