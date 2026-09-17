@@ -116,8 +116,9 @@ export default function HomePage() {
             {/* Sub-headline */}
             <p className="hero-item hero-item-3 text-white/70 text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-body">
               <strong className="text-white font-semibold">500+ students trained.</strong> ₹1.2 Crore+ in combined annual salaries generated.
-              Placed in 30 days, or we refund{" "}
-              <strong className="text-amber-brand font-semibold">every single rupee.</strong>
+              Do the work, and if you&apos;re not placed within 4 months of finishing, we refund{" "}
+              <strong className="text-amber-brand font-semibold">every single rupee.</strong>{" "}
+              <Link href="/placement" className="underline underline-offset-4 decoration-white/30 hover:decoration-white">See the conditions</Link>.
             </p>
 
             <p className="hero-item hero-item-3 text-white/55 text-base mb-10 max-w-2xl mx-auto font-body">
@@ -157,7 +158,7 @@ export default function HomePage() {
                 { icon: "⭐", text: "4.9★, 122 Google Reviews" },
                 { icon: "🎓", text: "500+ Students Trained" },
                 { icon: "🏆", text: "10+ Certifications Included" },
-                { icon: "✅", text: "100% Placement or Refund" },
+                { icon: "✅", text: "Written Placement Guarantee" },
               ].map((item) => (
                 <span key={item.text} className="flex items-center gap-1.5">
                   <span>{item.icon}</span> {item.text}
@@ -268,7 +269,7 @@ export default function HomePage() {
               <div className="bento p-6 bg-amber-brand/5 border-amber-brand/20">
                 <Shield className="w-7 h-7 text-amber-brand mb-3" />
                 <div className="stat-number text-5xl mb-1">30</div>
-                <div className="text-white/50 text-xs font-body">Days avg. to placement — or full refund</div>
+                <div className="text-white/50 text-xs font-body">Days avg. to placement for our graduates</div>
               </div>
             </AnimateOnScroll>
 
@@ -345,7 +346,7 @@ export default function HomePage() {
                   {[
                     ["Live client campaigns", "Real budgets from Week 1", "Dummy accounts / theory"],
                     ["Trainers", "Active practitioners (₹1 Cr+ ad spend/yr)", "Slide-readers"],
-                    ["Placement", "100% guarantee or full refund", "A WhatsApp group"],
+                    ["Placement", "Written guarantee: placed or full refund, on clear conditions", "A WhatsApp group"],
                     ["AI tools", "Built into every module", "Rarely covered"],
                     ["Curriculum", "Updated every quarter", "Frozen for years"],
                     ["Certifications", "10+ (Google, Meta & more)", "Institute certificate only"],
@@ -426,7 +427,7 @@ export default function HomePage() {
                     Full Stack Digital Marketing Program
                   </h3>
                   <p className="text-white/65 font-body mb-6 max-w-xl leading-relaxed">
-                    The complete career transformation program. In 4 months, you go from zero to managing real Google Ads, Meta Ads, SEO, and AI tools for live clients — with a 100% job placement guarantee or full refund.
+                    The complete career transformation program. In 4 months, you go from zero to managing real Google Ads, Meta Ads, SEO, and AI tools for live clients — backed by a written placement guarantee (full refund if you meet the conditions and aren&apos;t placed).
                   </p>
                   <div className="flex flex-wrap gap-3">
                     {["4 Months", "10+ Certifications", "All Levels", "Live Campaigns", "100% Placement"].map((tag) => (
@@ -575,7 +576,7 @@ export default function HomePage() {
                       "Submit every assignment by the deadline",
                       "Build 3 portfolio projects during training",
                       "Apply to 30+ jobs within 4 months",
-                      "Get placed — or receive a full refund",
+                      "Still not placed? You get a full refund",
                     ].map((step, i) => (
                       <div key={step} className="flex items-center gap-4">
                         <div className="w-7 h-7 rounded-full bg-amber-brand/15 border border-amber-brand/30 flex items-center justify-center font-heading font-black text-amber-brand text-xs flex-shrink-0">
@@ -595,7 +596,7 @@ export default function HomePage() {
                 {[
                   { value: "100%", label: "Placement Guarantee" },
                   { value: "30", suffix: " days", label: "Average time to placement" },
-                  { value: "₹0", label: "Risk — full refund if not placed" },
+                  { value: "₹0", label: "Risk if you meet the conditions and aren't placed" },
                   { value: "10+", label: "Active hiring partners" },
                 ].map((s, i) => (
                   <AnimateOnScroll key={s.label} delay={i * 100}>

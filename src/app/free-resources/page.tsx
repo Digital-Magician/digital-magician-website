@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Download, BookOpen, FileText, Play } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-resources" },
   title: "Free Digital Marketing Resources",
   description:
     "Free guides, templates, and checklists for digital marketers in India. Google Ads checklist, Meta Ads swipe file, SEO audit template, and more — all free.",

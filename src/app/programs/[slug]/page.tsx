@@ -416,7 +416,7 @@ export default async function ProgramPage({
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Complete all modules, submit assignments, build your portfolio, and apply to 30+ jobs.
-                If you aren't placed within 4 months, we refund every rupee. No exceptions, no fine print.
+                If you do all of that and still aren't placed within 4 months of finishing, we refund every rupee. The full conditions are on our refund policy page.
               </p>
             </div>
             <Link

@@ -68,8 +68,8 @@ export const locations: LocationData[] = [
     mode: "home",
     metaTitle: "Digital Marketing Course in Sonipat | Best Institute",
     metaDesc: "The best digital marketing course in Sonipat — live Google Ads, SEO & Meta Ads training with a 100% placement guarantee. Fees ₹45,000, EMI available.",
-    heroHeadline: "The Best Digital Marketing Course in Sonipat — With a Real 100% Placement Guarantee",
-    heroSubheadline: "You don't need to travel to Delhi to get Delhi-level digital marketing training. It's right here — with real campaigns, real results, and a 100% placement guarantee.",
+    heroHeadline: "The Best Digital Marketing Course in Sonipat, With a Written Placement Guarantee",
+    heroSubheadline: "You don't need to travel to Delhi to get Delhi-level digital marketing training. It's right here, with real campaigns, real results, and a written placement guarantee.",
     eyebrowText: "Located in Sonipat, Haryana",
     localContext: {
       heading: "Sonipat Has a Digital Skills Gap — We're Closing It",
@@ -88,7 +88,7 @@ export const locations: LocationData[] = [
       { q: "What is the fee for the course?", a: "The Full Stack Digital Marketing program is ₹45,000 (a limited-time offer, reduced from ₹60,000) for both online and offline modes. Specialisation courses start from ₹10,000. EMI options are available — ask us on WhatsApp." },
       { q: "Which is the best digital marketing course in Sonipat for beginners?", a: "Our Full Stack Digital Marketing program is built for beginners and career-switchers in Sonipat — no prior experience needed. You learn Google Ads, Meta Ads, SEO, and AI tools on live campaigns and graduate with a 10-project portfolio and a 100% placement guarantee." },
       { q: "Do you offer digital marketing training and classes for working professionals in Sonipat?", a: "Yes. We run offline classes in Sonipat (Monday to Friday, with 7:30 AM, 9:00 AM, 12:30 PM and 5:30 PM batches) and a live online batch, so working professionals and college students can attend without disrupting their schedule. Every class is recorded with 12-month access." },
-      { q: "Will I get a job after the digital marketing course in Sonipat?", a: "Yes — placement is guaranteed in writing or you get a full refund. 80% of our graduates are placed within 30 days, most in Delhi NCR roles (Gurgaon, Noida, Faridabad) or working remotely from Sonipat. You also get our job portal and interview preparation." },
+      { q: "Will I get a job after the digital marketing course in Sonipat?", a: "Placement is backed by a written guarantee. Attend 75% of classes, submit every assignment, finish your live campaign project and apply to 30+ jobs within 4 months of completing the course; if you are still not placed, you get a full refund. 80% of our graduates are placed within 30 days, most in Delhi NCR roles (Gurgaon, Noida, Faridabad) or working remotely from Sonipat. You also get our job portal and interview preparation." },
     ],
     studentStory: {
       name: "Rahul K.",
@@ -774,7 +774,7 @@ export const locations: LocationData[] = [
     travelTime: "50–70 minutes via NH44",
     mode: "medium",
     metaTitle: "Digital Marketing Course in Delhi | Real Campaigns, Jobs",
-    metaDesc: "Digital marketing course for Delhi students — live agency campaigns 55 km away in Sonipat, 500+ placements, 100% refund guarantee. Online batch available.",
+    metaDesc: "Digital marketing course for Delhi students — live agency campaigns 55 km away in Sonipat, 500+ students trained, written placement guarantee. Online batch available.",
     heroHeadline: "Delhi Has Hundreds of Digital Marketing Institutes. Only One Has a Placement Guarantee.",
     heroSubheadline: "Just 55 km from Delhi, Digital Magician offers something most Delhi institutes won't: live client campaign access from Day 1, and a legally backed 100% placement guarantee.",
     eyebrowText: "55 km from Delhi • Online & Offline",

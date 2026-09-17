@@ -3,6 +3,7 @@ import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/refund-policy" },
   title: { absolute: pageTitle("Refund Policy: Placement Guarantee Explained") },
   description:
     "Digital Magician's refund policy for course fees. Full refund if placement conditions are met but placement not achieved. Clear, no-trap policy.",

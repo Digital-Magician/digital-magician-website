@@ -8,7 +8,7 @@ import CountUp from "@/components/shared/CountUp";
 export const metadata: Metadata = {
   title: { absolute: pageTitle("Digital Marketing Course With 100% Placement Guarantee") },
   description:
-    "A digital marketing course with a real, legally-backed placement guarantee — placed in 30 days or a full refund. 80% placed, 10+ hiring partners.",
+    "A digital marketing course with a real, legally-backed placement guarantee — full refund if you meet the conditions and aren't placed. 80% placed in 30 days, 10+ hiring partners.",
   alternates: { canonical: "/placement" },
 };
 

@@ -6,6 +6,9 @@ import { serviceCourses, SERVICE_CITY_SLUGS } from "@/lib/data/services";
 
 const BASE_URL = "https://digitalmagician.in";
 
+// Scheduled blog posts go live by date, so the sitemap must rebuild on its own.
+export const revalidate = 3600;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Users, Zap, Shield, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/hire-from-us" },
   title: "Hire Digital Marketing Talent",
   description:
     "Hire job-ready digital marketing professionals from Digital Magician. Our graduates bring live campaign experience, certifications and proven results.",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, AlertCircle, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/write-for-us" },
   title: "Write for Us | Blog",
   description:
     "Contribute to the Digital Magician blog. We publish practitioner-written articles on Google Ads, SEO, Meta Ads, AI tools and marketing careers in India.",

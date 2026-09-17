@@ -6,6 +6,7 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import CountUp from "@/components/shared/CountUp";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: { absolute: pageTitle("About Us: AI Marketing Institute in Sonipat, India") },
   description:
     "Meet the team behind Digital Magician, Sonipat's AI and digital marketing institute. 500+ students trained, founded by a practitioner who built two agencies.",

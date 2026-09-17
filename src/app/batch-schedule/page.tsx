@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   const [nextDate] = getUpcomingBatchDates(1);
   return {
+    alternates: { canonical: "/batch-schedule" },
     title: { absolute: pageTitle("Batch Schedule & Upcoming Classes in Sonipat") },
     description: `Upcoming Digital Magician batch dates. Next batch starts ${nextDate}, only 4 seats left. Online and offline available. Book your seat on WhatsApp.`,
   };

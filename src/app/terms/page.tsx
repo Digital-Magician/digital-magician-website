@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "Terms & Conditions",
   description: "Digital Magician's terms and conditions for course enrolment, usage, and conduct.",
 };

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Clock, Award, Zap, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/scholarship-test" },
   title: "Scholarship Test — 50% Fee Waiver",
   description:
     "Take Digital Magician's free scholarship test at our Sonipat centre and win up to 50% fee waiver. 30 questions, 30 minutes, results on the spot.",

@@ -18,7 +18,7 @@ export const programs: Program[] = [
     icon: "🚀",
     color: "from-amber-500 to-orange-500",
     outcomes: [
-      "Guaranteed job placement or full refund",
+      "Written placement guarantee: full refund if you meet the conditions and aren't placed",
       "Master 60+ professional tools across 12 categories",
       "Earn Dual Certification: AI-Powered Digital Marketing Professional and Autonomous Marketing Systems Specialist",
       "Graduate with a 10-project portfolio backed by real campaign results from Sonipat and across India",

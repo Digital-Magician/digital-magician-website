@@ -6,6 +6,7 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import Marquee from "@/components/shared/Marquee";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/alumni" },
   title: { absolute: pageTitle("Alumni Stories: 500+ Students, Real Salaries") },
   description:
     "Digital Magician alumni are working marketers earning Rs 22,000 to Rs 1,50,000 a month. Read their stories and see where a real education takes you.",

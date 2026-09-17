@@ -7,6 +7,7 @@ import BlogClient from "./BlogClient";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog — Digital Marketing Guides",
   description:
     "Practitioner-written guides on Google Ads, SEO, Meta Ads, AI tools, and digital marketing careers — from the agency managing ₹1 Crore+ in annual ad spend.",

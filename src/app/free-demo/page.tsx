@@ -4,6 +4,7 @@ import { ArrowRight, Play, CheckCircle, Clock, Users, Star, Calendar } from "luc
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-demo" },
   title: "Free Demo Class — Watch Before You Enroll",
   description:
     "Watch a free Digital Magician demo class before you enroll. See how we teach from live client campaigns, not slides. No registration needed.",

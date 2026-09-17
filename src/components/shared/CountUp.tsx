@@ -19,13 +19,21 @@ export default function CountUp({
   decimals = 0,
   className = "",
 }: Props) {
-  const [value, setValue] = useState(0);
+  // Start at the final value so the server HTML (read by crawlers and AI
+  // tools that don't run JavaScript) carries the real number, not 0.
+  const [value, setValue] = useState(end);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Already on screen at load: keep the final value, no jump back to 0.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) return;
+
+    setValue(0);
 
     const observer = new IntersectionObserver(
       ([entry]) => {

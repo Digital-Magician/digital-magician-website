@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock, ArrowRight, MessageCircle } from "lucide-re
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact Us — Sonipat",
   description:
     "Reach Digital Magician in Sonipat. Call, WhatsApp, or visit us. We respond to every inquiry within 2 hours — no bots, no call centres.",
@@ -40,9 +41,9 @@ const contactMethods = [
   {
     icon: <MapPin className="w-6 h-6" />,
     title: "Visit Us",
-    value: "Sonipat, Haryana",
-    sub: "Share location on WhatsApp for directions",
-    href: "https://wa.me/917988227240?text=Hi!%20Can%20you%20share%20the%20exact%20address%20for%20Digital%20Magician%3F",
+    value: "8 Marla, Model Town, Sonipat",
+    sub: "Above Dr. Batra's Clinic",
+    href: "https://www.google.com/maps?cid=15426676245541234030",
     cta: "Get Directions",
     highlight: false,
   },
@@ -146,16 +147,17 @@ export default function ContactPage() {
                     <div>
                       <div className="font-heading font-bold text-white mb-1">Address</div>
                       <div className="text-white/55 font-body text-sm leading-relaxed">
-                        Digital Magician Institute<br />
-                        Sonipat, Haryana — 131001
+                        Digital Magician<br />
+                        Above Dr. Batra&apos;s Clinic, near Mittal Nursing Home<br />
+                        8 Marla, Model Town, Sonipat, Haryana 131001
                       </div>
                       <Link
-                        href="https://wa.me/917988227240?text=Hi!%20Can%20you%20share%20the%20exact%20address%20for%20Digital%20Magician%3F"
+                        href="https://www.google.com/maps?cid=15426676245541234030"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-amber-brand text-xs font-heading font-semibold mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all"
                       >
-                        Get exact directions on WhatsApp <ArrowRight className="w-3 h-3" />
+                        Open in Google Maps <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
                   </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy-policy" },
   title: "Privacy Policy",
   description: "Digital Magician's privacy policy — how we collect, use, and protect your personal data.",
 };

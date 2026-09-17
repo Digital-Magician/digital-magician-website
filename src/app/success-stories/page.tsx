@@ -4,6 +4,7 @@ import { ArrowRight, Star, TrendingUp, Quote } from "lucide-react";
 import { testimonials } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/success-stories" },
   title: "Student Success Stories",
   description:
     "Real results from real students. See how Digital Magician graduates from Haryana and Delhi NCR went from freshers to ₹60,000/month careers in digital marketing.",
