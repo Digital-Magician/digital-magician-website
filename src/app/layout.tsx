@@ -88,6 +88,7 @@ const structuredData = {
     addressCountry: "IN",
   },
   telephone: "+91-79882-27240",
+  openingHours: "Mo-Su 09:00-21:00",
   email: "Hello@digitalmagician.in",
   sameAs: [
     "https://www.instagram.com/digitalmagician.in",

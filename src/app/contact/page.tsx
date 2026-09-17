@@ -24,7 +24,7 @@ const contactMethods = [
     icon: <Phone className="w-6 h-6" />,
     title: "Call Us",
     value: "+91 79882 27240",
-    sub: "Mon – Sat, 9 AM to 8 PM",
+    sub: "Every day, 9 AM to 9 PM",
     href: "tel:+917988227240",
     cta: "Call Now",
     highlight: false,
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: "Can I visit the institute before enrolling?",
-    a: "Absolutely. We encourage it. Visit us any weekday between 10 AM and 6 PM. You'll see the classroom, meet our trainers if available, and get a full walkthrough of the program — no pressure, no sales script.",
+    a: "Absolutely. We encourage it. Visit us any day between 9 AM and 9 PM. You'll see the classroom, meet our trainers if available, and get a full walkthrough of the program — no pressure, no sales script.",
   },
   {
     q: "I'm not from Sonipat. Can I still attend?",
@@ -168,8 +168,8 @@ export default function ContactPage() {
                     <div>
                       <div className="font-heading font-bold text-white mb-1">Office Hours</div>
                       <div className="text-white/55 font-body text-sm leading-relaxed">
-                        Monday – Saturday: 9 AM – 8 PM<br />
-                        Sunday: Closed (WhatsApp open)
+                        Monday – Sunday: 9 AM – 9 PM<br />
+                        Open all 7 days
                       </div>
                     </div>
                   </div>
