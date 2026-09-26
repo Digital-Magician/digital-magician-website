@@ -27,3 +27,6 @@ yarn-error.log*
 *.pem
 .vercel
 .claude/
+
+# Locally stored enrollment documents (development only)
+.uploads/

@@ -11,15 +11,19 @@
   "dependencies": {
     "@mdx-js/mdx": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
+    "@neondatabase/serverless": "^1.1.0",
+    "@types/pg": "^8.23.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.469.0",
     "next": "^15.1.0",
+    "pg": "^8.23.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "reading-time": "^1.5.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1091.0",
@@ -29,11 +33,12 @@
     "@types/react-dom": "^18",
     "@vercel/blob": "^2.4.1",
     "autoprefixer": "^10.4.20",
+    "dotenv": "^18.0.4",
     "eslint": "^8",
     "eslint-config-next": "^15.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "5.8.2"
   },
   "overrides": {
     "next": {
