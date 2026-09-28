@@ -27,7 +27,6 @@
 ## Key resources
 - [Batch Schedule](https://digitalmagician.in/batch-schedule): Upcoming batch start dates, timings, fees, and seats.
 - [Free Demo Class](https://digitalmagician.in/free-demo): Watch a real class before enrolling.
-- [Scholarship Test](https://digitalmagician.in/scholarship-test): Earn up to 50% off the fee.
 - [Hire From Us](https://digitalmagician.in/hire-from-us): For employers who want to hire trained digital marketers.
 
 ## Blog & guides

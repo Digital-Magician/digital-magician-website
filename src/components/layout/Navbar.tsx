@@ -6,6 +6,27 @@ import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { getComingMonday } from "@/lib/date";
 
+/**
+ * Short-lived notice shown in the top bar alongside the next-batch line.
+ * It stops showing by itself after `showUntil` (end of that day, IST), so an
+ * out-of-date announcement cannot sit on the site. To retire it early, set
+ * `text` to an empty string.
+ */
+const batchNotice = {
+  text: "Please note: today's 9 PM batch will now begin tomorrow.",
+  shortText: "Today's 9 PM batch begins tomorrow.",
+  showUntil: "2026-09-28",
+};
+
+function noticeIsCurrent(): boolean {
+  if (!batchNotice.text) return false;
+  const todayInIndia = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+  );
+  todayInIndia.setHours(0, 0, 0, 0);
+  return new Date(`${batchNotice.showUntil}T00:00:00`) >= todayInIndia;
+}
+
 const navLinks = [
   { label: "Programs", href: "/programs", hasDropdown: true,
     items: [
@@ -28,6 +49,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [nextBatch, setNextBatch] = useState<{ long: string; short: string } | null>(null);
+  const [showNotice, setShowNotice] = useState(false);
+  const [noticeVisible, setNoticeVisible] = useState(false);
+  const [fading, setFading] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,6 +61,23 @@ export default function Navbar() {
 
   useEffect(() => {
     setNextBatch(getComingMonday());
+  }, []);
+
+  // Alternate the two headlines, fading between them. Runs on the client only,
+  // so the server-rendered bar always carries the next-batch line.
+  useEffect(() => {
+    if (!noticeIsCurrent()) return;
+    setShowNotice(true);
+
+    const interval = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setNoticeVisible((current) => !current);
+        setFading(false);
+      }, 500);
+    }, 6000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -49,15 +90,32 @@ export default function Navbar() {
     >
       {/* Announcement Bar */}
       <div className="bg-amber-brand text-midnight py-2 text-center text-sm font-semibold font-heading">
-        <span className="hidden sm:inline">
-          🎓 Next Batch Starting {nextBatch ? nextBatch.long : "Coming Monday"} — Only 4 Seats Left!
+        <span
+          className={`transition-opacity duration-500 ${fading ? "opacity-0" : "opacity-100"}`}
+        >
+          {!(showNotice && noticeVisible) && (
+            <>
+              <span className="hidden sm:inline">
+                🎓 Next Batch Starting {nextBatch ? nextBatch.long : "Coming Monday"} — Only 4 Seats Left!
+              </span>
+              <span className="sm:hidden">
+                Next Batch: {nextBatch ? nextBatch.short : "Mon"} — 4 Seats Left!
+              </span>
+              <Link href="/free-demo" className="ml-3 underline underline-offset-2 hover:opacity-80">
+                Book a Free Demo →
+              </Link>
+            </>
+          )}
+          {showNotice && noticeVisible && (
+            <>
+              <span className="hidden sm:inline">{batchNotice.text}</span>
+              <span className="sm:hidden">{batchNotice.shortText}</span>
+              <Link href="/batch-schedule" className="ml-3 underline underline-offset-2 hover:opacity-80">
+                See the schedule →
+              </Link>
+            </>
+          )}
         </span>
-        <span className="sm:hidden">
-          Next Batch: {nextBatch ? nextBatch.short : "Mon"} — 4 Seats Left!
-        </span>
-        <Link href="/scholarship-test" className="ml-3 underline underline-offset-2 hover:opacity-80">
-          Get 50% Off →
-        </Link>
       </div>
 
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,10 +185,10 @@ export default function Navbar() {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/scholarship-test"
+              href="/free-demo"
               className="text-sm font-heading font-semibold text-amber-brand hover:text-amber-400 transition-colors"
             >
-              Free Scholarship Test
+              Free Demo Class
             </Link>
             <Link
               href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20courses."
@@ -180,11 +238,11 @@ export default function Navbar() {
             ))}
             <div className="pt-3 border-t border-white/10 space-y-2">
               <Link
-                href="/scholarship-test"
+                href="/free-demo"
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center btn-outline px-5 py-3 rounded-lg text-sm font-heading font-bold"
               >
-                Free Scholarship Test
+                Free Demo Class
               </Link>
               <Link
                 href="https://wa.me/917988227240?text=Hi%20Digital%20Magician!%20I%20want%20to%20know%20more%20about%20your%20digital%20marketing%20courses."

@@ -953,10 +953,10 @@ export default function HomePage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/scholarship-test"
+                href="/free-demo"
                 className="btn-ghost px-10 py-5 text-base gap-2 w-full sm:w-auto justify-center"
               >
-                Take the Free Scholarship Test (50% Off)
+                Watch a Free Demo Class First
               </Link>
             </div>
 

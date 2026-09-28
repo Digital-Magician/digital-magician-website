@@ -13,7 +13,6 @@ const footerLinks = {
   ],
   Resources: [
     { label: "Free Demo Class", href: "/free-demo" },
-    { label: "Scholarship Test", href: "/scholarship-test" },
     { label: "Batch Schedule", href: "/batch-schedule" },
     { label: "Blog", href: "/blog" },
     { label: "Free Resources", href: "/free-resources" },

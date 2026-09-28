@@ -232,7 +232,7 @@ export const locations: LocationData[] = [
     faqs: [
       { q: "Are there digital marketing jobs in Rohtak itself?", a: "Yes — and the market is growing. Healthcare, educational institutions, and retail businesses in Rohtak are building marketing teams. But your ceiling is much higher if you're also targeting Delhi, Gurugram, and Faridabad — which is exactly what our placement support covers." },
       { q: "How does the online batch work for Rohtak students?", a: "Our online batch is a completely live class — not recorded lectures. You join via Zoom at your chosen slot, Monday to Friday and see the trainer's live screen as he manages real campaigns. Every session is also recorded for 12-month replay access." },
-      { q: "Is there any scholarship or fee discount?", a: "Yes — we run a Scholarship Test that can reduce fees by up to 50%. Check our scholarship test page for the next test date and eligibility criteria." },
+      { q: "Is there any fee discount?", a: "Yes. Pay the full Full Stack fee at enrollment and it comes down to Rs 40,000 instead of Rs 45,000. If you would rather spread it out, book your seat with the Rs 5,000 enrollment fee and pay the balance on the first day of class. EMI options are available, so ask us on WhatsApp." },
     ],
   },
 

@@ -32,6 +32,8 @@ const nextConfig: NextConfig = {
     { source: "/courses/search-engine-mastery-program",  destination: "/programs/seo-mastery",           permanent: true },
     { source: "/courses/performance-marketing-program",  destination: "/programs/performance-marketing", permanent: true },
     { source: "/digital-marketing-institutes-in-sonipat/", destination: "/digital-marketing-course/sonipat", permanent: true },
+    // Scholarship test withdrawn: send that traffic to the course and its fees.
+    { source: "/scholarship-test",                       destination: "/digital-marketing-course/sonipat", permanent: true },
   ],
 };
 
