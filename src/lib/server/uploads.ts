@@ -52,6 +52,16 @@ function decrypt(data: Buffer): Buffer {
   return Buffer.concat([decipher.update(body), decipher.final()]);
 }
 
+/**
+ * The project has two blob stores: a public one for testimonial videos and a
+ * private one for documents. BLOB_STORE_ID points at the public store, so the
+ * private store is named explicitly on every document call.
+ */
+function documentStore(): { storeId: string } | Record<string, never> {
+  const storeId = process.env.BLOB_DOCUMENTS_STORE_ID;
+  return storeId ? { storeId } : {};
+}
+
 /** Development machines have no private blob store, so files stay on disk. */
 function useLocalDisk(): boolean {
   return process.env.NODE_ENV !== "production" && process.env.BLOB_PRIVATE_STORE !== "1";
@@ -88,6 +98,7 @@ export async function storePrivateFile(
       access: "private",
       contentType: "application/octet-stream",
       addRandomSuffix: false,
+      ...documentStore(),
     });
   }
 
@@ -104,7 +115,7 @@ export async function readPrivateFile(pathname: string): Promise<Buffer | null> 
     }
   }
 
-  const result = await get(pathname, { access: "private" });
+  const result = await get(pathname, { access: "private", ...documentStore() });
   if (!result?.stream) return null;
   const chunks: Uint8Array[] = [];
   const reader = result.stream.getReader();
@@ -121,5 +132,5 @@ export async function deletePrivateFile(pathname: string) {
     await fs.rm(path.join(LOCAL_DIR, pathname), { force: true });
     return;
   }
-  await del(pathname);
+  await del(pathname, documentStore());
 }
