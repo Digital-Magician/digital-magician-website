@@ -70,7 +70,7 @@ export default function LoginForm({
           value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Your password" />
       </div>
 
-      <button type="submit" disabled={busy} className="btn-primary w-full py-4 gap-2 disabled:opacity-60">
+      <button type="submit" disabled={busy} className="btn-primary w-full py-4 gap-2 disabled:opacity-60 justify-center">
         {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <><LogIn className="w-4 h-4" /> Sign in</>}
       </button>
     </form>

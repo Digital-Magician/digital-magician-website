@@ -6,7 +6,9 @@ import { issueClaimToken } from "@/lib/server/claim";
 import { createOrder, razorpayConfigured, razorpayKeyId } from "@/lib/server/razorpay";
 import {
   amountDueNowPaise,
+  balanceDuePaise,
   buildReference,
+  discountPaise,
   findProgram,
   normalisePhone,
   validateEnrollment,
@@ -66,8 +68,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please check the highlighted fields.", errors }, { status: 400 });
   }
 
+  // Amounts are always recomputed here; the browser only says which plan it wants.
   const program = findProgram(input.programSlug)!;
-  const dueNow = amountDueNowPaise(input.paymentPlan, program.feeInr);
+  const dueNow = amountDueNowPaise(input.paymentPlan, program);
+  const discount = discountPaise(input.paymentPlan, program);
 
   // Cash is only offered for the remaining course fee, never for money due now.
   if (input.paymentMethod === "cash") {
@@ -104,13 +108,13 @@ export async function POST(request: Request) {
     INSERT INTO enrollments (
       reference, student_name, father_name, guardian_phone, contact_number, whatsapp_number,
       email, address, program_slug, program_name, course_fee_paise, payment_plan,
-      amount_due_now_paise, payment_method, balance_method, payment_status, aadhaar_path
+      amount_due_now_paise, discount_paise, payment_method, balance_method, payment_status, aadhaar_path
     ) VALUES (
       ${reference}, ${input.studentName}, ${input.fatherName},
       ${normalisePhone(input.guardianPhone)}, ${normalisePhone(input.contactNumber)},
       ${normalisePhone(input.whatsappNumber)}, ${input.email || null}, ${input.address},
       ${program.slug}, ${program.name}, ${program.feeInr * 100}, ${input.paymentPlan},
-      ${dueNow}, ${input.paymentMethod}, ${balanceMethod}, 'pending', ${aadhaarPath}
+      ${dueNow}, ${discount}, ${input.paymentMethod}, ${balanceMethod}, 'pending', ${aadhaarPath}
     )
     RETURNING id
   `;
@@ -164,6 +168,8 @@ export async function POST(request: Request) {
     reference,
     claimToken,
     amountDuePaise: dueNow,
+    discountPaise: discount,
+    balanceDuePaise: input.paymentPlan === "enrollment_only" ? balanceDuePaise(program) : 0,
     razorpay,
   });
 }

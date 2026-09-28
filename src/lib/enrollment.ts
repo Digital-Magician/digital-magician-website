@@ -4,6 +4,15 @@ import { programs } from "@/lib/data/programs";
 export const ENROLLMENT_FEE_INR = 5000;
 export const ENROLLMENT_FEE_PAISE = ENROLLMENT_FEE_INR * 100;
 
+/**
+ * Paying the whole fee up front earns a discount on the Full Stack programme.
+ * Paying only the booking fee keeps the full price, with the balance due on the
+ * first day of class.
+ */
+export const INSTANT_PAYMENT_DISCOUNTS: Record<string, number> = {
+  "full-stack-digital-marketing": 5000,
+};
+
 export const UPI_ID = process.env.NEXT_PUBLIC_UPI_ID || "GARVFENCER@YBL";
 export const UPI_PAYEE_NAME = "Digital Magician";
 
@@ -17,6 +26,8 @@ export interface ProgramOption {
   shortName: string;
   feeInr: number;
   duration: string;
+  /** Taken off the fee when the whole amount is paid at enrollment. */
+  instantDiscountInr: number;
 }
 
 export const enrollmentPrograms: ProgramOption[] = programs.map((program) => ({
@@ -25,14 +36,33 @@ export const enrollmentPrograms: ProgramOption[] = programs.map((program) => ({
   shortName: program.shortName,
   feeInr: program.fee,
   duration: program.duration,
+  instantDiscountInr: INSTANT_PAYMENT_DISCOUNTS[program.slug] ?? 0,
 }));
 
 export function findProgram(slug: string): ProgramOption | undefined {
   return enrollmentPrograms.find((program) => program.slug === slug);
 }
 
-export function amountDueNowPaise(plan: PaymentPlan, courseFeeInr: number): number {
-  return plan === "full" ? courseFeeInr * 100 : ENROLLMENT_FEE_PAISE;
+/** The discount applies only to paying everything at once. */
+export function discountPaise(plan: PaymentPlan, program: ProgramOption): number {
+  return plan === "full" ? program.instantDiscountInr * 100 : 0;
+}
+
+export function amountDueNowPaise(plan: PaymentPlan, program: ProgramOption): number {
+  if (plan !== "full") return ENROLLMENT_FEE_PAISE;
+  return program.feeInr * 100 - discountPaise(plan, program);
+}
+
+/** What is left to pay on the first day of class after the booking fee. */
+export function balanceDuePaise(program: ProgramOption): number {
+  return program.feeInr * 100 - ENROLLMENT_FEE_PAISE;
+}
+
+/** Everything the student pays under the chosen plan. */
+export function payableTotalPaise(plan: PaymentPlan, program: ProgramOption): number {
+  return plan === "full"
+    ? amountDueNowPaise(plan, program)
+    : ENROLLMENT_FEE_PAISE + balanceDuePaise(program);
 }
 
 export function formatInr(paise: number): string {

@@ -40,8 +40,11 @@ Share `https://digitalmagician.in/enroll` with the student on WhatsApp. They fil
 their details, attach the Aadhaar card, and choose:
 
 - **Full fee** or **enrollment fee only** (₹5,000).
-- If they pay the enrollment fee only, they say how the balance will come: **cash** at the
-  institute, or **online** later.
+- Paying the whole Full Stack fee at once costs **₹40,000 instead of ₹45,000**. The ₹5,000
+  discount applies only to paying in one go.
+- Paying the enrollment fee only keeps the full ₹45,000 price: ₹5,000 now and **₹40,000 on
+  the first day of class**. They choose whether that balance comes as **cash** at the
+  institute or **online**.
 - To pay now: **Razorpay** (card, UPI, netbanking; verified automatically) or **UPI** to
   GARVFENCER@YBL followed by a screenshot your team checks.
 

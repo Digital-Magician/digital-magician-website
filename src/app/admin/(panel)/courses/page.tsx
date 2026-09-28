@@ -40,7 +40,7 @@ export default async function CoursesPage() {
           <h2 className="font-heading font-bold text-white text-sm">New course</h2>
           <input name="title" required placeholder="Course name, e.g. Full Stack Batch, Oct 2026" className={field} />
           <input name="description" placeholder="Short description (optional)" className={field} />
-          <button type="submit" className="btn-primary w-full py-2.5 text-sm">Create course</button>
+          <button type="submit" className="btn-primary w-full py-2.5 text-sm justify-center">Create course</button>
         </form>
 
         <form action={createModule} className="bento p-5 space-y-3">
@@ -52,7 +52,7 @@ export default async function CoursesPage() {
             ))}
           </select>
           <input name="title" required placeholder="Module name, e.g. Month 1: Foundations" className={field} />
-          <button type="submit" className="btn-primary w-full py-2.5 text-sm">Add module</button>
+          <button type="submit" className="btn-primary w-full py-2.5 text-sm justify-center">Add module</button>
         </form>
       </div>
 
@@ -77,7 +77,7 @@ export default async function CoursesPage() {
           Upload the recording to YouTube as Unlisted, then paste the link here. Unlisted videos do not
           appear in search or on your channel, but anyone with the link can watch, so keep the link inside the portal.
         </p>
-        <button type="submit" className="btn-primary w-full py-2.5 text-sm">Add class</button>
+        <button type="submit" className="btn-primary w-full py-2.5 text-sm justify-center">Add class</button>
       </form>
 
       {modules.length === 0 ? (

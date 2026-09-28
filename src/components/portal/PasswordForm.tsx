@@ -74,7 +74,7 @@ export default function PasswordForm({ redirectTo }: { redirectTo: string }) {
           value={confirm} onChange={(e) => setConfirm(e.target.value)} placeholder="Type it again" />
       </div>
 
-      <button type="submit" disabled={busy} className="btn-primary w-full py-4 gap-2 disabled:opacity-60">
+      <button type="submit" disabled={busy} className="btn-primary w-full py-4 gap-2 disabled:opacity-60 justify-center">
         {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <><ShieldCheck className="w-4 h-4" /> Save new password</>}
       </button>
     </form>

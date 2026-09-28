@@ -1,6 +1,6 @@
 import { FileText, Image as ImageIcon } from "lucide-react";
 import { query } from "@/lib/server/db";
-import { formatInr } from "@/lib/enrollment";
+import { ENROLLMENT_FEE_INR, formatInr } from "@/lib/enrollment";
 import { markPaymentReceived, setEnrollmentStatus } from "@/app/admin/actions";
 
 export const dynamic = "force-dynamic";
@@ -20,6 +20,7 @@ interface EnrollmentRow {
   payment_plan: string;
   amount_due_now_paise: number;
   amount_paid_paise: number;
+  discount_paise: number;
   payment_method: string | null;
   balance_method: string | null;
   payment_status: string;
@@ -80,8 +81,19 @@ export default async function EnrollmentsPage() {
               <div className="text-white/45 font-body text-xs">Due now</div>
               <div className="text-white font-heading font-bold">{formatInr(row.amount_due_now_paise)}</div>
               <div className="text-white/35 font-body text-xs">
-                paid {formatInr(row.amount_paid_paise)} of {formatInr(row.course_fee_paise)}
+                paid {formatInr(row.amount_paid_paise)} of{" "}
+                {formatInr(row.course_fee_paise - Number(row.discount_paise ?? 0))}
               </div>
+              {Number(row.discount_paise ?? 0) > 0 && (
+                <div className="text-amber-brand/80 font-body text-xs">
+                  {formatInr(row.discount_paise)} instant payment discount
+                </div>
+              )}
+              {row.payment_plan === "enrollment_only" && (
+                <div className="text-white/35 font-body text-xs">
+                  {formatInr(row.course_fee_paise - ENROLLMENT_FEE_INR * 100)} due on day one
+                </div>
+              )}
             </div>
           </div>
 
@@ -95,7 +107,7 @@ export default async function EnrollmentsPage() {
             {row.email && <Detail label="Email" value={row.email} href={`mailto:${row.email}`} />}
             <Detail label="Paid via" value={row.payment_method ?? "not chosen"} />
             {row.payment_plan === "enrollment_only" && (
-              <Detail label="Balance by" value={row.balance_method ?? "not chosen"} />
+              <Detail label="Day-one balance by" value={row.balance_method ?? "not chosen"} />
             )}
             {row.razorpay_payment_id && <Detail label="Razorpay id" value={row.razorpay_payment_id} />}
           </div>

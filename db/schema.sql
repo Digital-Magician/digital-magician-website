@@ -129,3 +129,6 @@ CREATE TABLE IF NOT EXISTS audit_log (
   created_at     TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS audit_log_created_idx ON audit_log (created_at DESC);
+
+-- Discount applied when the whole fee is paid at enrollment.
+ALTER TABLE enrollments ADD COLUMN IF NOT EXISTS discount_paise BIGINT NOT NULL DEFAULT 0;

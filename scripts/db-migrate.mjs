@@ -14,10 +14,18 @@ const schema = readFileSync(join(here, "..", "db", "schema.sql"), "utf8");
 
 // Split on semicolons that end a statement line; the schema has no functions or
 // dollar-quoted bodies, so this is sufficient and keeps the script dependency-free.
+// Comment lines are stripped from each chunk rather than used to skip it: a
+// statement that happens to follow a comment still has to run.
 const statements = schema
   .split(/;\s*$/m)
-  .map((s) => s.trim())
-  .filter((s) => s && !s.startsWith("--"));
+  .map((chunk) =>
+    chunk
+      .split("\n")
+      .filter((line) => !line.trim().startsWith("--"))
+      .join("\n")
+      .trim()
+  )
+  .filter(Boolean);
 
 let applied = 0;
 for (const statement of statements) {

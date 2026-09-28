@@ -5,6 +5,8 @@ import {
   ENROLLMENT_FEE_INR,
   UPI_ID,
   amountDueNowPaise,
+  balanceDuePaise,
+  discountPaise,
   enrollmentPrograms,
   formatInr,
   upiDeepLink,
@@ -78,8 +80,15 @@ export default function EnrollmentForm() {
 
   const dueNow = useMemo(() => {
     if (!program || !values.paymentPlan) return 0;
-    return amountDueNowPaise(values.paymentPlan, program.feeInr);
+    return amountDueNowPaise(values.paymentPlan, program);
   }, [program, values.paymentPlan]);
+
+  const discount = useMemo(() => {
+    if (!program || !values.paymentPlan) return 0;
+    return discountPaise(values.paymentPlan, program);
+  }, [program, values.paymentPlan]);
+
+  const balance = program ? balanceDuePaise(program) : 0;
 
   useEffect(() => {
     if (sameWhatsapp) {
@@ -367,7 +376,7 @@ export default function EnrollmentForm() {
             {errors.address && <p className={errorClass}>{errors.address}</p>}
           </div>
 
-          <button type="button" className="btn-primary w-full py-4 gap-2"
+          <button type="button" className="btn-primary w-full py-4 gap-2 justify-center"
             onClick={() => validateStepOne() && setStep(2)}>
             Continue <ArrowRight className="w-4 h-4" />
           </button>
@@ -432,7 +441,7 @@ export default function EnrollmentForm() {
               onClick={() => setStep(1)}>
               <ArrowLeft className="w-4 h-4" />
             </button>
-            <button type="button" className="btn-primary flex-1 py-4 gap-2"
+            <button type="button" className="btn-primary flex-1 py-4 gap-2 justify-center"
               onClick={() => validateStepTwo() && setStep(3)}>
               Continue <ArrowRight className="w-4 h-4" />
             </button>
@@ -449,15 +458,22 @@ export default function EnrollmentForm() {
               <PlanOption
                 selected={values.paymentPlan === "full"}
                 onSelect={() => update("paymentPlan", "full")}
-                title="Pay the full course fee"
-                subtitle={`${program.shortName} - complete payment`}
-                amount={formatInr(program.feeInr * 100)}
+                title="Pay the full course fee now"
+                subtitle={
+                  program.instantDiscountInr > 0
+                    ? `Save ${formatInr(program.instantDiscountInr * 100)} by paying in one go`
+                    : `${program.shortName} - complete payment`
+                }
+                amount={formatInr(program.feeInr * 100 - program.instantDiscountInr * 100)}
+                strikeAmount={
+                  program.instantDiscountInr > 0 ? formatInr(program.feeInr * 100) : undefined
+                }
               />
               <PlanOption
                 selected={values.paymentPlan === "enrollment_only"}
                 onSelect={() => update("paymentPlan", "enrollment_only")}
                 title="Pay the enrollment fee only"
-                subtitle="Books your seat. The rest is payable later."
+                subtitle={`Books your seat. ${formatInr(balance)} is due on the first day of class.`}
                 amount={formatInr(ENROLLMENT_FEE_INR * 100)}
               />
             </div>
@@ -467,7 +483,7 @@ export default function EnrollmentForm() {
           {values.paymentPlan === "enrollment_only" && (
             <div>
               <span className={labelClass}>
-                How will you pay the remaining {formatInr((program.feeInr - ENROLLMENT_FEE_INR) * 100)}?
+                How will you pay the remaining {formatInr(balance)} on the first day of class?
               </span>
               <div className="grid grid-cols-2 gap-2.5">
                 <ChoiceCard
@@ -475,7 +491,7 @@ export default function EnrollmentForm() {
                   onSelect={() => update("balanceMethod", "cash")}
                   icon={<Banknote className="w-5 h-5" />}
                   title="Cash"
-                  subtitle="At the institute"
+                  subtitle="At the institute on day one"
                 />
                 <ChoiceCard
                   selected={values.balanceMethod === "online"}
@@ -515,9 +531,12 @@ export default function EnrollmentForm() {
           <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 space-y-2 font-body text-sm">
             <Row label="Course" value={program.shortName} />
             <Row label="Course fee" value={formatInr(program.feeInr * 100)} />
+            {discount > 0 && (
+              <Row label="Instant payment discount" value={`- ${formatInr(discount)}`} />
+            )}
             {values.paymentPlan && <Row label="Payable now" value={formatInr(dueNow)} highlight />}
             {values.paymentPlan === "enrollment_only" && (
-              <Row label="Balance" value={formatInr((program.feeInr - ENROLLMENT_FEE_INR) * 100)} />
+              <Row label="On the first day of class" value={formatInr(balance)} />
             )}
           </div>
 
@@ -526,7 +545,7 @@ export default function EnrollmentForm() {
               onClick={() => setStep(2)}>
               <ArrowLeft className="w-4 h-4" />
             </button>
-            <button type="button" className="btn-primary flex-1 py-4 gap-2" disabled={busy} onClick={submit}>
+            <button type="button" className="btn-primary flex-1 py-4 gap-2 justify-center" disabled={busy} onClick={submit}>
               {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Continue to payment <ArrowRight className="w-4 h-4" /></>}
             </button>
           </div>
@@ -552,7 +571,7 @@ export default function EnrollmentForm() {
               <p className="text-white/70 font-body text-sm">
                 The secure Razorpay window should have opened. If it did not, use the button below.
               </p>
-              <button type="button" className="btn-primary w-full py-4 gap-2" disabled={busy}
+              <button type="button" className="btn-primary w-full py-4 gap-2 justify-center" disabled={busy}
                 onClick={() => created && startRazorpay(created)}>
                 {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Pay {formatInr(created.amountDuePaise)}</>}
               </button>
@@ -570,7 +589,7 @@ export default function EnrollmentForm() {
                   Amount: {formatInr(created.amountDuePaise)} &middot; Add {created.reference} in the note
                 </div>
                 <a href={upiDeepLink(created.amountDuePaise, created.reference)}
-                  className="btn-primary w-full mt-4 py-3.5 gap-2 sm:hidden">
+                  className="btn-primary w-full mt-4 py-3.5 gap-2 sm:hidden justify-center">
                   <Smartphone className="w-4 h-4" /> Open UPI app
                 </a>
               </div>
@@ -597,7 +616,7 @@ export default function EnrollmentForm() {
                   placeholder="The 12-digit UTR from your payment app" />
               </div>
 
-              <button type="button" className="btn-primary w-full py-4 gap-2" disabled={busy} onClick={uploadScreenshot}>
+              <button type="button" className="btn-primary w-full py-4 gap-2 justify-center" disabled={busy} onClick={uploadScreenshot}>
                 {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Submit payment proof <ArrowRight className="w-4 h-4" /></>}
               </button>
             </div>
@@ -629,13 +648,14 @@ export default function EnrollmentForm() {
             <Row label="Student" value={values.studentName} />
             <Row label="Course" value={program?.shortName ?? ""} />
             <Row label="Paid now" value={formatInr(created.amountDuePaise)} />
+            {discount > 0 && <Row label="Discount applied" value={`- ${formatInr(discount)}`} />}
             {values.paymentPlan === "enrollment_only" && (
               <Row
-                label="Balance"
+                label="On the first day of class"
                 value={
                   values.balanceMethod === "cash"
-                    ? `${formatInr(((program?.feeInr ?? 0) - ENROLLMENT_FEE_INR) * 100)} in cash at the institute`
-                    : `${formatInr(((program?.feeInr ?? 0) - ENROLLMENT_FEE_INR) * 100)} online, link on WhatsApp`
+                    ? `${formatInr(balance)} in cash at the institute`
+                    : `${formatInr(balance)} online, link on WhatsApp`
                 }
               />
             )}
@@ -645,7 +665,7 @@ export default function EnrollmentForm() {
             Save this reference. Quote it when you message us on WhatsApp.
           </p>
           <a href="https://wa.me/917988227240" target="_blank" rel="noopener noreferrer"
-            className="btn-primary w-full py-4 gap-2">
+            className="btn-primary w-full py-4 gap-2 justify-center">
             Message the team on WhatsApp
           </a>
         </div>
@@ -664,8 +684,15 @@ function Row({ label, value, highlight }: { label: string; value: string; highli
 }
 
 function PlanOption({
-  selected, onSelect, title, subtitle, amount,
-}: { selected: boolean; onSelect: () => void; title: string; subtitle: string; amount: string }) {
+  selected, onSelect, title, subtitle, amount, strikeAmount,
+}: {
+  selected: boolean;
+  onSelect: () => void;
+  title: string;
+  subtitle: string;
+  amount: string;
+  strikeAmount?: string;
+}) {
   return (
     <button type="button" onClick={onSelect}
       className={`w-full flex items-center justify-between gap-4 rounded-xl border px-4 py-4 text-left transition-colors ${
@@ -675,7 +702,12 @@ function PlanOption({
         <span className="block text-white font-heading font-semibold text-sm">{title}</span>
         <span className="block text-white/45 font-body text-xs mt-0.5">{subtitle}</span>
       </span>
-      <span className="text-amber-brand font-heading font-bold whitespace-nowrap">{amount}</span>
+      <span className="text-right whitespace-nowrap">
+        {strikeAmount && (
+          <span className="block text-white/35 font-body text-xs line-through">{strikeAmount}</span>
+        )}
+        <span className="text-amber-brand font-heading font-bold">{amount}</span>
+      </span>
     </button>
   );
 }

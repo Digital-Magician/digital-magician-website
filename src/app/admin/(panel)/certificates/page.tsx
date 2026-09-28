@@ -47,7 +47,7 @@ export default async function CertificatesPage() {
         <p className="text-white/35 font-body text-xs">
           Anyone can check this number at /verify-certificate. Only the name, programme, date and grade are shown.
         </p>
-        <button type="submit" className="btn-primary w-full py-2.5 text-sm">Save certificate</button>
+        <button type="submit" className="btn-primary w-full py-2.5 text-sm justify-center">Save certificate</button>
       </form>
 
       <div className="bento overflow-x-auto">
