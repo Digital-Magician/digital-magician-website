@@ -30,3 +30,4 @@ yarn-error.log*
 
 # Locally stored enrollment documents (development only)
 .uploads/
+.env*
