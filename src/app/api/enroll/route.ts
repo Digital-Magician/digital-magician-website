@@ -34,7 +34,9 @@ export async function POST(request: Request) {
   }
 
   const ip = clientIp(request.headers);
-  const limit = await rateLimit(`enroll:${ip}`, 8, 60 * 60);
+  // Staff often fill this in for several students from one office connection,
+  // so the limit is set well above normal use but still far below bot traffic.
+  const limit = await rateLimit(`enroll:${ip}`, 20, 60 * 60);
   if (!limit.allowed) {
     return NextResponse.json(
       { error: "Too many submissions from this device. Please contact us on WhatsApp." },
