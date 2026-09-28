@@ -13,9 +13,9 @@ import { getComingMonday } from "@/lib/date";
  * `text` to an empty string.
  */
 const batchNotice = {
-  text: "Please note: today's 9 PM batch will now begin tomorrow.",
-  shortText: "Today's 9 PM batch begins tomorrow.",
-  showUntil: "2026-09-28",
+  text: "Please note: the new batch scheduled for 28 September will now begin on 29 September at 9 PM.",
+  shortText: "28 Sept batch now begins 29 Sept, 9 PM.",
+  showUntil: "2026-09-29",
 };
 
 function noticeIsCurrent(): boolean {
