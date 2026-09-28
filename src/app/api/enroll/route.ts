@@ -3,7 +3,12 @@ import { query, queryOne, isDbConfigured } from "@/lib/server/db";
 import { storePrivateFile } from "@/lib/server/uploads";
 import { rateLimit, clientIp } from "@/lib/server/ratelimit";
 import { issueClaimToken } from "@/lib/server/claim";
-import { createOrder, razorpayConfigured, razorpayKeyId } from "@/lib/server/razorpay";
+import {
+  createOrder,
+  liveKeysBlockedHere,
+  razorpayConfigured,
+  razorpayKeyId,
+} from "@/lib/server/razorpay";
 import {
   amountDueNowPaise,
   balanceDuePaise,
@@ -127,6 +132,15 @@ export async function POST(request: Request) {
   let razorpay: { orderId: string; keyId: string; amount: number } | null = null;
 
   if (input.paymentMethod === "razorpay") {
+    if (liveKeysBlockedHere()) {
+      return NextResponse.json(
+        {
+          error:
+            "This is the test server and it holds live payment keys, so card payment is switched off here. Use UPI, or try this on the live site.",
+        },
+        { status: 503 }
+      );
+    }
     if (!razorpayConfigured()) {
       return NextResponse.json(
         {

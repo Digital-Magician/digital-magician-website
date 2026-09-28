@@ -16,6 +16,14 @@ export function razorpayKeyId(): string {
   return process.env.RAZORPAY_KEY_ID ?? "";
 }
 
+/**
+ * Live keys on a development machine would charge a real card during testing,
+ * so order creation is refused there. Production is unaffected.
+ */
+export function liveKeysBlockedHere(): boolean {
+  return process.env.NODE_ENV !== "production" && razorpayKeyId().startsWith("rzp_live_");
+}
+
 function authHeader(): string {
   const id = process.env.RAZORPAY_KEY_ID;
   const secret = process.env.RAZORPAY_KEY_SECRET;
@@ -35,6 +43,10 @@ export async function createOrder(params: {
   receipt: string;
   notes?: Record<string, string>;
 }): Promise<RazorpayOrder> {
+  if (liveKeysBlockedHere()) {
+    throw new Error("Refusing to create a live Razorpay order from a development server.");
+  }
+
   const response = await fetch(`${API}/orders`, {
     method: "POST",
     headers: { Authorization: authHeader(), "Content-Type": "application/json" },
