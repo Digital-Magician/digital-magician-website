@@ -90,7 +90,7 @@ function FeaturedCard({ post }: { post: PostPreview }) {
           {/* Top row */}
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">
-              Featured Post
+              Latest Post
             </span>
             <span className="w-1 h-1 rounded-full bg-slate-600" />
             <span
@@ -145,11 +145,13 @@ export default function BlogClient({ posts }: { posts: PostPreview[] }) {
     return catOk && searchOk;
   });
 
-  const featuredPosts = filtered.filter((p) => p.featured);
-  const regularPosts = filtered.filter((p) => !p.featured);
-  const heroFeatured = featuredPosts[0] ?? null;
-  const remainingFeatured = featuredPosts.slice(1);
-  const gridPosts = [...remainingFeatured, ...regularPosts];
+  // Newest first, always. The `featured` flag still earns the badge on a card,
+  // but it no longer lifts an older post above a newer one.
+  const byNewest = [...filtered].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  const heroFeatured = byNewest[0] ?? null;
+  const gridPosts = byNewest.slice(1);
 
   return (
     <main className="min-h-screen pt-24 pb-20">
