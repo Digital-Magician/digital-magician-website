@@ -4,6 +4,8 @@ import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 
 const footerLinks = {
   Programs: [
+    // Exact-match anchor: this phrase must point only at the Sonipat page.
+    { label: "Digital Marketing Course in Sonipat", href: "/digital-marketing-course/sonipat" },
     { label: "Full Stack Digital Marketing", href: "/programs/full-stack-digital-marketing" },
     { label: "Performance Marketing", href: "/programs/performance-marketing" },
     { label: "Google Ads Mastery", href: "/programs/google-ads-mastery" },

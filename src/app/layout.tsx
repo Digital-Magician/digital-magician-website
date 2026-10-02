@@ -25,7 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://digitalmagician.in"),
   title: {
-    default: "Digital Magician | #1 Digital Marketing Course in Sonipat — 100% Job Guarantee",
+    default: "Digital Magician | AI-First Digital Marketing Training",
     template: "%s | Digital Magician",
   },
   description:
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://digitalmagician.in",
     siteName: "Digital Magician",
-    title: "Digital Magician | #1 Digital Marketing Course in Sonipat",
+    title: "Digital Magician | AI-First Digital Marketing Training",
     description:
       "100% job placement guarantee. Master Google Ads, SEO, Meta Ads & AI Tools. Haryana's most trusted digital marketing institute.",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Magician | #1 Digital Marketing Course in Sonipat",
+    title: "Digital Magician | AI-First Digital Marketing Training",
     description: "100% job placement guarantee. Haryana's most trusted digital marketing institute.",
   },
   robots: {

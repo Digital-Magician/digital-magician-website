@@ -349,14 +349,24 @@ export default async function LocationPage({
                 </div>
                 <div className="space-y-3 mb-6">
                   {[
-                    "In-person classes at our Sonipat campus",
+                    // Non-Sonipat city pages point the phrase home, so they stop
+                    // competing with /digital-marketing-course/sonipat for it.
+                    isHome ? "In-person classes at our Sonipat campus" : (
+                      <>
+                        In-person classes at our{" "}
+                        <Link href="/digital-marketing-course/sonipat" className="text-amber-brand hover:underline">
+                          digital marketing course in Sonipat
+                        </Link>{" "}
+                        campus
+                      </>
+                    ),
                     "Face-to-face sessions on live client accounts",
                     isHome ? "Walk-in on any class day" : `${location.travelInfo}`,
                     "Full campus community access",
                     "Workshops, portfolio reviews, mock interviews",
                     "Same fees as online mode",
-                  ].map((item) => (
-                    <div key={item} className="flex items-start gap-2.5 text-white/65 text-sm font-body">
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-2.5 text-white/65 text-sm font-body">
                       <span className="w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0 mt-1.5" />
                       {item}
                     </div>

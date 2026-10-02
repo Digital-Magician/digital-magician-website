@@ -16,9 +16,9 @@ import { testimonials } from "@/lib/data/testimonials";
 import ToolIcon from "@/components/shared/ToolIcon";
 
 export const metadata: Metadata = {
-  title: "Best AI Digital Marketing Institute in India — Sonipat",
+  title: "AI-First Digital Marketing Institute | Digital Magician",
   description:
-    "North India's #1 digital marketing institute in Sonipat — master Google Ads, SEO, Meta Ads & AI tools with a 100% placement guarantee. 500+ students trained.",
+    "Learn digital marketing and AI by running live client campaigns with real ad budgets. Live online batches across India and classroom training in Haryana. 500+ students trained.",
   alternates: { canonical: "/" },
 };
 
@@ -110,7 +110,7 @@ export default function HomePage() {
             </h1>
 
             <h2 className="hero-item hero-item-2 text-amber-brand/90 font-heading font-semibold text-base sm:text-lg mb-6 tracking-wide">
-              India&apos;s #1 AI-Powered Digital Marketing Institute — Sonipat &amp; Online
+              Founder-Led Training on Live Client Campaigns, Online Across India
             </h2>
 
             {/* Sub-headline */}
@@ -408,6 +408,16 @@ export default function HomePage() {
             </h2>
             <p className="text-white/60 text-lg mt-4 max-w-2xl mx-auto font-body">
               Every program includes live campaign work on real client accounts. Every program comes with placement support. Every program gives you results you can show, not just a certificate.
+            </p>
+            <p className="text-white/50 text-base mt-4 max-w-2xl mx-auto font-body">
+              Studying in Haryana? Fees, batch timings and placement details for the{" "}
+              <Link
+                href="/digital-marketing-course/sonipat"
+                className="text-amber-brand underline underline-offset-4 decoration-amber-brand/40 hover:decoration-amber-brand transition-colors"
+              >
+                digital marketing course in Sonipat
+              </Link>
+              .
             </p>
           </AnimateOnScroll>
 
@@ -974,21 +984,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Schema: FAQ */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((f) => ({
-              "@type": "Question",
-              name: f.q,
-              acceptedAnswer: { "@type": "Answer", text: f.a },
-            })),
-          }),
-        }}
-      />
     </>
   );
 }
