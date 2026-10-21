@@ -87,6 +87,21 @@ const mdxComponents = {
   li: (props: React.LiHTMLAttributes<HTMLLIElement>) => (
     <li className="text-slate-300 leading-relaxed" {...props} />
   ),
+  // In-content images: full width, rounded, with the alt text shown as a caption.
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <figure className="my-8">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        {...props}
+        alt={props.alt ?? ""}
+        loading="lazy"
+        className="w-full rounded-2xl border border-white/10"
+      />
+      {props.alt ? (
+        <figcaption className="mt-3 text-center text-sm text-slate-400 italic">{props.alt}</figcaption>
+      ) : null}
+    </figure>
+  ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
       className="border-l-4 border-amber-500 bg-amber-500/5 pl-5 pr-4 py-3 rounded-r-xl my-6 text-slate-300 italic"
