@@ -20,6 +20,7 @@ type PostPreview = {
   readTime: string;
   featured: boolean;
   coverEmoji: string;
+  coverImage?: string | null;
 };
 
 // ── PostCard ──────────────────────────────────────────────────────────────────
@@ -33,9 +34,18 @@ function PostCard({ post }: { post: PostPreview }) {
       href={`/blog/${post.slug}`}
       className="group bento flex flex-col gap-4 p-6 hover:border-amber-500/40 transition-all duration-300"
     >
-      {/* Emoji + category */}
+      {/* Cover photo when the post has one, otherwise the emoji */}
+      {post.coverImage && (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={post.coverImage}
+          alt=""
+          loading="lazy"
+          className="w-full h-40 object-cover rounded-xl border border-white/10"
+        />
+      )}
       <div className="flex items-start justify-between gap-3">
-        <span className="text-4xl leading-none">{post.coverEmoji}</span>
+        {!post.coverImage && <span className="text-4xl leading-none">{post.coverEmoji}</span>}
         <span
           className={`shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full border ${catColor}`}
         >
@@ -81,10 +91,18 @@ function FeaturedCard({ post }: { post: PostPreview }) {
       className="group gradient-border p-[1px] rounded-2xl block"
     >
       <div className="bento rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start hover:bg-white/5 transition-colors">
-        {/* Emoji */}
-        <div className="shrink-0 w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-amber-500/10 flex items-center justify-center text-5xl md:text-6xl">
-          {post.coverEmoji}
-        </div>
+        {post.coverImage ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={post.coverImage}
+            alt=""
+            className="shrink-0 w-full md:w-72 h-44 md:h-40 object-cover rounded-2xl border border-white/10"
+          />
+        ) : (
+          <div className="shrink-0 w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-amber-500/10 flex items-center justify-center text-5xl md:text-6xl">
+            {post.coverEmoji}
+          </div>
+        )}
 
         <div className="flex flex-col gap-4 flex-1">
           {/* Top row */}
